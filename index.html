@@ -578,6 +578,333 @@
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
         .delay-5 { animation-delay: 0.5s; }
+
+        /* ── Download Modal ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            animation: modal-fade 0.2s ease-out;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        @keyframes modal-fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal {
+            background: var(--gray-900);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            animation: modal-slide 0.25s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modal-slide {
+            from { opacity: 0; transform: translateY(12px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--gray-400);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+            z-index: 1;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--gray-200);
+        }
+
+        .modal-close svg { width: 16px; height: 16px; }
+
+        .modal-header {
+            padding: 32px 32px 0;
+        }
+
+        .modal-header h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-100);
+            margin-bottom: 4px;
+        }
+
+        .modal-header p {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        /* OS Tabs */
+        .os-tabs {
+            display: flex;
+            gap: 4px;
+            padding: 0 32px;
+            margin-top: 24px;
+        }
+
+        .os-tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background: none;
+            color: var(--gray-500);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-family: inherit;
+        }
+
+        .os-tab svg { width: 16px; height: 16px; }
+
+        .os-tab:hover {
+            color: var(--gray-300);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .os-tab.active {
+            color: var(--gray-100);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .os-tab-content {
+            display: none;
+            padding: 24px 32px 32px;
+        }
+
+        .os-tab-content.active { display: block; }
+
+        /* Linux download options */
+        .linux-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .linux-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.02);
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+
+        .linux-option:hover {
+            border-color: rgba(167, 139, 250, 0.3);
+            background: rgba(167, 139, 250, 0.05);
+        }
+
+        .linux-option-info { display: flex; align-items: center; gap: 14px; }
+
+        .linux-option-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+        }
+
+        .linux-option-icon svg { width: 18px; height: 18px; }
+
+        .linux-option-text h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-100);
+            margin-bottom: 2px;
+        }
+
+        .linux-option-text p {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        .linux-option-arrow {
+            color: var(--accent);
+            opacity: 0;
+            transform: translateX(-4px);
+            transition: all 0.15s;
+        }
+
+        .linux-option-arrow svg { width: 16px; height: 16px; }
+
+        .linux-option:hover .linux-option-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Windows content */
+        .win-downloading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            background: rgba(52, 211, 153, 0.08);
+            border: 1px solid rgba(52, 211, 153, 0.15);
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--emerald);
+        }
+
+        .win-downloading svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+        .win-instructions h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-300);
+            margin-bottom: 16px;
+        }
+
+        .win-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .win-step {
+            display: flex;
+            gap: 14px;
+        }
+
+        .win-step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            background: var(--accent-dim);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .win-step-text {
+            font-size: 14px;
+            color: var(--gray-400);
+            line-height: 1.5;
+        }
+
+        .win-step-text strong {
+            color: var(--gray-200);
+            font-weight: 600;
+        }
+
+        /* SmartScreen mockup */
+        .smartscreen-mock {
+            margin: 12px 0 4px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: #1a1f2e;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        .ss-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ss-shield {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            color: #60a5fa;
+        }
+
+        .ss-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-100);
+            margin-bottom: 4px;
+        }
+
+        .ss-desc {
+            font-size: 12px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        .ss-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            justify-content: flex-end;
+        }
+
+        .ss-btn {
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gray-400);
+        }
+
+        .ss-btn.highlight {
+            border-color: rgba(167, 139, 250, 0.4);
+            background: rgba(167, 139, 250, 0.12);
+            color: var(--accent);
+            position: relative;
+        }
+
+        .ss-link {
+            font-size: 12px;
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            cursor: default;
+        }
+
+        /* Modal responsive */
+        @media (max-width: 480px) {
+            .modal { border-radius: 12px; }
+            .modal-header, .os-tabs, .os-tab-content { padding-left: 20px; padding-right: 20px; }
+            .os-tab { padding: 8px 14px; font-size: 13px; }
+            .linux-option { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .linux-option-arrow { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -804,17 +1131,139 @@
     </div>
 </footer>
 
+<!-- Download Modal -->
+<div class="modal-overlay" id="dl-modal">
+    <div class="modal">
+        <button class="modal-close" id="modal-close">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <div class="modal-header">
+            <h3>Download Vaxtly</h3>
+            <p>Choose your platform and format.</p>
+        </div>
+
+        <div class="os-tabs">
+            <button class="os-tab" data-os="windows">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                Windows
+            </button>
+            <button class="os-tab" data-os="linux">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.311.002-.465.006C7.44.123 3.87 3.124 3.002 7.202 1.27 7.7 0 9.281 0 11.156c0 2.273 1.734 4.127 3.882 4.322v.002h4.145c.19 0 .345-.154.345-.345v-.69c0-.19-.155-.345-.345-.345H3.882c-1.357 0-2.573-.93-2.89-2.252a3.007 3.007 0 012.108-3.476l.464-.155.097-.484c.598-2.97 3.06-5.346 6.165-5.703a6.74 6.74 0 011.64-.048c3.562.33 6.352 3.252 6.55 6.83l.044.803.803.044c1.523.084 2.756 1.248 2.94 2.756a2.975 2.975 0 01-2.076 3.193c-.11.037-.223.06-.337.073l-.257.017h-3.754c-.19 0-.345.154-.345.345v.69c0 .19.155.345.345.345h3.754a3.652 3.652 0 003.62-3.317c.186-1.992-1.138-3.784-3.07-4.235C19.187 3.236 15.465.032 12.504 0zM8.63 14.384l3.21-3.21c.136-.136.357-.136.494 0l3.21 3.21c.136.136.136.357 0 .494l-.353.353c-.136.136-.357.136-.494 0l-1.967-1.967v6.167c0 .193-.157.35-.35.35h-.5c-.193 0-.35-.157-.35-.35v-6.167l-1.967 1.967c-.136.136-.357.136-.494 0l-.353-.353c-.136-.137-.136-.358-.001-.494z"/></svg>
+                Linux
+            </button>
+        </div>
+
+        <!-- Windows tab -->
+        <div class="os-tab-content" data-os="windows">
+            <div class="win-downloading" id="win-dl-status">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                Your download should start automatically...
+            </div>
+
+            <div class="win-instructions">
+                <h4>Windows may show a security warning — here's how to proceed:</h4>
+
+                <div class="win-steps">
+                    <div class="win-step">
+                        <span class="win-step-num">1</span>
+                        <div class="win-step-text">
+                            Windows SmartScreen will show a <strong>"Windows protected your PC"</strong> dialog. This is normal for unsigned apps.
+
+                            <div class="smartscreen-mock">
+                                <div class="ss-header">
+                                    <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                                    <div>
+                                        <div class="ss-title">Windows protected your PC</div>
+                                        <div class="ss-desc">Microsoft Defender SmartScreen prevented an unrecognized app from starting.</div>
+                                    </div>
+                                </div>
+                                <span class="ss-link">More info</span> <span style="font-size:11px;color:var(--gray-600);margin-left:4px;">← click this</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="win-step">
+                        <span class="win-step-num">2</span>
+                        <div class="win-step-text">
+                            Click <strong>"More info"</strong> to reveal the extra option.
+                        </div>
+                    </div>
+
+                    <div class="win-step">
+                        <span class="win-step-num">3</span>
+                        <div class="win-step-text">
+                            Click <strong>"Run anyway"</strong> to proceed with the installation.
+
+                            <div class="smartscreen-mock">
+                                <div class="ss-header">
+                                    <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                                    <div>
+                                        <div class="ss-title">Windows protected your PC</div>
+                                        <div class="ss-desc" style="margin-bottom:4px;">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
+                                        <div class="ss-desc">App: Vaxtly-Setup.exe<br>Publisher: <strong style="color:var(--gray-400);">Unknown publisher</strong></div>
+                                    </div>
+                                </div>
+                                <div class="ss-actions">
+                                    <span class="ss-btn">Don't run</span>
+                                    <span class="ss-btn highlight">Run anyway</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linux tab -->
+        <div class="os-tab-content" data-os="linux">
+            <div class="linux-options">
+                <a id="dl-modal-appimage" href="#" class="linux-option">
+                    <div class="linux-option-info">
+                        <div class="linux-option-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+                        </div>
+                        <div class="linux-option-text">
+                            <h4>AppImage</h4>
+                            <p>Universal Linux — no install needed, just run</p>
+                        </div>
+                    </div>
+                    <div class="linux-option-arrow">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </div>
+                </a>
+
+                <a id="dl-modal-deb" href="#" class="linux-option">
+                    <div class="linux-option-info">
+                        <div class="linux-option-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859"/></svg>
+                        </div>
+                        <div class="linux-option-text">
+                            <h4>.deb Package</h4>
+                            <p>For Debian, Ubuntu, and derivatives</p>
+                        </div>
+                    </div>
+                    <div class="linux-option-arrow">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 (function() {
     var REPO = 'vaxtly/vaxtly';
     var FALLBACK = 'https://github.com/' + REPO + '/releases/latest';
+    var assets = {};
 
+    // Fetch release assets
     fetch('https://api.github.com/repos/' + REPO + '/releases/latest')
         .then(function(r) { return r.json(); })
         .then(function(release) {
             if (!release || !release.assets) return;
 
-            var assets = {};
             release.assets.forEach(function(a) {
                 var name = a.name.toLowerCase();
                 if (name.endsWith('.exe') && name.includes('setup')) assets.exe = a.browser_download_url;
@@ -822,22 +1271,93 @@
                 else if (name.endsWith('.deb')) assets.deb = a.browser_download_url;
             });
 
+            // Update download section cards (direct links still work)
             if (assets.exe) document.getElementById('dl-win').href = assets.exe;
             if (assets.appimage) document.getElementById('dl-appimage').href = assets.appimage;
             if (assets.deb) document.getElementById('dl-deb').href = assets.deb;
 
-            // Hero button: detect OS and link to the best match
-            var hero = document.getElementById('dl-hero');
-            var ua = navigator.userAgent.toLowerCase();
-            if (ua.indexOf('win') !== -1 && assets.exe) {
-                hero.href = assets.exe;
-            } else if (ua.indexOf('linux') !== -1) {
-                hero.href = assets.appimage || assets.deb || FALLBACK;
-            } else {
-                hero.href = FALLBACK;
-            }
+            // Update modal links
+            if (assets.appimage) document.getElementById('dl-modal-appimage').href = assets.appimage;
+            if (assets.deb) document.getElementById('dl-modal-deb').href = assets.deb;
         })
         .catch(function() {});
+
+    // Modal logic
+    var modal = document.getElementById('dl-modal');
+    var closeBtn = document.getElementById('modal-close');
+    var tabs = document.querySelectorAll('.os-tab');
+    var tabContents = document.querySelectorAll('.os-tab-content');
+
+    function detectOS() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('win') !== -1) return 'windows';
+        return 'linux';
+    }
+
+    function switchTab(os) {
+        tabs.forEach(function(t) { t.classList.toggle('active', t.getAttribute('data-os') === os); });
+        tabContents.forEach(function(c) { c.classList.toggle('active', c.getAttribute('data-os') === os); });
+    }
+
+    function openModal(os) {
+        switchTab(os || detectOS());
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // If Windows, auto-trigger the download
+        if ((os || detectOS()) === 'windows') {
+            setTimeout(function() {
+                var url = assets.exe || FALLBACK;
+                var a = document.createElement('a');
+                a.href = url;
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }, 400);
+        }
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Tab switching
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            switchTab(this.getAttribute('data-os'));
+        });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // Hero download button opens modal
+    document.getElementById('dl-hero').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    // Download section cards open modal with the right OS
+    document.getElementById('dl-win').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('windows');
+    });
+    document.getElementById('dl-appimage').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('linux');
+    });
+    document.getElementById('dl-deb').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('linux');
+    });
 })();
 </script>
 </body>
