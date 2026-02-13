@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Vaxtly OG Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        .og {
+            width: 1200px;
+            height: 630px;
+            background: #08080a;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* ── Subtle grid ── */
+        .og::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(ellipse 80% 70% at 30% 50%, black 20%, transparent 70%);
+        }
+
+        /* ── Top-left glow ── */
+        .glow-1 {
+            position: absolute;
+            width: 700px;
+            height: 500px;
+            top: -120px;
+            left: -100px;
+            background: radial-gradient(ellipse, rgba(100, 60, 180, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ── Bottom-right accent glow ── */
+        .glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 400px;
+            bottom: -80px;
+            right: -60px;
+            background: radial-gradient(ellipse, rgba(52, 211, 200, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ── Noise texture ── */
+        .noise {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            pointer-events: none;
+        }
+
+        /* ── Content layout ── */
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            height: 100%;
+            padding: 72px 80px;
+            gap: 60px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .logo {
+            height: 52px;
+            width: auto;
+            margin-bottom: 32px;
+        }
+
+        .tagline {
+            font-size: 34px;
+            font-weight: 700;
+            color: #e8e8ec;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .tagline .gradient {
+            background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .desc {
+            font-size: 17px;
+            color: #6b6b6b;
+            line-height: 1.65;
+            max-width: 420px;
+        }
+
+        .pills {
+            display: flex;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b6b6b;
+        }
+
+        .pill svg { width: 13px; height: 13px; opacity: 0.5; }
+
+        /* ── Screenshot mockup ── */
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            width: 520px;
+            position: relative;
+        }
+
+        .screenshot-frame {
+            width: 500px;
+            position: relative;
+            transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+            transform-origin: center center;
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.5),
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 80px rgba(167, 139, 250, 0.06);
+            display: block;
+        }
+
+        /* ── Decorative pixels (matching logo style) ── */
+        .pixel {
+            position: absolute;
+            border-radius: 2px;
+        }
+
+        .p1 { width: 8px; height: 8px; background: rgba(96, 165, 250, 0.35); top: 60px; right: 110px; }
+        .p2 { width: 6px; height: 6px; background: rgba(52, 211, 153, 0.3); top: 90px; right: 70px; }
+        .p3 { width: 10px; height: 10px; background: rgba(167, 139, 250, 0.25); bottom: 80px; right: 50px; }
+        .p4 { width: 5px; height: 5px; background: rgba(96, 165, 250, 0.2); bottom: 120px; left: 380px; }
+        .p5 { width: 7px; height: 7px; background: rgba(52, 211, 200, 0.3); top: 50px; right: 40px; }
+        .p6 { width: 4px; height: 4px; background: rgba(167, 139, 250, 0.4); top: 80px; right: 30px; }
+
+        /* ── Bottom bar ── */
+        .bottom-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.2), rgba(96, 165, 250, 0.15), rgba(52, 211, 153, 0.1), transparent);
+            z-index: 3;
+        }
+
+        /* ── URL badge ── */
+        .url {
+            position: absolute;
+            bottom: 30px;
+            left: 80px;
+            z-index: 3;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            color: #404040;
+            letter-spacing: 0.02em;
+        }
+
+        /* ── Version badge ── */
+        .version {
+            position: absolute;
+            bottom: 26px;
+            right: 80px;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 100px;
+            background: rgba(167, 139, 250, 0.08);
+            border: 1px solid rgba(167, 139, 250, 0.15);
+            font-size: 12px;
+            font-weight: 500;
+            color: #a78bfa;
+        }
+
+        .version-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #a78bfa;
+        }
+
+        /* ── Border ── */
+        .border-frame {
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="og">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="noise"></div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/name.png" alt="Vaxtly" class="logo">
+                <div class="tagline">Your APIs,<br><span class="gradient">your machine.</span></div>
+                <p class="desc">A local-first desktop API client. Design, test, and organize HTTP requests with Git-based sync.</p>
+                <div class="pills">
+                    <span class="pill">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                        Windows
+                    </span>
+                    <span class="pill">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        macOS
+                    </span>
+                    <span class="pill">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.311.002-.465.006C7.44.123 3.87 3.124 3.002 7.202 1.27 7.7 0 9.281 0 11.156c0 2.273 1.734 4.127 3.882 4.322v.002h4.145c.19 0 .345-.154.345-.345v-.69c0-.19-.155-.345-.345-.345H3.882c-1.357 0-2.573-.93-2.89-2.252a3.007 3.007 0 012.108-3.476l.464-.155.097-.484c.598-2.97 3.06-5.346 6.165-5.703a6.74 6.74 0 011.64-.048c3.562.33 6.352 3.252 6.55 6.83l.044.803.803.044c1.523.084 2.756 1.248 2.94 2.756a2.975 2.975 0 01-2.076 3.193c-.11.037-.223.06-.337.073l-.257.017h-3.754c-.19 0-.345.154-.345.345v.69c0 .19.155.345.345.345h3.754a3.652 3.652 0 003.62-3.317c.186-1.992-1.138-3.784-3.07-4.235C19.187 3.236 15.465.032 12.504 0z"/></svg>
+                        Linux
+                    </span>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="pixel p1"></div>
+                <div class="pixel p2"></div>
+                <div class="pixel p3"></div>
+                <div class="pixel p4"></div>
+                <div class="pixel p5"></div>
+                <div class="pixel p6"></div>
+                <div class="screenshot-frame">
+                    <img src="images/screenshot.png" alt="Vaxtly app">
+                </div>
+            </div>
+        </div>
+
+        <div class="url">vaxtly.app</div>
+        
+        <div class="bottom-bar"></div>
+        <div class="border-frame"></div>
+    </div>
+</body>
+</html>
