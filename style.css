@@ -173,7 +173,7 @@ nav .container {
 
 /* ── Hero ── */
 .hero {
-    padding: 180px 0 80px;
+    padding: 180px 0 100px;
     text-align: center;
     position: relative;
 }
@@ -347,13 +347,9 @@ h1 .gradient {
 .platform-pill svg { width: 14px; height: 14px; opacity: 0.6; }
 
 /* ── App screenshot ── */
-.screenshot-section {
-    padding: 0 0 120px;
-}
-
 .screenshot-wrap {
+    margin: 80px auto 0;
     max-width: 1060px;
-    margin: 0 auto;
     position: relative;
     z-index: 1;
 }
