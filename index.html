@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" version="1.1">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaxtly — Desktop API Client</title>
-    <meta name="description" content="A desktop API client with no account, no cloud, and no subscription. Git sync, HashiCorp Vault integration, and smart environment switching built in.">
+    <meta name="description" content="A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and HashiCorp Vault integration built in.">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/logo.png">
@@ -30,7 +30,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Vaxtly",
-        "description": "A desktop API client with no account, no cloud, and no subscription. Git sync, HashiCorp Vault integration, and smart environment switching built in.",
+        "description": "A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and HashiCorp Vault integration built in.",
         "url": "https://vaxtly.app",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows, macOS, Linux",
@@ -80,6 +80,7 @@
             <a href="https://github.com/vaxtly/vaxtly/releases/latest" class="hero-badge animate-in" target="_blank" rel="noopener">
                 <span class="hero-badge-dot"></span>
                 <span id="hero-version">Early Access</span>
+                <svg class="hero-badge-arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
             </a>
 
             <h1 class="animate-in delay-1">
@@ -87,7 +88,8 @@
             </h1>
 
             <p class="hero-sub animate-in delay-2">
-                No account. No cloud. No subscription. A desktop API client that keeps your data on your machine — with Git sync, HashiCorp Vault integration, and smart environment switching built in.
+                No account. No cloud. No subscription.<br>
+                A desktop API client that keeps your data on your machine.
             </p>
 
             <div class="hero-actions animate-in delay-3">
@@ -135,31 +137,8 @@
         </p>
 
         <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon fi-emerald">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
-                </div>
-                <h3>Request Builder</h3>
-                <p>Method, URL, headers, query params, body, auth — all in one view with a syntax-highlighted editor. Import and export your data whenever you want.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon fi-blue">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
-                </div>
-                <h3>Collections</h3>
-                <p>Group requests into collections with nested folders. Each collection can have its own environment variables and Git repository.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon fi-amber">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
-                </div>
-                <h3>Smart Environments</h3>
-                <p>Define variables per collection or folder — they auto-switch as you navigate between requests. Use <code class="mono code-amber">{{base_url}}</code> and never touch a URL again.</p>
-            </div>
-
-            <div class="feature-card">
+            <!-- Differentiators — highlighted row -->
+            <div class="feature-card feature-highlight">
                 <div class="feature-icon fi-accent">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg>
                 </div>
@@ -167,7 +146,7 @@
                 <p>Push and pull collections to any Git remote. Your team shares API definitions through version control — not a proprietary cloud.</p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card feature-highlight">
                 <div class="feature-icon fi-red">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
                 </div>
@@ -175,12 +154,37 @@
                 <p>Native Vault integration out of the box. Set a token and namespace, then sync your secrets — just like collections sync with Git.</p>
             </div>
 
+            <div class="feature-card feature-highlight">
+                <div class="feature-icon fi-amber">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
+                </div>
+                <h3>Smart Environments</h3>
+                <p>Define variables per collection or folder — they auto-switch as you navigate between requests. Use <code class="mono code-amber">{{base_url}}</code> and never touch a URL again.</p>
+            </div>
+
+            <!-- Standard features -->
+            <div class="feature-card">
+                <div class="feature-icon fi-emerald">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+                </div>
+                <h3>Request Builder</h3>
+                <p>Method, headers, query params, body, auth — with a syntax-highlighted editor and full import/export.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon fi-blue">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+                </div>
+                <h3>Collections</h3>
+                <p>Organize requests into nested folders. Each collection gets its own environments, variables, and Git repository.</p>
+            </div>
+
             <div class="feature-card">
                 <div class="feature-icon fi-orange">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z"/></svg>
                 </div>
-                <h3>Desktop Native</h3>
-                <p>A real desktop app — not an Electron wrapper around a web page. Your data lives on your machine, not on someone else's server.</p>
+                <h3>Local First</h3>
+                <p>Runs on your machine as a desktop app built with NativePHP. Your data stays local — nothing is sent anywhere unless you choose to sync.</p>
             </div>
         </div>
     </div>
@@ -190,41 +194,30 @@
 <section class="download-section" id="download">
     <div class="container">
         <div class="section-label">Download</div>
-        <h2>Download Vaxtly</h2>
+        <h2>Free, open source, yours forever.</h2>
         <p class="section-desc section-desc-center">
-            Free, open source, and yours forever. No account required, no usage limits, no data collection.
+            No account required. No usage limits. No data collection.
         </p>
 
-        <div class="download-cards">
-            <a id="dl-win" href="https://github.com/vaxtly/vaxtly/releases/latest" class="download-card">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                <h3>Windows</h3>
-                <p>.exe installer</p>
-                <span class="download-link">
-                    Download
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </span>
+        <div class="download-cta">
+            <a id="dl-section-btn" href="#" class="btn btn-primary btn-lg">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                <span id="dl-section-text">Download Vaxtly</span>
             </a>
-
-            <a id="dl-mac" href="#" class="download-card">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <h3>macOS</h3>
-                <p>via Homebrew</p>
-                <span class="download-link">
-                    Install
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </span>
-            </a>
-
-            <a id="dl-linux" href="#" class="download-card">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.311.002-.465.006C7.44.123 3.87 3.124 3.002 7.202 1.27 7.7 0 9.281 0 11.156c0 2.273 1.734 4.127 3.882 4.322v.002h4.145c.19 0 .345-.154.345-.345v-.69c0-.19-.155-.345-.345-.345H3.882c-1.357 0-2.573-.93-2.89-2.252a3.007 3.007 0 012.108-3.476l.464-.155.097-.484c.598-2.97 3.06-5.346 6.165-5.703a6.74 6.74 0 011.64-.048c3.562.33 6.352 3.252 6.55 6.83l.044.803.803.044c1.523.084 2.756 1.248 2.94 2.756a2.975 2.975 0 01-2.076 3.193c-.11.037-.223.06-.337.073l-.257.017h-3.754c-.19 0-.345.154-.345.345v.69c0 .19.155.345.345.345h3.754a3.652 3.652 0 003.62-3.317c.186-1.992-1.138-3.784-3.07-4.235C19.187 3.236 15.465.032 12.504 0zM8.63 14.384l3.21-3.21c.136-.136.357-.136.494 0l3.21 3.21c.136.136.136.357 0 .494l-.353.353c-.136.136-.357.136-.494 0l-1.967-1.967v6.167c0 .193-.157.35-.35.35h-.5c-.193 0-.35-.157-.35-.35v-6.167l-1.967 1.967c-.136.136-.357.136-.494 0l-.353-.353c-.136-.137-.136-.358-.001-.494z"/></svg>
-                <h3>Linux</h3>
-                <p>.AppImage / .deb</p>
-                <span class="download-link">
-                    Download
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                </span>
-            </a>
+            <div class="platforms">
+                <button class="platform-pill" data-os="windows">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                    Windows
+                </button>
+                <button class="platform-pill" data-os="mac">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    macOS
+                </button>
+                <button class="platform-pill" data-os="linux">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.311.002-.465.006C7.44.123 3.87 3.124 3.002 7.202 1.27 7.7 0 9.281 0 11.156c0 2.273 1.734 4.127 3.882 4.322v.002h4.145c.19 0 .345-.154.345-.345v-.69c0-.19-.155-.345-.345-.345H3.882c-1.357 0-2.573-.93-2.89-2.252a3.007 3.007 0 012.108-3.476l.464-.155.097-.484c.598-2.97 3.06-5.346 6.165-5.703a6.74 6.74 0 011.64-.048c3.562.33 6.352 3.252 6.55 6.83l.044.803.803.044c1.523.084 2.756 1.248 2.94 2.756a2.975 2.975 0 01-2.076 3.193c-.11.037-.223.06-.337.073l-.257.017h-3.754c-.19 0-.345.154-.345.345v.69c0 .19.155.345.345.345h3.754a3.652 3.652 0 003.62-3.317c.186-1.992-1.138-3.784-3.07-4.235C19.187 3.236 15.465.032 12.504 0zM8.63 14.384l3.21-3.21c.136-.136.357-.136.494 0l3.21 3.21c.136.136.136.357 0 .494l-.353.353c-.136.136-.357.136-.494 0l-1.967-1.967v6.167c0 .193-.157.35-.35.35h-.5c-.193 0-.35-.157-.35-.35v-6.167l-1.967 1.967c-.136.136-.357.136-.494 0l-.353-.353c-.136-.137-.136-.358-.001-.494z"/></svg>
+                    Linux
+                </button>
+            </div>
         </div>
     </div>
 </section>
@@ -244,10 +237,8 @@
                 <a href="https://github.com/vaxtly/vaxtly" target="_blank" rel="noopener">GitHub</a>
             </div>
         </div>
-        <p class="footer-stack">Built with Laravel, Livewire, Tailwind CSS, NativePHP, CodeMirror &amp; Pest</p>
     </div>
 </footer>
-
 <!-- Download Modal -->
 <div class="modal-overlay" id="dl-modal" role="dialog" aria-modal="true" aria-label="Download Vaxtly">
     <div class="modal">
@@ -418,9 +409,6 @@
                 else if (name.endsWith('.dmg') && name.includes('x64')) assets.dmgX64 = a.browser_download_url;
             });
 
-            // Update download section cards
-            if (assets.exe) document.getElementById('dl-win').href = assets.exe;
-
             // Update modal links
             if (assets.appimage) document.getElementById('dl-modal-appimage').href = assets.appimage;
             if (assets.deb) document.getElementById('dl-modal-deb').href = assets.deb;
@@ -457,12 +445,15 @@
         return 'linux';
     };
 
-    // OS-aware hero button text (#2)
+    // OS-aware button text (#2)
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     if (!isMobile) {
         const osNames = { mac: 'macOS', windows: 'Windows', linux: 'Linux' };
+        const osLabel = osNames[detectOS()] || 'Desktop';
         const heroText = document.getElementById('dl-hero-text');
-        if (heroText) heroText.textContent = 'Download for ' + (osNames[detectOS()] || 'Desktop');
+        if (heroText) heroText.textContent = 'Download for ' + osLabel;
+        const sectionText = document.getElementById('dl-section-text');
+        if (sectionText) sectionText.textContent = 'Download for ' + osLabel;
     }
 
     const switchTab = (os) => {
@@ -547,16 +538,14 @@
         openModal();
     });
 
-    // Download section cards open modal with the right OS + click feedback (#14)
-    document.querySelectorAll('.download-card').forEach(card => {
-        card.addEventListener('click', (e) => {
+    // Download section button opens modal
+    const dlSectionBtn = document.getElementById('dl-section-btn');
+    if (dlSectionBtn) {
+        dlSectionBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const os = card.id === 'dl-win' ? 'windows' : card.id === 'dl-mac' ? 'mac' : 'linux';
-            card.classList.add('active');
-            setTimeout(() => card.classList.remove('active'), 300);
-            openModal(os);
+            openModal();
         });
-    });
+    }
 
     // Platform pills open modal (#9)
     document.querySelectorAll('.platform-pill[data-os]').forEach(pill => {
