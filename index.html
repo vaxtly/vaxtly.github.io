@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" version="1.0">
+<html lang="en" version="1.1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
             "url": "https://github.com/vaxtly"
         },
         "license": "https://github.com/vaxtly/vaxtly/blob/main/LICENSE",
-        "softwareVersion": "0.2.8",
+        "softwareVersion": "latest",
         "screenshot": "https://vaxtly.app/images/screenshot.png"
     }
     </script>
@@ -66,6 +66,7 @@
                 <a href="https://github.com/vaxtly/vaxtly" class="nav-gh" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
                     GitHub
+                    <span id="gh-stars"></span>
                 </a>
             </li>
         </ul>
@@ -76,10 +77,10 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="hero-badge animate-in">
+            <a href="https://github.com/vaxtly/vaxtly/releases/latest" class="hero-badge animate-in" target="_blank" rel="noopener">
                 <span class="hero-badge-dot"></span>
-                v0.2.8 — Beta
-            </div>
+                <span id="hero-version">Beta</span>
+            </a>
 
             <h1 class="animate-in delay-1">
                 Your APIs,<br><span class="gradient">your machine.</span>
@@ -92,7 +93,8 @@
             <div class="hero-actions animate-in delay-3">
                 <a id="dl-hero" href="https://github.com/vaxtly/vaxtly/releases/latest" class="btn btn-primary">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-                    Download
+                    <span id="dl-hero-text">Download</span>
+                    <svg class="dl-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                 </a>
                 <a href="https://github.com/vaxtly/vaxtly" class="btn btn-secondary" target="_blank" rel="noopener">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
@@ -101,23 +103,18 @@
             </div>
 
             <div class="platforms animate-in delay-4">
-                <span class="platform-pill">
+                <button class="platform-pill" data-os="windows">
                     <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
                     Windows
-                </span>
-                <span class="platform-pill">
+                </button>
+                <button class="platform-pill" data-os="mac">
                     <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                     macOS
-                </span>
-                <span class="platform-pill">
+                </button>
+                <button class="platform-pill" data-os="linux">
                     <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.311.002-.465.006C7.44.123 3.87 3.124 3.002 7.202 1.27 7.7 0 9.281 0 11.156c0 2.273 1.734 4.127 3.882 4.322v.002h4.145c.19 0 .345-.154.345-.345v-.69c0-.19-.155-.345-.345-.345H3.882c-1.357 0-2.573-.93-2.89-2.252a3.007 3.007 0 012.108-3.476l.464-.155.097-.484c.598-2.97 3.06-5.346 6.165-5.703a6.74 6.74 0 011.64-.048c3.562.33 6.352 3.252 6.55 6.83l.044.803.803.044c1.523.084 2.756 1.248 2.94 2.756a2.975 2.975 0 01-2.076 3.193c-.11.037-.223.06-.337.073l-.257.017h-3.754c-.19 0-.345.154-.345.345v.69c0 .19.155.345.345.345h3.754a3.652 3.652 0 003.62-3.317c.186-1.992-1.138-3.784-3.07-4.235C19.187 3.236 15.465.032 12.504 0zM8.63 14.384l3.21-3.21c.136-.136.357-.136.494 0l3.21 3.21c.136.136.136.357 0 .494l-.353.353c-.136.136-.357.136-.494 0l-1.967-1.967v6.167c0 .193-.157.35-.35.35h-.5c-.193 0-.35-.157-.35-.35v-6.167l-1.967 1.967c-.136.136-.357.136-.494 0l-.353-.353c-.136-.137-.136-.358-.001-.494z"/></svg>
                     Linux
-                </span>
-            </div>
-
-            <!-- App screenshot -->
-            <div class="screenshot-wrap animate-in delay-5">
-                <img src="images/screenshot.png" alt="Vaxtly — Desktop API Client">
+                </button>
             </div>
         </div>
     </div>
@@ -135,7 +132,7 @@
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon fi-emerald">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.63 8.41m5.96 5.96a14.93 14.93 0 01-5.96 2.58m0 0a14.93 14.93 0 01-8.38-2.58M9.63 8.41a6 6 0 017.38-5.84"/></svg>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
                 </div>
                 <h3>Request Builder</h3>
                 <p>Full control over method, URL, headers, query params, body, and auth. Syntax-highlighted JSON editor included.</p>
@@ -151,7 +148,7 @@
 
             <div class="feature-card">
                 <div class="feature-icon fi-amber">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0012 3c2.59 0 5.08.41 7.255 1.168a.75.75 0 01.497.71v3.498c0 4.33-2.07 8.2-5.282 10.663a.75.75 0 01-.94 0C10.32 16.576 8.25 12.706 8.25 8.376V4.878a.75.75 0 01.497-.71z"/></svg>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
                 </div>
                 <h3>Environment Variables</h3>
                 <p>Define variables per environment — dev, staging, production — and reference them with <code class="mono code-amber">{{base_url}}</code> syntax.</p>
@@ -159,7 +156,7 @@
 
             <div class="feature-card">
                 <div class="feature-icon fi-accent">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m0-3l-3-3m0 0l-3 3m3-3v11.25m6-2.25h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-7.5a2.25 2.25 0 012.25-2.25H12"/></svg>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg>
                 </div>
                 <h3>Git Sync</h3>
                 <p>Push and pull collections to GitHub or GitLab. Share API definitions with your team through version control.</p>
@@ -180,6 +177,15 @@
                 <h3>Desktop Native</h3>
                 <p>Runs as a native desktop app via NativePHP. No browser tab needed — your data stays on your machine.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshot -->
+<section class="screenshot-section">
+    <div class="container">
+        <div class="screenshot-wrap">
+            <img src="images/screenshot.png" alt="Vaxtly — Desktop API Client" width="2560" height="1440">
         </div>
     </div>
 </section>
@@ -227,45 +233,22 @@
     </div>
 </section>
 
-<!-- Stack -->
-<section class="stack-section">
-    <div class="container text-center">
-        <h2 class="sr-only">Tech Stack</h2>
-        <div class="section-label">Built With</div>
-        <div class="stack-grid">
-            <div class="stack-item">
-                <span class="stack-dot dot-red"></span>
-                Laravel 12
-            </div>
-            <div class="stack-item">
-                <span class="stack-dot dot-accent"></span>
-                Livewire 4
-            </div>
-            <div class="stack-item">
-                <span class="stack-dot dot-blue"></span>
-                Tailwind CSS v4
-            </div>
-            <div class="stack-item">
-                <span class="stack-dot dot-emerald"></span>
-                NativePHP
-            </div>
-            <div class="stack-item">
-                <span class="stack-dot dot-amber"></span>
-                CodeMirror 6
-            </div>
-            <div class="stack-item">
-                <span class="stack-dot dot-orange"></span>
-                Pest 4
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p>&copy; <span id="year"></span> Vaxtly &middot; <a href="https://github.com/vaxtly/vaxtly/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></p>
-        <p><a href="https://github.com/vaxtly/vaxtly" target="_blank" rel="noopener">GitHub</a></p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>&copy; <span id="year"></span> Vaxtly &middot; <a href="https://github.com/vaxtly/vaxtly/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></p>
+            </div>
+            <div class="footer-col footer-col-center">
+                <a href="https://github.com/vaxtly/vaxtly/releases" target="_blank" rel="noopener">Releases</a>
+                <a href="https://github.com/vaxtly/vaxtly/issues" target="_blank" rel="noopener">Issues / Support</a>
+            </div>
+            <div class="footer-col footer-col-end">
+                <a href="https://github.com/vaxtly/vaxtly" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+        <p class="footer-stack">Built with Laravel, Livewire, Tailwind CSS, NativePHP, CodeMirror &amp; Pest</p>
     </div>
 </footer>
 
@@ -303,58 +286,33 @@
                 <span>Download not started? <a id="win-dl-fallback" href="https://github.com/vaxtly/vaxtly/releases/latest" class="win-fallback-link">Click here to download</a>.</span>
             </div>
 
-            <div class="win-instructions">
-                <h4>Windows may show a security warning — here's how to proceed:</h4>
+            <details class="win-smartscreen">
+                <summary>
+                    <svg class="ss-shield-sm" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                    Windows may show a SmartScreen warning — this is normal
+                </summary>
+                <div class="win-smartscreen-body">
+                    <ol class="win-steps-compact">
+                        <li>SmartScreen will show a <strong>"Windows protected your PC"</strong> dialog — click <strong>"More info"</strong>.</li>
+                        <li>Then click <strong>"Run anyway"</strong> to proceed with the installation.</li>
+                    </ol>
 
-                <div class="win-steps">
-                    <div class="win-step">
-                        <span class="win-step-num">1</span>
-                        <div class="win-step-text">
-                            Windows SmartScreen will show a <strong>"Windows protected your PC"</strong> dialog. This is normal for unsigned apps.
-
-                            <div class="smartscreen-mock">
-                                <div class="ss-header">
-                                    <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-                                    <div>
-                                        <div class="ss-title">Windows protected your PC</div>
-                                        <div class="ss-desc">Microsoft Defender SmartScreen prevented an unrecognized app from starting.</div>
-                                    </div>
-                                </div>
-                                <span class="ss-link">More info</span> <span class="ss-hint">&larr; click this</span>
+                    <div class="smartscreen-mock">
+                        <div class="ss-header">
+                            <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                            <div>
+                                <div class="ss-title">Windows protected your PC</div>
+                                <div class="ss-desc ss-desc-extra">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
+                                <div class="ss-desc">App: Vaxtly-Setup.exe<br>Publisher: <strong class="ss-publisher">Unknown publisher</strong></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="win-step">
-                        <span class="win-step-num">2</span>
-                        <div class="win-step-text">
-                            Click <strong>"More info"</strong> to reveal the extra option.
-                        </div>
-                    </div>
-
-                    <div class="win-step">
-                        <span class="win-step-num">3</span>
-                        <div class="win-step-text">
-                            Click <strong>"Run anyway"</strong> to proceed with the installation.
-
-                            <div class="smartscreen-mock">
-                                <div class="ss-header">
-                                    <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-                                    <div>
-                                        <div class="ss-title">Windows protected your PC</div>
-                                        <div class="ss-desc ss-desc-extra">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
-                                        <div class="ss-desc">App: Vaxtly-Setup.exe<br>Publisher: <strong class="ss-publisher">Unknown publisher</strong></div>
-                                    </div>
-                                </div>
-                                <div class="ss-actions">
-                                    <span class="ss-btn">Don't run</span>
-                                    <span class="ss-btn highlight">Run anyway</span>
-                                </div>
-                            </div>
+                        <div class="ss-actions">
+                            <span class="ss-btn">Don't run</span>
+                            <span class="ss-btn highlight">Run anyway</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </details>
         </div>
 
         <!-- macOS tab -->
@@ -431,11 +389,29 @@
     const FALLBACK = 'https://github.com/' + REPO + '/releases/latest';
     const assets = {};
 
-    // Fetch release assets
+    // Fetch release assets + version
     fetch('https://api.github.com/repos/' + REPO + '/releases/latest')
         .then(r => r.json())
         .then(release => {
-            if (!release || !release.assets) return;
+            if (!release) return;
+
+            // Update version badge
+            if (release.tag_name) {
+                const ver = release.tag_name.replace(/^v/, '');
+                const badge = document.getElementById('hero-version');
+                if (badge) badge.textContent = 'v' + ver + ' \u2014 Beta';
+                // Update structured data
+                const ldJson = document.querySelector('script[type="application/ld+json"]');
+                if (ldJson) {
+                    try {
+                        const data = JSON.parse(ldJson.textContent);
+                        data.softwareVersion = ver;
+                        ldJson.textContent = JSON.stringify(data);
+                    } catch (e) {}
+                }
+            }
+
+            if (!release.assets) return;
 
             release.assets.forEach(a => {
                 const name = a.name.toLowerCase();
@@ -459,6 +435,18 @@
             console.warn('Failed to fetch release assets:', err);
         });
 
+    // Fetch GitHub stars
+    fetch('https://api.github.com/repos/' + REPO)
+        .then(r => r.json())
+        .then(data => {
+            if (!data || !data.stargazers_count) return;
+            const count = data.stargazers_count;
+            const formatted = count >= 1000 ? (count / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(count);
+            const el = document.getElementById('gh-stars');
+            if (el) el.textContent = '\u2605 ' + formatted;
+        })
+        .catch(() => {});
+
     // Modal logic
     const modal = document.getElementById('dl-modal');
     const closeBtn = document.getElementById('modal-close');
@@ -472,6 +460,14 @@
         if (ua.includes('win')) return 'windows';
         return 'linux';
     };
+
+    // OS-aware hero button text (#2)
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!isMobile) {
+        const osNames = { mac: 'macOS', windows: 'Windows', linux: 'Linux' };
+        const heroText = document.getElementById('dl-hero-text');
+        if (heroText) heroText.textContent = 'Download for ' + (osNames[detectOS()] || 'Desktop');
+    }
 
     const switchTab = (os) => {
         tabs.forEach(t => { t.classList.toggle('active', t.getAttribute('data-os') === os); });
@@ -501,10 +497,18 @@
         }
     };
 
+    let scrollY = 0;
+
     const openModal = (os) => {
         previouslyFocusedElement = document.activeElement;
         switchTab(os || detectOS());
         modal.classList.add('active');
+        // Lock body scroll (mobile-safe)
+        scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
         document.body.style.overflow = 'hidden';
         closeBtn.focus();
         modal.addEventListener('keydown', trapFocus);
@@ -512,7 +516,13 @@
 
     const closeModal = () => {
         modal.classList.remove('active');
+        // Unlock body scroll
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
         document.body.style.overflow = '';
+        window.scrollTo(0, scrollY);
         modal.removeEventListener('keydown', trapFocus);
         if (previouslyFocusedElement) {
             previouslyFocusedElement.focus();
@@ -541,18 +551,22 @@
         openModal();
     });
 
-    // Download section cards open modal with the right OS
-    document.getElementById('dl-win').addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal('windows');
+    // Download section cards open modal with the right OS + click feedback (#14)
+    document.querySelectorAll('.download-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const os = card.id === 'dl-win' ? 'windows' : card.id === 'dl-mac' ? 'mac' : 'linux';
+            card.classList.add('active');
+            setTimeout(() => card.classList.remove('active'), 300);
+            openModal(os);
+        });
     });
-    document.getElementById('dl-mac').addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal('mac');
-    });
-    document.getElementById('dl-linux').addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal('linux');
+
+    // Platform pills open modal (#9)
+    document.querySelectorAll('.platform-pill[data-os]').forEach(pill => {
+        pill.addEventListener('click', () => {
+            openModal(pill.getAttribute('data-os'));
+        });
     });
 
     // Copy brew command
@@ -569,18 +583,20 @@
     // Dynamic footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
+    // Mobile nav toggle with hamburger/X animation (#12)
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
 
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-open');
+        const isOpen = navLinks.classList.toggle('nav-open');
+        navToggle.classList.toggle('active', isOpen);
     });
 
     // Close nav on link click
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('nav-open');
+            navToggle.classList.remove('active');
         });
     });
 
@@ -588,6 +604,7 @@
     document.addEventListener('click', (e) => {
         if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('nav-open');
+            navToggle.classList.remove('active');
         }
     });
 })();

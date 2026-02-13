@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Vaxtly</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #b0b0b0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+        }
+        .wrap { padding: 24px; }
+        h1 {
+            font-size: clamp(72px, 15vw, 120px);
+            font-weight: 700;
+            color: #f0f0f0;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 18px;
+            color: #808080;
+            margin-bottom: 32px;
+        }
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #0a0a0a;
+            background: #f0f0f0;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        a:hover {
+            background: #fff;
+            box-shadow: 0 0 24px rgba(255, 255, 255, 0.15);
+        }
+        a svg { width: 16px; height: 16px; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>404</h1>
+        <p>Page not found</p>
+        <a href="/">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+            Back to Vaxtly
+        </a>
+    </div>
+</body>
+</html>
