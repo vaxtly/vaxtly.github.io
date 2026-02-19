@@ -87,7 +87,7 @@
         <div class="hero-content">
             <a href="https://github.com/vaxtly/app/releases/latest" class="hero-badge animate-in" target="_blank" rel="noopener">
                 <span class="hero-badge-dot"></span>
-                <span id="hero-version">Early Access</span>
+                <span id="hero-version">Latest Release</span>
                 <svg class="hero-badge-arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
             </a>
 
@@ -127,10 +127,6 @@
                 </button>
             </div>
 
-            <!-- App screenshot -->
-            <div class="screenshot-wrap animate-in delay-5">
-                <img src="images/screenshot.png" alt="Vaxtly — Desktop API Client" width="2560" height="1440">
-            </div>
         </div>
     </div>
 </section>
@@ -394,7 +390,7 @@
             if (release.tag_name) {
                 const ver = release.tag_name.replace(/^v/, '');
                 const badge = document.getElementById('hero-version');
-                if (badge) badge.textContent = 'v' + ver + ' \u2014 Early Access';
+                if (badge) badge.textContent = 'v' + ver;
                 // Update structured data
                 const ldJson = document.querySelector('script[type="application/ld+json"]');
                 if (ldJson) {
