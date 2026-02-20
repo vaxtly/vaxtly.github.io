@@ -719,7 +719,7 @@ footer a:hover { color: var(--gray-300); }
     background: var(--gray-900);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    max-width: 520px;
+    max-width: 670px;
     width: 100%;
     position: relative;
     animation: modal-slide 0.25s ease-out;
