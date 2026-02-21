@@ -70,9 +70,9 @@
     <!-- Nav -->
     <nav>
         <div class="container">
-            <a href="#" class="nav-logo"><img src="images/name.png" alt="Vaxtly"></a>
+            <a href="#" class="nav-logo"><img src="images/name.png" alt="Vaxtly" width="81" height="28"></a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -82,7 +82,7 @@
                 <li><a href="#download-install">Download</a></li>
                 <li>
                     <a href="https://github.com/vaxtly/app" class="nav-gh" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
                             <path
                                 d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
                         </svg>
@@ -108,22 +108,23 @@
 
                 <div class="hero-install animate-in delay-3" id="download-install">
                     <div class="hero-os-tabs">
+                        <div class="os-tab-indicator"></div>
                         <button class="os-tab" data-os="windows">
-                            <svg fill="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
                             </svg>
                             Windows
                         </button>
                         <button class="os-tab" data-os="mac">
-                            <svg fill="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                             </svg>
                             macOS
                         </button>
                         <button class="os-tab" data-os="linux">
-                            <svg fill="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12.642 8.084c-.364.189-.79.42-1.242.42s-.81-.209-1.066-.413c-.13-.101-.234-.202-.313-.276-.137-.108-.12-.259-.064-.254.094.012.108.136.168.191.08.075.18.172.302.269.243.192.567.38.973.38s.878-.238 1.167-.4c.163-.092.371-.256.541-.381.13-.095.125-.21.232-.198.107.013.028.127-.122.258a3.404 3.404 0 0 1-.576.404z" />
                                 <path
@@ -134,7 +135,8 @@
                             Linux
                         </button>
                         <a href="https://github.com/vaxtly/app" class="source-link" target="_blank" rel="noopener">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                             </svg>
@@ -150,8 +152,8 @@
                                 <pre class="cmd-pre">scoop bucket add vaxtly https://github.com/vaxtly/scoop-bucket
 scoop install vaxtly</pre>
                                 <button id="copy-scoop" class="copy-btn" title="Copy to clipboard">
-                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24">
+                                    <svg aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
                                     </svg>
@@ -166,7 +168,8 @@ scoop install vaxtly</pre>
 
                         <div class="install-secondary">
                             <a id="win-dl-fallback" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
@@ -196,8 +199,8 @@ scoop install vaxtly</pre>
                             <div class="cmd-wrap">
                                 <pre class="cmd-pre">brew install vaxtly/tap/vaxtly</pre>
                                 <button id="copy-brew" class="copy-btn" title="Copy to clipboard">
-                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24">
+                                    <svg aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
                                     </svg>
@@ -212,7 +215,8 @@ scoop install vaxtly</pre>
 
                         <div class="install-secondary">
                             <a id="dl-mac-dmg" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
@@ -229,8 +233,8 @@ scoop install vaxtly</pre>
                             <div class="cmd-wrap">
                                 <pre class="cmd-pre">snap install vaxtly</pre>
                                 <button id="copy-snap" class="copy-btn" title="Copy to clipboard">
-                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24">
+                                    <svg aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
                                     </svg>
@@ -245,7 +249,8 @@ scoop install vaxtly</pre>
                         <div class="install-secondary">
                             <div class="dl-btn-row">
                                 <a id="dl-appimage" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
-                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                     </svg>
@@ -253,7 +258,8 @@ scoop install vaxtly</pre>
                                     <span class="dl-btn-sub">Universal Linux</span>
                                 </a>
                                 <a id="dl-deb" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
-                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                     </svg>
@@ -273,7 +279,7 @@ scoop install vaxtly</pre>
     <section class="screenshot-section">
         <div class="screenshot-container">
             <div class="screenshot-wrap animate-in delay-4">
-                <video src="images/showcase.webm" autoplay loop muted playsinline
+                <video src="images/showcase.webm" poster="images/screenshot.png" autoplay loop muted playsinline
                     aria-label="Vaxtly — Desktop API Client"></video>
             </div>
             <div class="screenshot-fade"></div>
@@ -463,7 +469,7 @@ scoop install vaxtly</pre>
                 <!-- Compact row -->
                 <div class="feature-card feature-compact">
                     <div class="feature-icon fi-emerald">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                         </svg>
@@ -477,7 +483,7 @@ scoop install vaxtly</pre>
 
                 <div class="feature-card feature-compact">
                     <div class="feature-icon fi-blue">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
                         </svg>
@@ -491,7 +497,7 @@ scoop install vaxtly</pre>
 
                 <div class="feature-card feature-compact">
                     <div class="feature-icon fi-orange">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
                         </svg>
@@ -515,18 +521,18 @@ scoop install vaxtly</pre>
                 yourself, or just download it.</p>
             <div class="closing-actions">
                 <a href="#download-install" class="btn btn-primary btn-lg">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                     </svg>
-                    Download Vaxtly
+                    <span>Download Vaxtly</span>
                 </a>
-                <a href="https://github.com/vaxtly/app" class="btn btn-secondary" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://github.com/vaxtly/app" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
                     </svg>
-                    View on GitHub
+                    <span>View on GitHub</span>
                     <span id="gh-stars-closing"></span>
                 </a>
             </div>
@@ -553,174 +559,7 @@ scoop install vaxtly</pre>
         </div>
     </footer>
 
-    <script>
-        (() => {
-            const REPO = 'vaxtly/app';
-            const FALLBACK = 'https://github.com/' + REPO + '/releases/latest';
-            const assets = {};
-
-            // Fetch release assets + version
-            fetch('https://api.github.com/repos/' + REPO + '/releases/latest')
-                .then(r => r.json())
-                .then(release => {
-                    if (!release) return;
-
-                    // Update version badge
-                    if (release.tag_name) {
-                        const ver = release.tag_name.replace(/^v/, '');
-                        const badge = document.getElementById('hero-version');
-                        if (badge) badge.textContent = 'v' + ver;
-                        // Update structured data
-                        const ldJson = document.querySelector('script[type="application/ld+json"]');
-                        if (ldJson) {
-                            try {
-                                const data = JSON.parse(ldJson.textContent);
-                                data.softwareVersion = ver;
-                                ldJson.textContent = JSON.stringify(data);
-                            } catch (e) { }
-                        }
-                    }
-
-                    if (!release.assets) return;
-
-                    release.assets.forEach(a => {
-                        const name = a.name.toLowerCase();
-                        if (name.endsWith('.exe') && name.includes('setup')) assets.exe = a.browser_download_url;
-                        else if (name.endsWith('.appimage')) assets.appimage = a.browser_download_url;
-                        else if (name.endsWith('.deb')) assets.deb = a.browser_download_url;
-                        else if (name.endsWith('.dmg') && name.includes('arm64')) assets.dmgArm64 = a.browser_download_url;
-                        else if (name.endsWith('.dmg') && name.includes('x64')) assets.dmgX64 = a.browser_download_url;
-                    });
-
-                    // Update download links
-                    if (assets.appimage) document.getElementById('dl-appimage').href = assets.appimage;
-                    if (assets.deb) document.getElementById('dl-deb').href = assets.deb;
-                    if (assets.exe) document.getElementById('win-dl-fallback').href = assets.exe;
-                    if (assets.dmgArm64) document.getElementById('dl-mac-dmg').href = assets.dmgArm64;
-                })
-                .catch(err => {
-                    console.warn('Failed to fetch release assets:', err);
-                });
-
-            // Fetch GitHub stars
-            fetch('https://api.github.com/repos/' + REPO)
-                .then(r => r.json())
-                .then(data => {
-                    if (!data || !data.stargazers_count) return;
-                    const count = data.stargazers_count;
-                    const formatted = count >= 1000 ? (count / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(count);
-                    const el = document.getElementById('gh-stars');
-                    if (el) el.textContent = '\u2605 ' + formatted;
-                    const el2 = document.getElementById('gh-stars-closing');
-                    if (el2) el2.textContent = '\u2605 ' + formatted;
-                })
-                .catch(() => { });
-
-            // Hero install tab switching
-            const heroInstall = document.querySelector('.hero-install');
-            const tabs = heroInstall.querySelectorAll('.os-tab');
-            const tabContents = heroInstall.querySelectorAll('.hero-tab-content');
-
-            const detectOS = () => {
-                const ua = navigator.userAgent.toLowerCase();
-                if (ua.includes('mac')) return 'mac';
-                if (ua.includes('win')) return 'windows';
-                return 'linux';
-            };
-
-            const switchTab = (os) => {
-                tabs.forEach(t => { t.classList.toggle('active', t.getAttribute('data-os') === os); });
-                tabContents.forEach(c => { c.classList.toggle('active', c.getAttribute('data-os') === os); });
-            };
-
-            // Auto-select detected OS
-            switchTab(detectOS());
-
-            // Tab click handling
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    switchTab(tab.getAttribute('data-os'));
-                });
-            });
-
-            // Copy scoop command
-            document.getElementById('copy-scoop').addEventListener('click', function () {
-                const btn = this;
-                navigator.clipboard.writeText('scoop bucket add vaxtly https://github.com/vaxtly/scoop-bucket\nscoop install vaxtly').then(() => {
-                    btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="var(--emerald)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
-                    setTimeout(() => {
-                        btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>';
-                    }, 2000);
-                });
-            });
-
-            // Copy brew command
-            document.getElementById('copy-brew').addEventListener('click', function () {
-                const btn = this;
-                navigator.clipboard.writeText('brew install vaxtly/tap/vaxtly').then(() => {
-                    btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="var(--emerald)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
-                    setTimeout(() => {
-                        btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>';
-                    }, 2000);
-                });
-            });
-
-            // Copy snap command
-            document.getElementById('copy-snap').addEventListener('click', function () {
-                const btn = this;
-                navigator.clipboard.writeText('snap install vaxtly').then(() => {
-                    btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="var(--emerald)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
-                    setTimeout(() => {
-                        btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>';
-                    }, 2000);
-                });
-            });
-
-            // Dynamic footer year
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            // Mobile nav toggle
-            const navToggle = document.getElementById('nav-toggle');
-            const navLinks = document.getElementById('nav-links');
-
-            navToggle.addEventListener('click', () => {
-                const isOpen = navLinks.classList.toggle('nav-open');
-                navToggle.classList.toggle('active', isOpen);
-            });
-
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('nav-open');
-                    navToggle.classList.remove('active');
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                    navLinks.classList.remove('nav-open');
-                    navToggle.classList.remove('active');
-                }
-            });
-
-            // Scroll Reveal Animation Observer
-            const revealElements = document.querySelectorAll('.reveal');
-            if (revealElements.length > 0 && 'IntersectionObserver' in window) {
-                const revealObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
-
-                revealElements.forEach(el => revealObserver.observe(el));
-            } else {
-                revealElements.forEach(el => el.classList.add('active'));
-            }
-
-        })();
-    </script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

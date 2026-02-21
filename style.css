@@ -230,15 +230,29 @@ nav .container {
 }
 
 /* Grid background */
+@keyframes grid-move {
+    0% {
+        background-position-y: 0px;
+    }
+
+    100% {
+        background-position-y: 64px;
+    }
+}
+
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
     mask-image: radial-gradient(ellipse 70% 50% at 30% 30%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 30% 30%, black, transparent);
+    animation: grid-move 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Animated glow — dynamic orb */
@@ -295,10 +309,25 @@ h1 {
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
+@keyframes text-pan {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
 h1 code {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85em;
-    color: var(--accent);
+    color: transparent;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--emerald) 50%, var(--accent) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-pan 4s linear infinite;
     letter-spacing: -0.02em;
 }
 
@@ -572,6 +601,47 @@ h1 code {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12.5px;
     line-height: 1.6;
+    opacity: 0;
+}
+
+@keyframes terminal-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal.active .log-entry {
+    animation: terminal-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal.active .log-entry:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reveal.active .log-entry:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.reveal.active .log-entry:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.reveal.active .log-entry:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.reveal.active .log-entry:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.reveal.active .log-entry:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 .log-time {
@@ -719,6 +789,7 @@ h1 code {
     border: 1px solid transparent;
 }
 
+/* Base border */
 .feature-card::before {
     content: '';
     position: absolute;
@@ -731,6 +802,30 @@ h1 code {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+}
+
+/* Mouse spotlight border effect */
+.feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.2),
+            transparent 40%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
 }
 
 .feature-card:hover {
@@ -875,12 +970,13 @@ h1 code {
 
 
 /* ═══════════════════════════════════════════
-   BUTTONS (unchanged)
+   BUTTONS (Enhanced)
    ═══════════════════════════════════════════ */
 
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 14px 28px;
     border-radius: 10px;
@@ -888,28 +984,81 @@ h1 code {
     font-weight: 600;
     cursor: pointer;
     border: none;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:active {
+    transform: scale(0.98);
 }
 
 .btn svg {
     width: 18px;
     height: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-lg {
+    padding: 18px 40px;
+    font-size: 17px;
+}
+
+@keyframes spin-border {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .btn-primary {
-    background: var(--gray-100);
+    background: var(--glass-bg);
     color: var(--gray-950);
 }
 
-.btn-primary:hover {
-    background: #fff;
-    box-shadow: 0 0 24px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(255, 255, 255, 0.1);
-    transform: scale(1.03);
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--gray-100);
+}
+
+/* Rotating gradient border effect */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background: conic-gradient(from 0deg, var(--emerald), var(--blue), var(--accent), var(--emerald));
+    z-index: -1;
+    animation: spin-border 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-primary:hover::after {
+    opacity: 1;
+}
+
+.btn-primary:hover::before {
+    inset: 2px;
+    border-radius: inherit;
+    background: var(--gray-100);
 }
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: var(--gray-200);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -917,12 +1066,6 @@ h1 code {
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.03);
-}
-
-.btn-lg {
-    padding: 18px 40px;
-    font-size: 17px;
 }
 
 
@@ -937,6 +1080,8 @@ h1 code {
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-tab-content {
@@ -1080,19 +1225,34 @@ h1 code {
     flex-wrap: wrap;
 }
 
+.os-tab-indicator {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    /* Stronger visible pill */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    z-index: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .os-tab {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
     border-radius: 8px;
     border: 1px solid transparent;
-    background: none;
+    /* Keeps sizing consistent */
+    background: transparent;
     color: var(--gray-500);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: color 0.2s;
     font-family: inherit;
 }
 
@@ -1103,13 +1263,10 @@ h1 code {
 
 .os-tab:hover {
     color: var(--gray-300);
-    background: rgba(255, 255, 255, 0.04);
 }
 
 .os-tab.active {
     color: var(--gray-100);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Copy button */
@@ -1305,7 +1462,7 @@ footer a:hover {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    filter: blur(4px);
+    filter: blur(10px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
