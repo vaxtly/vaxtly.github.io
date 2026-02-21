@@ -366,6 +366,20 @@ h1 code {
     z-index: 1;
 }
 
+/* Ambient glow behind the video */
+.screenshot-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(ellipse 60% 50% at 50% 40%,
+            rgba(167, 139, 250, 0.12),
+            rgba(52, 211, 153, 0.06) 40%,
+            transparent 70%);
+    z-index: -1;
+    filter: blur(40px);
+    pointer-events: none;
+}
+
 .screenshot-wrap img,
 .screenshot-wrap video {
     display: block;
@@ -373,11 +387,13 @@ h1 code {
     height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.6),
-        0 32px 100px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 32px 80px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+        0 0 80px rgba(167, 139, 250, 0.06);
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .screenshot-fade {
@@ -385,7 +401,7 @@ h1 code {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 160px;
+    height: 60px;
     background: linear-gradient(to bottom, transparent, var(--gray-950));
     z-index: 2;
     pointer-events: none;
@@ -591,6 +607,7 @@ h1 code {
 
 .log-entries {
     padding: 8px 0;
+    overflow: hidden;
 }
 
 .log-entry {
@@ -602,6 +619,7 @@ h1 code {
     font-size: 12.5px;
     line-height: 1.6;
     opacity: 0;
+    min-width: 0;
 }
 
 @keyframes terminal-slide-in {
@@ -675,6 +693,10 @@ h1 code {
 
 .log-msg {
     color: var(--gray-400);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .log-msg-ok {
@@ -747,6 +769,7 @@ h1 code {
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     line-height: 1.7;
+    min-width: 0;
 }
 
 .env-row:last-child {
@@ -761,6 +784,10 @@ h1 code {
 
 .env-val {
     color: var(--emerald);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* ── Separator between tier 1 and grid ── */
@@ -1534,26 +1561,40 @@ footer a:hover {
         padding: 12px 0;
     }
 
-    /* Hero */
+    /* Hero — hide forced line breaks on mobile */
+    h1 br,
+    .hero-sub br {
+        display: none;
+    }
+
     .hero {
-        padding: 140px 0 60px;
+        padding: 130px 0 48px;
     }
 
     .hero-content {
-        text-align: center;
+        text-align: left;
     }
 
     .hero-sub {
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 16px;
+        margin-bottom: 36px;
     }
-
 
     /* Install widget responsive */
     .hero-os-tabs {
         flex-wrap: wrap;
         gap: 6px;
         padding-bottom: 12px;
+    }
+
+    /* Hide the sliding pill indicator on mobile — use inline active style instead */
+    .os-tab-indicator {
+        display: none;
+    }
+
+    .os-tab.active {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.15);
     }
 
     .hero-tab-content {
@@ -1566,12 +1607,7 @@ footer a:hover {
     }
 
     .source-link {
-        width: 100%;
-        margin-top: 8px;
-        margin-left: 0;
-        justify-content: center;
-        padding: 8px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        display: none;
     }
 
     .win-smartscreen summary {
@@ -1579,7 +1615,7 @@ footer a:hover {
     }
 
     .cmd-pre {
-        font-size: 11px;
+        font-size: 12px;
         padding: 12px 14px;
     }
 
@@ -1587,7 +1623,16 @@ footer a:hover {
         flex-direction: column;
     }
 
+    /* Screenshot */
+    .screenshot-section {
+        padding-bottom: 64px;
+    }
+
     /* Anti-features */
+    .anti-features {
+        padding: 64px 0 80px;
+    }
+
     .anti-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1595,6 +1640,20 @@ footer a:hover {
 
     .anti-label {
         font-size: clamp(22px, 5vw, 28px);
+    }
+
+    /* Features */
+    .features-section {
+        padding: 80px 0;
+    }
+
+    .feature-hero {
+        gap: 32px;
+        padding-bottom: 48px;
+    }
+
+    .feature-hero-border + .feature-hero {
+        padding-top: 48px;
     }
 
     /* Feature grid */
@@ -1606,8 +1665,33 @@ footer a:hover {
         grid-column: auto;
     }
 
+    /* Log entries: prevent overflow */
+    .log-entry {
+        min-width: 0;
+    }
+
+    .log-msg {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+    }
+
+    /* Env switcher: prevent overflow */
+    .env-key {
+        min-width: 80px;
+    }
+
+    .env-val {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+    }
+
     /* Closing */
     .closing-section {
+        padding: 80px 0 80px;
         text-align: center;
     }
 
@@ -1637,8 +1721,7 @@ footer a:hover {
     }
 
     .footer-col-center {
-        flex-direction: column;
-        gap: 8px;
+        gap: 16px;
     }
 
     .footer-col-end {
@@ -1653,7 +1736,15 @@ footer a:hover {
 /* ── 480px ── */
 @media (max-width: 480px) {
     h1 {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 120px 0 40px;
+    }
+
+    .hero-sub {
+        font-size: 15px;
     }
 
     .log-time {
@@ -1661,25 +1752,75 @@ footer a:hover {
     }
 
     .log-action {
-        min-width: 56px;
+        min-width: auto;
     }
 
     .log-entry {
-        font-size: 11.5px;
-        gap: 8px;
-        padding: 5px 14px;
+        font-size: 11px;
+        gap: 6px;
+        padding: 5px 12px;
+    }
+
+    .log-msg {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Env switcher: tighter on small screens */
+    .env-key {
+        min-width: 80px;
+        font-size: 12px;
+    }
+
+    .env-val {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .env-row {
+        gap: 12px;
+    }
+
+    .env-switcher {
+        padding: 16px 14px;
+    }
+
+    .env-tab {
+        padding: 5px 12px;
+        font-size: 12px;
     }
 
     .anti-features {
-        padding: 60px 0 80px;
+        padding: 48px 0 64px;
     }
 
     .anti-lead {
         font-size: 18px;
+        margin-bottom: 40px;
     }
 
     .anti-grid {
-        gap: 32px;
+        gap: 28px;
+    }
+
+    .features-section {
+        padding: 64px 0;
+    }
+
+    .feature-hero {
+        gap: 28px;
+        padding-bottom: 40px;
+    }
+
+    .feature-hero-border + .feature-hero {
+        padding-top: 40px;
+    }
+
+    .feature-compact {
+        padding: 20px 18px;
     }
 
     .feature-compact .feature-icon {
@@ -1692,9 +1833,38 @@ footer a:hover {
         height: 16px;
     }
 
+    .screenshot-section {
+        padding-bottom: 64px;
+    }
+
+    .closing-section {
+        padding: 64px 0 80px;
+    }
+
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .btn-lg {
+        padding: 16px 28px;
+        font-size: 16px;
+    }
+
+    .cmd-pre {
+        font-size: 11px;
+        padding: 12px 12px;
+        padding-right: 40px;
+    }
+
+    .os-tab {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .os-tab svg {
+        width: 14px;
+        height: 14px;
     }
 }
 
