@@ -69,7 +69,7 @@
         </button>
         <ul class="nav-links" id="nav-links" aria-label="Main navigation">
             <li><a href="#features">Features</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><a href="#download-install">Download</a></li>
             <li>
                 <a href="https://github.com/vaxtly/app" class="nav-gh" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -85,52 +85,157 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <a href="https://github.com/vaxtly/app/releases/latest" class="hero-badge animate-in" target="_blank" rel="noopener">
-                <span class="hero-badge-dot"></span>
-                <span id="hero-version">Latest Release</span>
-                <svg class="hero-badge-arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-            </a>
-
-            <h1 class="animate-in delay-1">
-                Your APIs,<br><span class="gradient">your machine.</span>
-            </h1>
+            <h1 class="animate-in delay-1">An API client that stays<br><code>on your machine.</code></h1>
 
             <p class="hero-sub animate-in delay-2">
-                No account. No cloud. No subscription.<br>
-                A desktop API client that keeps your data on your machine.
+                Test, debug, and organize HTTP requests.<br>No limits, no tiers, no catch &mdash; every feature is free.<br>No account required. Ever.
             </p>
 
-            <div class="hero-actions animate-in delay-3">
-                <a id="dl-hero" href="https://github.com/vaxtly/app/releases/latest" class="btn btn-primary">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-                    <span id="dl-hero-text">Download</span>
-                    <svg class="dl-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                </a>
-                <a href="https://github.com/vaxtly/app" class="btn btn-secondary" target="_blank" rel="noopener">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-                    Source Code
-                </a>
-            </div>
+            <div class="hero-install animate-in delay-3" id="download-install">
+                <div class="hero-os-tabs">
+                    <button class="os-tab" data-os="windows">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                        Windows
+                    </button>
+                    <button class="os-tab" data-os="mac">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        macOS
+                    </button>
+                    <button class="os-tab" data-os="linux">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.642 8.084c-.364.189-.79.42-1.242.42s-.81-.209-1.066-.413c-.13-.101-.234-.202-.313-.276-.137-.108-.12-.259-.064-.254.094.012.108.136.168.191.08.075.18.172.302.269.243.192.567.38.973.38s.878-.238 1.167-.4c.163-.092.371-.256.541-.381.13-.095.125-.21.232-.198.107.013.028.127-.122.258a3.404 3.404 0 0 1-.576.404z"/><path d="M19.649 17.77c-.142-.16-.209-.456-.281-.771s-.153-.654-.411-.874l-.002-.001a1.054 1.054 0 0 0-.317-.192c.359-1.065.219-2.126-.145-3.084-.444-1.177-1.222-2.202-1.815-2.903-.664-.838-1.313-1.633-1.301-2.808.021-1.793.197-5.118-2.958-5.122a4.66 4.66 0 0 0-.401.017c-3.526.283-2.59 4.008-2.643 5.255-.064.912-.249 1.631-.877 2.523-.736.876-1.774 2.295-2.266 3.771-.232.697-.342 1.407-.241 2.08a1.9 1.9 0 0 0-.091.089c-.216.231-.376.511-.555.699-.166.167-.403.229-.664.323s-.547.231-.721.565l-.001.002a1 1 0 0 0-.108.484c0 .154.023.311.046.461.048.313.097.609.032.81-.206.564-.232.954-.087 1.237.146.284.444.409.783.479.676.141 1.592.106 2.314.489l.062-.117-.061.118c.773.404 1.557.547 2.182.405.454-.104.821-.374 1.011-.789.489-.002 1.025-.209 1.885-.256.583-.047 1.312.207 2.149.16a1.119 1.119 0 0 0 .099.264c.324.649.928.946 1.571.896s1.329-.43 1.883-1.089l-.102-.085.102.084c.527-.64 1.403-.905 1.984-1.255.29-.175.525-.395.544-.713.018-.318-.169-.675-.599-1.152zm-7.79-11.708c-.003-.234.036-.435.126-.639s.201-.351.358-.47.312-.174.494-.176h.009c.179 0 .332.053.489.167.159.116.274.261.366.463a1.493 1.493 0 0 1 .141.636c.002.235-.038.435-.127.639a1.23 1.23 0 0 1-.18.299l-.074-.033c-.089-.038-.167-.069-.237-.096s-.124-.044-.181-.064c.041-.049.122-.108.151-.181a.943.943 0 0 0 .072-.347l.002-.016a.953.953 0 0 0-.05-.337c-.038-.113-.086-.195-.155-.263s-.139-.099-.223-.101h-.011a.324.324 0 0 0-.217.086.618.618 0 0 0-.174.25.944.944 0 0 0-.072.348l-.001.015a.992.992 0 0 0 .014.2 2.463 2.463 0 0 0-.507-.171 1.681 1.681 0 0 1-.014-.19v-.019zm-2.144.052c-.012-.202.009-.376.064-.556s.13-.311.238-.418a.516.516 0 0 1 .349-.168h.03c.118 0 .225.04.335.127a.968.968 0 0 1 .284.389c.076.171.116.343.127.545v.002a1.51 1.51 0 0 1-.002.243c-.023.006-.046.014-.068.021-.128.044-.23.093-.328.158a.845.845 0 0 0 .003-.214v-.012a.95.95 0 0 0-.068-.274.523.523 0 0 0-.138-.203c-.052-.044-.1-.065-.153-.064l-.017.001c-.061.005-.11.034-.157.092a.536.536 0 0 0-.101.223.912.912 0 0 0-.019.293l.001.012c.01.103.031.189.067.275a.528.528 0 0 0 .166.224c-.059.045-.098.078-.146.113l-.11.081a.995.995 0 0 1-.229-.342 1.528 1.528 0 0 1-.128-.546v-.002zm.155 1.228c.187-.14.315-.234.402-.298.086-.063.121-.086.148-.112h.001c.14-.132.362-.374.699-.49.115-.04.245-.065.39-.066.275-.001.608.089 1.01.348.247.16.439.174.882.363h.001c.213.087.338.202.399.321.061.12.063.25.012.387-.103.273-.429.562-.887.705h-.001c-.224.072-.418.233-.647.364a1.449 1.449 0 0 1-.842.217 1.105 1.105 0 0 1-.374-.083 1.202 1.202 0 0 1-.27-.167c-.161-.131-.303-.295-.51-.416h-.002c-.333-.19-.515-.408-.573-.598-.057-.189-.003-.351.162-.475zm.131 13.018v.001c-.047.623-.398.961-.938 1.085-.539.123-1.27 0-1.999-.381h-.001c-.808-.427-1.768-.385-2.384-.514-.308-.064-.509-.161-.602-.341-.092-.18-.094-.494.102-1.028l.001-.002.001-.002c.097-.299.025-.626-.021-.934-.047-.307-.07-.586.034-.781l.001-.002c.135-.259.332-.352.576-.439.245-.088.534-.157.764-.386l.001-.001.001-.001c.212-.223.371-.503.557-.702.157-.167.314-.279.551-.28h.009c.041 0 .085.003.132.011.314.047.588.268.853.625l.762 1.389h.001c.202.423.631.89.994 1.365.362.475.644.952.607 1.317l-.002.001zm-.063-1.01a6.721 6.721 0 0 0-.333-.469 13.467 13.467 0 0 0-.229-.293c.151 0 .28-.024.384-.072a.486.486 0 0 0 .266-.274c.09-.242 0-.583-.288-.973-.29-.39-.778-.83-1.494-1.269-.527-.328-.821-.729-.959-1.165s-.119-.907-.013-1.373c.204-.894.729-1.762 1.063-2.308.09-.066.032.123-.339.811-.332.629-.953 2.081-.103 3.214a6.722 6.722 0 0 1 .538-2.398c.472-1.067 1.456-2.919 1.534-4.395.041.029.18.123.241.158.182.106.316.262.492.403.177.142.396.264.729.283l.093.003c.343 0 .61-.112.833-.239.242-.138.436-.292.618-.351h.001c.387-.122.694-.335.869-.585.302 1.186 1.001 2.897 1.45 3.733.239.443.715 1.385.92 2.52.13-.004.273.015.427.054.537-1.393-.455-2.892-.909-3.31-.184-.178-.192-.258-.102-.254.492.436 1.139 1.311 1.374 2.3.107.451.13.925.016 1.393.056.023.113.048.171.076.862.42 1.181.785 1.027 1.283-.05-.002-.1-.001-.148 0h-.014c.125-.395-.151-.687-.889-1.02-.764-.336-1.373-.303-1.476.379a1.302 1.302 0 0 0-.017.109c-.057.02-.114.045-.172.076-.358.197-.555.553-.664.99-.108.437-.14.964-.17 1.558-.019.298-.141.702-.266 1.129-1.249.897-2.986 1.283-4.461.276zm9.628.057c-.524.317-1.456.593-2.05 1.313-.517.615-1.146.952-1.7.996-.555.044-1.033-.186-1.315-.752v-.001l-.001-.003c-.175-.333-.102-.858.045-1.412.147-.554.359-1.123.388-1.585v-.001c.03-.592.063-1.11.163-1.509.1-.399.256-.669.533-.821l.039-.02c.031.513.285 1.036.734 1.149.491.129 1.199-.292 1.498-.636.06-.002.118-.006.175-.007.262-.006.481.009.707.205v.001h.001c.173.146.255.423.326.733.071.31.128.647.342.888h.001c.41.456.542.764.531.96-.011.198-.153.344-.417.502z"/><path d="M11.738 6.762c.015.048.093.04.138.063.04.02.071.065.116.066.042.001.107-.015.113-.057.008-.056-.073-.091-.126-.111-.067-.026-.153-.039-.216-.004-.014.008-.03.027-.025.043zm-.46 0c-.016.048-.094.04-.139.063-.039.02-.071.065-.115.066-.042.001-.108-.015-.114-.057-.007-.056.074-.091.126-.111.067-.026.153-.039.217-.004.015.008.03.027.025.043z"/></svg>
+                        Linux
+                    </button>
+                    <a href="https://github.com/vaxtly/app" class="source-link" target="_blank" rel="noopener">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+                        Source Code
+                    </a>
+                </div>
 
-            <div class="platforms animate-in delay-4">
-                <button class="platform-pill" data-os="windows">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                    Windows
-                </button>
-                <button class="platform-pill" data-os="mac">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    macOS
-                </button>
-                <button class="platform-pill" data-os="linux">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.642 8.084c-.364.189-.79.42-1.242.42s-.81-.209-1.066-.413c-.13-.101-.234-.202-.313-.276-.137-.108-.12-.259-.064-.254.094.012.108.136.168.191.08.075.18.172.302.269.243.192.567.38.973.38s.878-.238 1.167-.4c.163-.092.371-.256.541-.381.13-.095.125-.21.232-.198.107.013.028.127-.122.258a3.404 3.404 0 0 1-.576.404z"/><path d="M19.649 17.77c-.142-.16-.209-.456-.281-.771s-.153-.654-.411-.874l-.002-.001a1.054 1.054 0 0 0-.317-.192c.359-1.065.219-2.126-.145-3.084-.444-1.177-1.222-2.202-1.815-2.903-.664-.838-1.313-1.633-1.301-2.808.021-1.793.197-5.118-2.958-5.122a4.66 4.66 0 0 0-.401.017c-3.526.283-2.59 4.008-2.643 5.255-.064.912-.249 1.631-.877 2.523-.736.876-1.774 2.295-2.266 3.771-.232.697-.342 1.407-.241 2.08a1.9 1.9 0 0 0-.091.089c-.216.231-.376.511-.555.699-.166.167-.403.229-.664.323s-.547.231-.721.565l-.001.002a1 1 0 0 0-.108.484c0 .154.023.311.046.461.048.313.097.609.032.81-.206.564-.232.954-.087 1.237.146.284.444.409.783.479.676.141 1.592.106 2.314.489l.062-.117-.061.118c.773.404 1.557.547 2.182.405.454-.104.821-.374 1.011-.789.489-.002 1.025-.209 1.885-.256.583-.047 1.312.207 2.149.16a1.119 1.119 0 0 0 .099.264c.324.649.928.946 1.571.896s1.329-.43 1.883-1.089l-.102-.085.102.084c.527-.64 1.403-.905 1.984-1.255.29-.175.525-.395.544-.713.018-.318-.169-.675-.599-1.152zm-7.79-11.708c-.003-.234.036-.435.126-.639s.201-.351.358-.47.312-.174.494-.176h.009c.179 0 .332.053.489.167.159.116.274.261.366.463a1.493 1.493 0 0 1 .141.636c.002.235-.038.435-.127.639a1.23 1.23 0 0 1-.18.299l-.074-.033c-.089-.038-.167-.069-.237-.096s-.124-.044-.181-.064c.041-.049.122-.108.151-.181a.943.943 0 0 0 .072-.347l.002-.016a.953.953 0 0 0-.05-.337c-.038-.113-.086-.195-.155-.263s-.139-.099-.223-.101h-.011a.324.324 0 0 0-.217.086.618.618 0 0 0-.174.25.944.944 0 0 0-.072.348l-.001.015a.992.992 0 0 0 .014.2 2.463 2.463 0 0 0-.507-.171 1.681 1.681 0 0 1-.014-.19v-.019zm-2.144.052c-.012-.202.009-.376.064-.556s.13-.311.238-.418a.516.516 0 0 1 .349-.168h.03c.118 0 .225.04.335.127a.968.968 0 0 1 .284.389c.076.171.116.343.127.545v.002a1.51 1.51 0 0 1-.002.243c-.023.006-.046.014-.068.021-.128.044-.23.093-.328.158a.845.845 0 0 0 .003-.214v-.012a.95.95 0 0 0-.068-.274.523.523 0 0 0-.138-.203c-.052-.044-.1-.065-.153-.064l-.017.001c-.061.005-.11.034-.157.092a.536.536 0 0 0-.101.223.912.912 0 0 0-.019.293l.001.012c.01.103.031.189.067.275a.528.528 0 0 0 .166.224c-.059.045-.098.078-.146.113l-.11.081a.995.995 0 0 1-.229-.342 1.528 1.528 0 0 1-.128-.546v-.002zm.155 1.228c.187-.14.315-.234.402-.298.086-.063.121-.086.148-.112h.001c.14-.132.362-.374.699-.49.115-.04.245-.065.39-.066.275-.001.608.089 1.01.348.247.16.439.174.882.363h.001c.213.087.338.202.399.321.061.12.063.25.012.387-.103.273-.429.562-.887.705h-.001c-.224.072-.418.233-.647.364a1.449 1.449 0 0 1-.842.217 1.105 1.105 0 0 1-.374-.083 1.202 1.202 0 0 1-.27-.167c-.161-.131-.303-.295-.51-.416h-.002c-.333-.19-.515-.408-.573-.598-.057-.189-.003-.351.162-.475zm.131 13.018v.001c-.047.623-.398.961-.938 1.085-.539.123-1.27 0-1.999-.381h-.001c-.808-.427-1.768-.385-2.384-.514-.308-.064-.509-.161-.602-.341-.092-.18-.094-.494.102-1.028l.001-.002.001-.002c.097-.299.025-.626-.021-.934-.047-.307-.07-.586.034-.781l.001-.002c.135-.259.332-.352.576-.439.245-.088.534-.157.764-.386l.001-.001.001-.001c.212-.223.371-.503.557-.702.157-.167.314-.279.551-.28h.009c.041 0 .085.003.132.011.314.047.588.268.853.625l.762 1.389h.001c.202.423.631.89.994 1.365.362.475.644.952.607 1.317l-.002.001zm-.063-1.01a6.721 6.721 0 0 0-.333-.469 13.467 13.467 0 0 0-.229-.293c.151 0 .28-.024.384-.072a.486.486 0 0 0 .266-.274c.09-.242 0-.583-.288-.973-.29-.39-.778-.83-1.494-1.269-.527-.328-.821-.729-.959-1.165s-.119-.907-.013-1.373c.204-.894.729-1.762 1.063-2.308.09-.066.032.123-.339.811-.332.629-.953 2.081-.103 3.214a6.722 6.722 0 0 1 .538-2.398c.472-1.067 1.456-2.919 1.534-4.395.041.029.18.123.241.158.182.106.316.262.492.403.177.142.396.264.729.283l.093.003c.343 0 .61-.112.833-.239.242-.138.436-.292.618-.351h.001c.387-.122.694-.335.869-.585.302 1.186 1.001 2.897 1.45 3.733.239.443.715 1.385.92 2.52.13-.004.273.015.427.054.537-1.393-.455-2.892-.909-3.31-.184-.178-.192-.258-.102-.254.492.436 1.139 1.311 1.374 2.3.107.451.13.925.016 1.393.056.023.113.048.171.076.862.42 1.181.785 1.027 1.283-.05-.002-.1-.001-.148 0h-.014c.125-.395-.151-.687-.889-1.02-.764-.336-1.373-.303-1.476.379a1.302 1.302 0 0 0-.017.109c-.057.02-.114.045-.172.076-.358.197-.555.553-.664.99-.108.437-.14.964-.17 1.558-.019.298-.141.702-.266 1.129-1.249.897-2.986 1.283-4.461.276zm9.628.057c-.524.317-1.456.593-2.05 1.313-.517.615-1.146.952-1.7.996-.555.044-1.033-.186-1.315-.752v-.001l-.001-.003c-.175-.333-.102-.858.045-1.412.147-.554.359-1.123.388-1.585v-.001c.03-.592.063-1.11.163-1.509.1-.399.256-.669.533-.821l.039-.02c.031.513.285 1.036.734 1.149.491.129 1.199-.292 1.498-.636.06-.002.118-.006.175-.007.262-.006.481.009.707.205v.001h.001c.173.146.255.423.326.733.071.31.128.647.342.888h.001c.41.456.542.764.531.96-.011.198-.153.344-.417.502z"/><path d="M11.738 6.762c.015.048.093.04.138.063.04.02.071.065.116.066.042.001.107-.015.113-.057.008-.056-.073-.091-.126-.111-.067-.026-.153-.039-.216-.004-.014.008-.03.027-.025.043zm-.46 0c-.016.048-.094.04-.139.063-.039.02-.071.065-.115.066-.042.001-.108-.015-.114-.057-.007-.056.074-.091.126-.111.067-.026.153-.039.217-.004.015.008.03.027.025.043z"/></svg>
-                    Linux
-                </button>
+                <!-- Windows -->
+                <div class="hero-tab-content" data-os="windows">
+                    <div class="install-primary">
+                        <span class="install-primary-label">Recommended</span>
+                        <div class="cmd-wrap">
+                            <pre class="cmd-pre">scoop bucket add vaxtly https://github.com/vaxtly/scoop-bucket
+scoop install vaxtly</pre>
+                            <button id="copy-scoop" class="copy-btn" title="Copy to clipboard">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
+                            </button>
+                        </div>
+                        <p class="mac-hint">Bypasses SmartScreen automatically. Don't have Scoop? <a href="https://scoop.sh" target="_blank" rel="noopener">Install it first &rarr;</a></p>
+                    </div>
+
+                    <div class="install-divider"><span>or download directly</span></div>
+
+                    <div class="install-secondary">
+                        <a id="win-dl-fallback" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                            Download .exe from GitHub Releases
+                        </a>
+                        <p class="install-secondary-note">Not code-signed yet — Windows SmartScreen will block the installer. Click "More info" &rarr; "Run anyway" to proceed.</p>
+                        <details class="win-smartscreen">
+                            <summary>Why is the app unsigned?</summary>
+                            <div class="win-smartscreen-body">
+                                <p class="win-unsigned-note">
+                                    Code signing certificates require identity verification programs that aren't available in all countries, and third-party alternatives cost ~$500/year — prohibitive for an independent open-source project. The app is fully open source — you can <a href="https://github.com/vaxtly/app" target="_blank" rel="noopener">audit the code and build it yourself</a>.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- macOS -->
+                <div class="hero-tab-content" data-os="mac">
+                    <div class="install-primary">
+                        <span class="install-primary-label">Recommended</span>
+                        <div class="cmd-wrap">
+                            <pre class="cmd-pre">brew install vaxtly/tap/vaxtly</pre>
+                            <button id="copy-brew" class="copy-btn" title="Copy to clipboard">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
+                            </button>
+                        </div>
+                        <p class="mac-hint">Bypasses Gatekeeper automatically. Don't have Homebrew? <a href="https://brew.sh" target="_blank" rel="noopener">Install it first &rarr;</a></p>
+                    </div>
+
+                    <div class="install-divider"><span>or download directly</span></div>
+
+                    <div class="install-secondary">
+                        <a id="dl-mac-dmg" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                            Download DMG from GitHub Releases
+                        </a>
+                        <p class="install-secondary-note">Requires manual quarantine removal after downloading.</p>
+                    </div>
+                </div>
+
+                <!-- Linux -->
+                <div class="hero-tab-content" data-os="linux">
+                    <div class="install-primary">
+                        <span class="install-primary-label">Recommended</span>
+                        <div class="cmd-wrap">
+                            <pre class="cmd-pre">snap install vaxtly</pre>
+                            <button id="copy-snap" class="copy-btn" title="Copy to clipboard">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
+                            </button>
+                        </div>
+                        <p class="mac-hint">Auto-updates via Snap. <a href="https://snapcraft.io/vaxtly" target="_blank" rel="noopener">View on Snap Store &rarr;</a></p>
+                    </div>
+
+                    <div class="install-divider"><span>or download directly</span></div>
+
+                    <div class="install-secondary">
+                        <div class="dl-btn-row">
+                            <a id="dl-appimage" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                                AppImage
+                                <span class="dl-btn-sub">Universal Linux</span>
+                            </a>
+                            <a id="dl-deb" href="https://github.com/vaxtly/app/releases/latest" class="dl-btn">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                                .deb Package
+                                <span class="dl-btn-sub">Debian / Ubuntu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
+</section>
 
+<!-- Screenshot -->
+<section class="screenshot-section">
+    <div class="screenshot-container">
         <div class="screenshot-wrap animate-in delay-4">
             <img src="images/screenshot.png" alt="Vaxtly — Desktop API Client" loading="eager">
+        </div>
+        <div class="screenshot-fade"></div>
+    </div>
+</section>
+
+<!-- Anti-Features -->
+<section class="anti-features">
+    <div class="container">
+        <p class="anti-lead">Most API clients ask you to create an account before you can send a single request. We think that's absurd.</p>
+
+        <div class="anti-grid">
+            <div class="anti-item">
+                <h3 class="anti-label">No account</h3>
+                <p>Download it. Open it. Use it. Your identity is not a feature we need.</p>
+            </div>
+            <div class="anti-item">
+                <h3 class="anti-label">No cloud</h3>
+                <p>Your requests, headers, tokens, and responses never leave your machine unless you explicitly push them to Git.</p>
+            </div>
+            <div class="anti-item">
+                <h3 class="anti-label">No subscription</h3>
+                <p>Free today, free tomorrow. MIT licensed. No "Pro" tier waiting behind the features you actually need.</p>
+            </div>
+            <div class="anti-item">
+                <h3 class="anti-label">No telemetry</h3>
+                <p>We don't track what you test, how often you test it, or which endpoints you call. We literally can't.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -138,94 +243,194 @@
 <!-- Features -->
 <section class="features-section" id="features">
     <div class="container">
-        <div class="section-label">Features</div>
-        <h2>Everything you need,<br>nothing you don't.</h2>
-        <p class="section-desc">
-            Built for developers who want a fast, private API client that stays out of the way.
-        </p>
 
+        <!-- Tier 1: Git Sync — full-width hero treatment -->
+        <div class="feature-hero">
+            <div class="feature-hero-text">
+                <span class="feature-kicker">Collaboration without the cloud</span>
+                <h2>Git Sync</h2>
+                <p>Push and pull collections to any Git remote. Your team shares API definitions through version control — not a proprietary cloud. Branch, merge, review diffs. Your API workspace is just a repo.</p>
+            </div>
+            <div class="feature-hero-visual">
+                <div class="terminal-block">
+                    <div class="log-header">
+                        <span class="log-header-tab active">Logs <span class="log-count">6</span></span>
+                        <span class="log-header-tab">History</span>
+                    </div>
+                    <div class="log-entries">
+                        <div class="log-entry">
+                            <span class="log-time">14:32:01</span>
+                            <span class="log-tag log-tag-git">git</span>
+                            <span class="log-action">auto-sync</span>
+                            <span class="log-msg">Starting git auto-sync...</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:02</span>
+                            <span class="log-tag log-tag-git">git</span>
+                            <span class="log-action">push</span>
+                            <span class="log-msg">3 requests pushed to <span class="t-white">origin/main</span></span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:02</span>
+                            <span class="log-tag log-tag-git">git</span>
+                            <span class="log-action">push</span>
+                            <span class="log-msg">1 collection synced</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:03</span>
+                            <span class="log-tag log-tag-git">git</span>
+                            <span class="log-action">pull</span>
+                            <span class="log-msg">2 requests updated from remote</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:03</span>
+                            <span class="log-tag log-tag-git">git</span>
+                            <span class="log-action">status</span>
+                            <span class="log-msg log-msg-ok">Everything up to date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-hero-border"></div>
+
+        <!-- Tier 1b: Vault — hero (reversed: visual LEFT, text RIGHT) -->
+        <div class="feature-hero feature-hero-reverse">
+            <div class="feature-hero-text">
+                <span class="feature-kicker kicker-red">Secrets that never touch disk</span>
+                <h2>HashiCorp Vault</h2>
+                <p>Connect directly to your Vault instance. Secrets sync into environments at runtime — they're never written to disk or committed to Git. Set a token and namespace, and your team shares credentials without ever exposing them.</p>
+            </div>
+            <div class="feature-hero-visual">
+                <div class="terminal-block">
+                    <div class="log-header">
+                        <span class="log-header-tab active">Logs <span class="log-count">5</span></span>
+                        <span class="log-header-tab">History</span>
+                    </div>
+                    <div class="log-entries">
+                        <div class="log-entry">
+                            <span class="log-time">14:32:01</span>
+                            <span class="log-tag log-tag-vault">vault</span>
+                            <span class="log-action">pull-all</span>
+                            <span class="log-msg">Syncing secrets from Vault...</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:01</span>
+                            <span class="log-tag log-tag-vault">vault</span>
+                            <span class="log-action">pull</span>
+                            <span class="log-msg"><span class="t-white">secret/api/stripe</span> &rarr; 2 keys loaded</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:02</span>
+                            <span class="log-tag log-tag-vault">vault</span>
+                            <span class="log-action">pull</span>
+                            <span class="log-msg"><span class="t-white">secret/db/prod</span> &rarr; 3 keys loaded</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:02</span>
+                            <span class="log-tag log-tag-vault">vault</span>
+                            <span class="log-action">sync</span>
+                            <span class="log-msg log-msg-ok">5 secrets synced to environment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-hero-border"></div>
+
+        <!-- Tier 1c: Smart Environments — hero (text LEFT, visual RIGHT) -->
+        <div class="feature-hero">
+            <div class="feature-hero-text">
+                <span class="feature-kicker kicker-amber">Variables that follow context</span>
+                <h2>Smart Environments</h2>
+                <p>Define variables per collection or folder — they auto-switch as you navigate between requests. Chain environments with inheritance, override per-folder, and use <code class="mono code-amber">{{base_url}}</code> to never hardcode a URL again.</p>
+            </div>
+            <div class="feature-hero-visual">
+                <div class="terminal-block">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="env-switcher">
+                        <div class="env-tabs">
+                            <span class="env-tab">dev</span>
+                            <span class="env-tab">staging</span>
+                            <span class="env-tab active">prod</span>
+                        </div>
+                        <div class="env-rows">
+                            <div class="env-row">
+                                <span class="env-key">base_url</span>
+                                <span class="env-val">https://api.example.com</span>
+                            </div>
+                            <div class="env-row">
+                                <span class="env-key">api_key</span>
+                                <span class="env-val">sk_live_••••••••mZ4x</span>
+                            </div>
+                            <div class="env-row">
+                                <span class="env-key">timeout</span>
+                                <span class="env-val">30000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-hero-border"></div>
+
+        <!-- Compact grid: remaining features -->
         <div class="features-grid">
-            <!-- Differentiators — highlighted row -->
-            <div class="feature-card feature-highlight">
-                <div class="feature-icon fi-accent">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg>
-                </div>
-                <h3>Git Sync</h3>
-                <p>Push and pull collections to any Git remote. Your team shares API definitions through version control — not a proprietary cloud.</p>
-            </div>
-
-            <div class="feature-card feature-highlight">
-                <div class="feature-icon fi-red">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
-                </div>
-                <h3>HashiCorp Vault</h3>
-                <p>Native Vault integration out of the box. Set a token and namespace, then sync your secrets — just like collections sync with Git.</p>
-            </div>
-
-            <div class="feature-card feature-highlight">
-                <div class="feature-icon fi-amber">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
-                </div>
-                <h3>Smart Environments</h3>
-                <p>Define variables per collection or folder — they auto-switch as you navigate between requests. Use <code class="mono code-amber">{{base_url}}</code> and never touch a URL again.</p>
-            </div>
-
-            <!-- Standard features -->
-            <div class="feature-card">
+            <!-- Compact row -->
+            <div class="feature-card feature-compact">
                 <div class="feature-icon fi-emerald">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
                 </div>
-                <h3>Request Builder</h3>
-                <p>Method, headers, query params, body, auth — with a syntax-highlighted editor and full import/export.</p>
+                <div>
+                    <h4>Request Builder</h4>
+                    <p>Method, headers, query params, body, auth — with a syntax-highlighted editor and full import/export.</p>
+                </div>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card feature-compact">
                 <div class="feature-icon fi-blue">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
                 </div>
-                <h3>Collections</h3>
-                <p>Organize requests into nested folders. Each collection gets its own environments, variables, and Git repository.</p>
+                <div>
+                    <h4>Collections</h4>
+                    <p>Organize requests into nested folders. Each collection gets its own environments, variables, and Git repository.</p>
+                </div>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card feature-compact">
                 <div class="feature-icon fi-orange">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z"/></svg>
                 </div>
-                <h3>Local First</h3>
-                <p>Runs on your machine as a native desktop app. Your data stays local — nothing is sent anywhere unless you choose to sync.</p>
+                <div>
+                    <h4>Local First</h4>
+                    <p>Runs on your machine as a native desktop app. Your data stays local — nothing is sent anywhere unless you choose to sync.</p>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 
-<!-- Download -->
-<section class="download-section" id="download">
+<!-- Closing: Download + Open Source -->
+<section class="closing-section" id="download">
     <div class="container">
-        <div class="section-label">Download</div>
-        <h2>Free, open source, yours forever.</h2>
-        <p class="section-desc section-desc-center">
-            No account required. No usage limits. No data collection.
-        </p>
-
-        <div class="download-cta">
-            <a id="dl-section-btn" href="#" class="btn btn-primary btn-lg">
+        <h2>Free, open source, and yours to keep.</h2>
+        <p class="closing-sub">MIT licensed. No account required. No usage limits. Inspect the code, build it yourself, or just download it.</p>
+        <div class="closing-actions">
+            <a href="#download-install" class="btn btn-primary btn-lg">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-                <span id="dl-section-text">Download Vaxtly</span>
+                Download Vaxtly
             </a>
-            <div class="platforms">
-                <button class="platform-pill" data-os="windows">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                    Windows
-                </button>
-                <button class="platform-pill" data-os="mac">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    macOS
-                </button>
-                <button class="platform-pill" data-os="linux">
-                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.642 8.084c-.364.189-.79.42-1.242.42s-.81-.209-1.066-.413c-.13-.101-.234-.202-.313-.276-.137-.108-.12-.259-.064-.254.094.012.108.136.168.191.08.075.18.172.302.269.243.192.567.38.973.38s.878-.238 1.167-.4c.163-.092.371-.256.541-.381.13-.095.125-.21.232-.198.107.013.028.127-.122.258a3.404 3.404 0 0 1-.576.404z"/><path d="M19.649 17.77c-.142-.16-.209-.456-.281-.771s-.153-.654-.411-.874l-.002-.001a1.054 1.054 0 0 0-.317-.192c.359-1.065.219-2.126-.145-3.084-.444-1.177-1.222-2.202-1.815-2.903-.664-.838-1.313-1.633-1.301-2.808.021-1.793.197-5.118-2.958-5.122a4.66 4.66 0 0 0-.401.017c-3.526.283-2.59 4.008-2.643 5.255-.064.912-.249 1.631-.877 2.523-.736.876-1.774 2.295-2.266 3.771-.232.697-.342 1.407-.241 2.08a1.9 1.9 0 0 0-.091.089c-.216.231-.376.511-.555.699-.166.167-.403.229-.664.323s-.547.231-.721.565l-.001.002a1 1 0 0 0-.108.484c0 .154.023.311.046.461.048.313.097.609.032.81-.206.564-.232.954-.087 1.237.146.284.444.409.783.479.676.141 1.592.106 2.314.489l.062-.117-.061.118c.773.404 1.557.547 2.182.405.454-.104.821-.374 1.011-.789.489-.002 1.025-.209 1.885-.256.583-.047 1.312.207 2.149.16a1.119 1.119 0 0 0 .099.264c.324.649.928.946 1.571.896s1.329-.43 1.883-1.089l-.102-.085.102.084c.527-.64 1.403-.905 1.984-1.255.29-.175.525-.395.544-.713.018-.318-.169-.675-.599-1.152zm-7.79-11.708c-.003-.234.036-.435.126-.639s.201-.351.358-.47.312-.174.494-.176h.009c.179 0 .332.053.489.167.159.116.274.261.366.463a1.493 1.493 0 0 1 .141.636c.002.235-.038.435-.127.639a1.23 1.23 0 0 1-.18.299l-.074-.033c-.089-.038-.167-.069-.237-.096s-.124-.044-.181-.064c.041-.049.122-.108.151-.181a.943.943 0 0 0 .072-.347l.002-.016a.953.953 0 0 0-.05-.337c-.038-.113-.086-.195-.155-.263s-.139-.099-.223-.101h-.011a.324.324 0 0 0-.217.086.618.618 0 0 0-.174.25.944.944 0 0 0-.072.348l-.001.015a.992.992 0 0 0 .014.2 2.463 2.463 0 0 0-.507-.171 1.681 1.681 0 0 1-.014-.19v-.019zm-2.144.052c-.012-.202.009-.376.064-.556s.13-.311.238-.418a.516.516 0 0 1 .349-.168h.03c.118 0 .225.04.335.127a.968.968 0 0 1 .284.389c.076.171.116.343.127.545v.002a1.51 1.51 0 0 1-.002.243c-.023.006-.046.014-.068.021-.128.044-.23.093-.328.158a.845.845 0 0 0 .003-.214v-.012a.95.95 0 0 0-.068-.274.523.523 0 0 0-.138-.203c-.052-.044-.1-.065-.153-.064l-.017.001c-.061.005-.11.034-.157.092a.536.536 0 0 0-.101.223.912.912 0 0 0-.019.293l.001.012c.01.103.031.189.067.275a.528.528 0 0 0 .166.224c-.059.045-.098.078-.146.113l-.11.081a.995.995 0 0 1-.229-.342 1.528 1.528 0 0 1-.128-.546v-.002zm.155 1.228c.187-.14.315-.234.402-.298.086-.063.121-.086.148-.112h.001c.14-.132.362-.374.699-.49.115-.04.245-.065.39-.066.275-.001.608.089 1.01.348.247.16.439.174.882.363h.001c.213.087.338.202.399.321.061.12.063.25.012.387-.103.273-.429.562-.887.705h-.001c-.224.072-.418.233-.647.364a1.449 1.449 0 0 1-.842.217 1.105 1.105 0 0 1-.374-.083 1.202 1.202 0 0 1-.27-.167c-.161-.131-.303-.295-.51-.416h-.002c-.333-.19-.515-.408-.573-.598-.057-.189-.003-.351.162-.475zm.131 13.018v.001c-.047.623-.398.961-.938 1.085-.539.123-1.27 0-1.999-.381h-.001c-.808-.427-1.768-.385-2.384-.514-.308-.064-.509-.161-.602-.341-.092-.18-.094-.494.102-1.028l.001-.002.001-.002c.097-.299.025-.626-.021-.934-.047-.307-.07-.586.034-.781l.001-.002c.135-.259.332-.352.576-.439.245-.088.534-.157.764-.386l.001-.001.001-.001c.212-.223.371-.503.557-.702.157-.167.314-.279.551-.28h.009c.041 0 .085.003.132.011.314.047.588.268.853.625l.762 1.389h.001c.202.423.631.89.994 1.365.362.475.644.952.607 1.317l-.002.001zm-.063-1.01a6.721 6.721 0 0 0-.333-.469 13.467 13.467 0 0 0-.229-.293c.151 0 .28-.024.384-.072a.486.486 0 0 0 .266-.274c.09-.242 0-.583-.288-.973-.29-.39-.778-.83-1.494-1.269-.527-.328-.821-.729-.959-1.165s-.119-.907-.013-1.373c.204-.894.729-1.762 1.063-2.308.09-.066.032.123-.339.811-.332.629-.953 2.081-.103 3.214a6.722 6.722 0 0 1 .538-2.398c.472-1.067 1.456-2.919 1.534-4.395.041.029.18.123.241.158.182.106.316.262.492.403.177.142.396.264.729.283l.093.003c.343 0 .61-.112.833-.239.242-.138.436-.292.618-.351h.001c.387-.122.694-.335.869-.585.302 1.186 1.001 2.897 1.45 3.733.239.443.715 1.385.92 2.52.13-.004.273.015.427.054.537-1.393-.455-2.892-.909-3.31-.184-.178-.192-.258-.102-.254.492.436 1.139 1.311 1.374 2.3.107.451.13.925.016 1.393.056.023.113.048.171.076.862.42 1.181.785 1.027 1.283-.05-.002-.1-.001-.148 0h-.014c.125-.395-.151-.687-.889-1.02-.764-.336-1.373-.303-1.476.379a1.302 1.302 0 0 0-.017.109c-.057.02-.114.045-.172.076-.358.197-.555.553-.664.99-.108.437-.14.964-.17 1.558-.019.298-.141.702-.266 1.129-1.249.897-2.986 1.283-4.461.276zm9.628.057c-.524.317-1.456.593-2.05 1.313-.517.615-1.146.952-1.7.996-.555.044-1.033-.186-1.315-.752v-.001l-.001-.003c-.175-.333-.102-.858.045-1.412.147-.554.359-1.123.388-1.585v-.001c.03-.592.063-1.11.163-1.509.1-.399.256-.669.533-.821l.039-.02c.031.513.285 1.036.734 1.149.491.129 1.199-.292 1.498-.636.06-.002.118-.006.175-.007.262-.006.481.009.707.205v.001h.001c.173.146.255.423.326.733.071.31.128.647.342.888h.001c.41.456.542.764.531.96-.011.198-.153.344-.417.502z"/><path d="M11.738 6.762c.015.048.093.04.138.063.04.02.071.065.116.066.042.001.107-.015.113-.057.008-.056-.073-.091-.126-.111-.067-.026-.153-.039-.216-.004-.014.008-.03.027-.025.043zm-.46 0c-.016.048-.094.04-.139.063-.039.02-.071.065-.115.066-.042.001-.108-.015-.114-.057-.007-.056.074-.091.126-.111.067-.026.153-.039.217-.004.015.008.03.027.025.043z"/></svg>
-                    Linux
-                </button>
-            </div>
+            <a href="https://github.com/vaxtly/app" class="btn btn-secondary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+                <span id="gh-stars-closing"></span>
+            </a>
         </div>
     </div>
 </section>
@@ -247,175 +452,6 @@
         </div>
     </div>
 </footer>
-<!-- Download Modal -->
-<div class="modal-overlay" id="dl-modal" role="dialog" aria-modal="true" aria-label="Download Vaxtly">
-    <div class="modal">
-        <button class="modal-close" id="modal-close" aria-label="Close">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-
-        <div class="modal-header">
-            <h3>Download Vaxtly</h3>
-            <p>Choose your platform and format.</p>
-        </div>
-
-        <div class="os-tabs">
-            <button class="os-tab" data-os="windows">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                Windows
-            </button>
-            <button class="os-tab" data-os="mac">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                macOS
-            </button>
-            <button class="os-tab" data-os="linux">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.642 8.084c-.364.189-.79.42-1.242.42s-.81-.209-1.066-.413c-.13-.101-.234-.202-.313-.276-.137-.108-.12-.259-.064-.254.094.012.108.136.168.191.08.075.18.172.302.269.243.192.567.38.973.38s.878-.238 1.167-.4c.163-.092.371-.256.541-.381.13-.095.125-.21.232-.198.107.013.028.127-.122.258a3.404 3.404 0 0 1-.576.404z"/><path d="M19.649 17.77c-.142-.16-.209-.456-.281-.771s-.153-.654-.411-.874l-.002-.001a1.054 1.054 0 0 0-.317-.192c.359-1.065.219-2.126-.145-3.084-.444-1.177-1.222-2.202-1.815-2.903-.664-.838-1.313-1.633-1.301-2.808.021-1.793.197-5.118-2.958-5.122a4.66 4.66 0 0 0-.401.017c-3.526.283-2.59 4.008-2.643 5.255-.064.912-.249 1.631-.877 2.523-.736.876-1.774 2.295-2.266 3.771-.232.697-.342 1.407-.241 2.08a1.9 1.9 0 0 0-.091.089c-.216.231-.376.511-.555.699-.166.167-.403.229-.664.323s-.547.231-.721.565l-.001.002a1 1 0 0 0-.108.484c0 .154.023.311.046.461.048.313.097.609.032.81-.206.564-.232.954-.087 1.237.146.284.444.409.783.479.676.141 1.592.106 2.314.489l.062-.117-.061.118c.773.404 1.557.547 2.182.405.454-.104.821-.374 1.011-.789.489-.002 1.025-.209 1.885-.256.583-.047 1.312.207 2.149.16a1.119 1.119 0 0 0 .099.264c.324.649.928.946 1.571.896s1.329-.43 1.883-1.089l-.102-.085.102.084c.527-.64 1.403-.905 1.984-1.255.29-.175.525-.395.544-.713.018-.318-.169-.675-.599-1.152zm-7.79-11.708c-.003-.234.036-.435.126-.639s.201-.351.358-.47.312-.174.494-.176h.009c.179 0 .332.053.489.167.159.116.274.261.366.463a1.493 1.493 0 0 1 .141.636c.002.235-.038.435-.127.639a1.23 1.23 0 0 1-.18.299l-.074-.033c-.089-.038-.167-.069-.237-.096s-.124-.044-.181-.064c.041-.049.122-.108.151-.181a.943.943 0 0 0 .072-.347l.002-.016a.953.953 0 0 0-.05-.337c-.038-.113-.086-.195-.155-.263s-.139-.099-.223-.101h-.011a.324.324 0 0 0-.217.086.618.618 0 0 0-.174.25.944.944 0 0 0-.072.348l-.001.015a.992.992 0 0 0 .014.2 2.463 2.463 0 0 0-.507-.171 1.681 1.681 0 0 1-.014-.19v-.019zm-2.144.052c-.012-.202.009-.376.064-.556s.13-.311.238-.418a.516.516 0 0 1 .349-.168h.03c.118 0 .225.04.335.127a.968.968 0 0 1 .284.389c.076.171.116.343.127.545v.002a1.51 1.51 0 0 1-.002.243c-.023.006-.046.014-.068.021-.128.044-.23.093-.328.158a.845.845 0 0 0 .003-.214v-.012a.95.95 0 0 0-.068-.274.523.523 0 0 0-.138-.203c-.052-.044-.1-.065-.153-.064l-.017.001c-.061.005-.11.034-.157.092a.536.536 0 0 0-.101.223.912.912 0 0 0-.019.293l.001.012c.01.103.031.189.067.275a.528.528 0 0 0 .166.224c-.059.045-.098.078-.146.113l-.11.081a.995.995 0 0 1-.229-.342 1.528 1.528 0 0 1-.128-.546v-.002zm.155 1.228c.187-.14.315-.234.402-.298.086-.063.121-.086.148-.112h.001c.14-.132.362-.374.699-.49.115-.04.245-.065.39-.066.275-.001.608.089 1.01.348.247.16.439.174.882.363h.001c.213.087.338.202.399.321.061.12.063.25.012.387-.103.273-.429.562-.887.705h-.001c-.224.072-.418.233-.647.364a1.449 1.449 0 0 1-.842.217 1.105 1.105 0 0 1-.374-.083 1.202 1.202 0 0 1-.27-.167c-.161-.131-.303-.295-.51-.416h-.002c-.333-.19-.515-.408-.573-.598-.057-.189-.003-.351.162-.475zm.131 13.018v.001c-.047.623-.398.961-.938 1.085-.539.123-1.27 0-1.999-.381h-.001c-.808-.427-1.768-.385-2.384-.514-.308-.064-.509-.161-.602-.341-.092-.18-.094-.494.102-1.028l.001-.002.001-.002c.097-.299.025-.626-.021-.934-.047-.307-.07-.586.034-.781l.001-.002c.135-.259.332-.352.576-.439.245-.088.534-.157.764-.386l.001-.001.001-.001c.212-.223.371-.503.557-.702.157-.167.314-.279.551-.28h.009c.041 0 .085.003.132.011.314.047.588.268.853.625l.762 1.389h.001c.202.423.631.89.994 1.365.362.475.644.952.607 1.317l-.002.001zm-.063-1.01a6.721 6.721 0 0 0-.333-.469 13.467 13.467 0 0 0-.229-.293c.151 0 .28-.024.384-.072a.486.486 0 0 0 .266-.274c.09-.242 0-.583-.288-.973-.29-.39-.778-.83-1.494-1.269-.527-.328-.821-.729-.959-1.165s-.119-.907-.013-1.373c.204-.894.729-1.762 1.063-2.308.09-.066.032.123-.339.811-.332.629-.953 2.081-.103 3.214a6.722 6.722 0 0 1 .538-2.398c.472-1.067 1.456-2.919 1.534-4.395.041.029.18.123.241.158.182.106.316.262.492.403.177.142.396.264.729.283l.093.003c.343 0 .61-.112.833-.239.242-.138.436-.292.618-.351h.001c.387-.122.694-.335.869-.585.302 1.186 1.001 2.897 1.45 3.733.239.443.715 1.385.92 2.52.13-.004.273.015.427.054.537-1.393-.455-2.892-.909-3.31-.184-.178-.192-.258-.102-.254.492.436 1.139 1.311 1.374 2.3.107.451.13.925.016 1.393.056.023.113.048.171.076.862.42 1.181.785 1.027 1.283-.05-.002-.1-.001-.148 0h-.014c.125-.395-.151-.687-.889-1.02-.764-.336-1.373-.303-1.476.379a1.302 1.302 0 0 0-.017.109c-.057.02-.114.045-.172.076-.358.197-.555.553-.664.99-.108.437-.14.964-.17 1.558-.019.298-.141.702-.266 1.129-1.249.897-2.986 1.283-4.461.276zm9.628.057c-.524.317-1.456.593-2.05 1.313-.517.615-1.146.952-1.7.996-.555.044-1.033-.186-1.315-.752v-.001l-.001-.003c-.175-.333-.102-.858.045-1.412.147-.554.359-1.123.388-1.585v-.001c.03-.592.063-1.11.163-1.509.1-.399.256-.669.533-.821l.039-.02c.031.513.285 1.036.734 1.149.491.129 1.199-.292 1.498-.636.06-.002.118-.006.175-.007.262-.006.481.009.707.205v.001h.001c.173.146.255.423.326.733.071.31.128.647.342.888h.001c.41.456.542.764.531.96-.011.198-.153.344-.417.502z"/><path d="M11.738 6.762c.015.048.093.04.138.063.04.02.071.065.116.066.042.001.107-.015.113-.057.008-.056-.073-.091-.126-.111-.067-.026-.153-.039-.216-.004-.014.008-.03.027-.025.043zm-.46 0c-.016.048-.094.04-.139.063-.039.02-.071.065-.115.066-.042.001-.108-.015-.114-.057-.007-.056.074-.091.126-.111.067-.026.153-.039.217-.004.015.008.03.027.025.043z"/></svg>
-                Linux
-            </button>
-        </div>
-
-        <!-- Windows tab -->
-        <div class="os-tab-content" data-os="windows">
-            <div class="win-instructions">
-                <h4>Install with Scoop (recommended)</h4>
-
-                <p class="mac-desc">
-                    Vaxtly isn't code-signed yet, so Windows SmartScreen will block the installer if you download it directly. Installing via Scoop bypasses this automatically.
-                </p>
-
-                <div class="cmd-wrap">
-                    <pre class="cmd-pre">scoop bucket add vaxtly https://github.com/vaxtly/scoop-bucket
-scoop install vaxtly</pre>
-                    <button id="copy-scoop" class="copy-btn" title="Copy to clipboard">
-                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
-                    </button>
-                </div>
-
-                <p class="mac-hint">
-                    Don't have Scoop? <a href="https://scoop.sh" target="_blank" rel="noopener" style="color: var(--accent);">Install it first</a>.
-                </p>
-
-                <div class="mac-divider">
-                    <p class="mac-dmg-text">Or download the installer directly (may trigger SmartScreen):</p>
-                    <a id="win-dl-fallback" href="https://github.com/vaxtly/app/releases/latest" class="mac-dmg-link">Download .exe from GitHub Releases &rarr;</a>
-
-                    <details class="win-smartscreen" style="margin-top: 16px;">
-                        <summary>
-                            <svg class="ss-shield-sm" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-                            Windows may show a SmartScreen warning — this is normal
-                        </summary>
-                        <div class="win-smartscreen-body">
-                            <ol class="win-steps-compact">
-                                <li>SmartScreen will show a <strong>"Windows protected your PC"</strong> dialog — click <strong>"More info"</strong>.</li>
-                                <li>Then click <strong>"Run anyway"</strong> to proceed with the installation.</li>
-                            </ol>
-
-                            <p class="win-unsigned-note">
-                                <strong>Why is the app unsigned?</strong> Code signing certificates require identity verification programs that aren't available in all countries, and third-party alternatives cost ~$500/year — prohibitive for an independent open-source project. The app is fully open source — you can <a href="https://github.com/vaxtly/app" target="_blank" rel="noopener">audit the code and build it yourself</a>.
-                            </p>
-
-                            <div class="smartscreen-mock">
-                                <div class="ss-header">
-                                    <svg class="ss-shield" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-                                    <div>
-                                        <div class="ss-title">Windows protected your PC</div>
-                                        <div class="ss-desc ss-desc-extra">Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</div>
-                                        <div class="ss-desc">App: Vaxtly-Setup.exe<br>Publisher: <strong class="ss-publisher">Unknown publisher</strong></div>
-                                    </div>
-                                </div>
-                                <div class="ss-actions">
-                                    <span class="ss-btn">Don't run</span>
-                                    <span class="ss-btn highlight">Run anyway</span>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
-
-        <!-- macOS tab -->
-        <div class="os-tab-content" data-os="mac">
-            <div class="win-instructions">
-                <h4>Install with Homebrew (recommended)</h4>
-
-                <p class="mac-desc">
-                    Vaxtly isn't signed with an Apple Developer certificate yet, so macOS Gatekeeper will block the app if you download the DMG directly. Installing via Homebrew bypasses this automatically.
-                </p>
-
-                <div class="cmd-wrap">
-                    <pre class="cmd-pre">brew install vaxtly/tap/vaxtly</pre>
-                    <button id="copy-brew" class="copy-btn" title="Copy to clipboard">
-                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
-                    </button>
-                </div>
-
-                <p class="mac-hint">
-                    Don't have Homebrew? Install it first:
-                </p>
-
-                <div class="cmd-wrap">
-                    <pre class="cmd-pre-sm">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
-                </div>
-
-                <div class="mac-divider">
-                    <p class="mac-dmg-text">Or download the DMG directly (requires manual quarantine removal):</p>
-                    <a id="dl-mac-dmg" href="https://github.com/vaxtly/app/releases/latest" class="mac-dmg-link">Download DMG from GitHub Releases &rarr;</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Linux tab -->
-        <div class="os-tab-content" data-os="linux">
-            <div class="linux-options">
-                <a id="dl-modal-appimage" href="#" class="linux-option">
-                    <div class="linux-option-info">
-                        <div class="linux-option-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
-                        </div>
-                        <div class="linux-option-text">
-                            <h4>AppImage</h4>
-                            <p>Universal Linux — no install needed, just run</p>
-                        </div>
-                    </div>
-                    <div class="linux-option-arrow">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
-                </a>
-
-                <a id="dl-modal-deb" href="#" class="linux-option">
-                    <div class="linux-option-info">
-                        <div class="linux-option-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859"/></svg>
-                        </div>
-                        <div class="linux-option-text">
-                            <h4>.deb Package</h4>
-                            <p>For Debian, Ubuntu, and derivatives</p>
-                        </div>
-                    </div>
-                    <div class="linux-option-arrow">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
-                </a>
-
-                <a href="https://snapcraft.io/vaxtly" target="_blank" rel="noopener" class="linux-option">
-                    <div class="linux-option-info">
-                        <div class="linux-option-icon">
-                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M13.804 13.367V5.69l5.292 2.362-5.292 5.315zM3.701 23.514l6.49-12.22 2.847 2.843L3.7 23.514zM0 .486l13.355 4.848v8.484L0 .486zM21.803 5.334H14.11L24 9.748z"/></svg>
-                        </div>
-                        <div class="linux-option-text">
-                            <h4>Snap Store</h4>
-                            <p>Auto-updates, sandboxed — install with <code>snap install vaxtly</code></p>
-                        </div>
-                    </div>
-                    <div class="linux-option-arrow">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
 (() => {
@@ -456,9 +492,9 @@ scoop install vaxtly</pre>
                 else if (name.endsWith('.dmg') && name.includes('x64')) assets.dmgX64 = a.browser_download_url;
             });
 
-            // Update modal links
-            if (assets.appimage) document.getElementById('dl-modal-appimage').href = assets.appimage;
-            if (assets.deb) document.getElementById('dl-modal-deb').href = assets.deb;
+            // Update download links
+            if (assets.appimage) document.getElementById('dl-appimage').href = assets.appimage;
+            if (assets.deb) document.getElementById('dl-deb').href = assets.deb;
             if (assets.exe) document.getElementById('win-dl-fallback').href = assets.exe;
             if (assets.dmgArm64) document.getElementById('dl-mac-dmg').href = assets.dmgArm64;
         })
@@ -475,15 +511,15 @@ scoop install vaxtly</pre>
             const formatted = count >= 1000 ? (count / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(count);
             const el = document.getElementById('gh-stars');
             if (el) el.textContent = '\u2605 ' + formatted;
+            const el2 = document.getElementById('gh-stars-closing');
+            if (el2) el2.textContent = '\u2605 ' + formatted;
         })
         .catch(() => {});
 
-    // Modal logic
-    const modal = document.getElementById('dl-modal');
-    const closeBtn = document.getElementById('modal-close');
-    const tabs = document.querySelectorAll('.os-tab');
-    const tabContents = document.querySelectorAll('.os-tab-content');
-    let previouslyFocusedElement = null;
+    // Hero install tab switching
+    const heroInstall = document.querySelector('.hero-install');
+    const tabs = heroInstall.querySelectorAll('.os-tab');
+    const tabContents = heroInstall.querySelectorAll('.hero-tab-content');
 
     const detectOS = () => {
         const ua = navigator.userAgent.toLowerCase();
@@ -492,112 +528,18 @@ scoop install vaxtly</pre>
         return 'linux';
     };
 
-    // OS-aware button text (#2)
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (!isMobile) {
-        const osNames = { mac: 'macOS', windows: 'Windows', linux: 'Linux' };
-        const osLabel = osNames[detectOS()] || 'Desktop';
-        const heroText = document.getElementById('dl-hero-text');
-        if (heroText) heroText.textContent = 'Download for ' + osLabel;
-        const sectionText = document.getElementById('dl-section-text');
-        if (sectionText) sectionText.textContent = 'Download for ' + osLabel;
-    }
-
     const switchTab = (os) => {
         tabs.forEach(t => { t.classList.toggle('active', t.getAttribute('data-os') === os); });
         tabContents.forEach(c => { c.classList.toggle('active', c.getAttribute('data-os') === os); });
     };
 
-    const getFocusableElements = () => {
-        return modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    };
+    // Auto-select detected OS
+    switchTab(detectOS());
 
-    const trapFocus = (e) => {
-        if (e.key !== 'Tab') return;
-        const focusable = getFocusableElements();
-        if (focusable.length === 0) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (e.shiftKey) {
-            if (document.activeElement === first) {
-                e.preventDefault();
-                last.focus();
-            }
-        } else {
-            if (document.activeElement === last) {
-                e.preventDefault();
-                first.focus();
-            }
-        }
-    };
-
-    let scrollY = 0;
-
-    const openModal = (os) => {
-        previouslyFocusedElement = document.activeElement;
-        switchTab(os || detectOS());
-        modal.classList.add('active');
-        // Lock body scroll (mobile-safe)
-        scrollY = window.scrollY;
-        document.body.style.position = 'fixed';
-        document.body.style.top = '-' + scrollY + 'px';
-        document.body.style.left = '0';
-        document.body.style.right = '0';
-        document.body.style.overflow = 'hidden';
-        closeBtn.focus();
-        modal.addEventListener('keydown', trapFocus);
-    };
-
-    const closeModal = () => {
-        modal.classList.remove('active');
-        // Unlock body scroll
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.left = '';
-        document.body.style.right = '';
-        document.body.style.overflow = '';
-        window.scrollTo(0, scrollY);
-        modal.removeEventListener('keydown', trapFocus);
-        if (previouslyFocusedElement) {
-            previouslyFocusedElement.focus();
-        }
-    };
-
-    // Tab switching
+    // Tab click handling
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             switchTab(tab.getAttribute('data-os'));
-        });
-    });
-
-    // Close modal
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
-
-    // Hero download button opens modal
-    document.getElementById('dl-hero').addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
-
-    // Download section button opens modal
-    const dlSectionBtn = document.getElementById('dl-section-btn');
-    if (dlSectionBtn) {
-        dlSectionBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
-    }
-
-    // Platform pills open modal (#9)
-    document.querySelectorAll('.platform-pill[data-os]').forEach(pill => {
-        pill.addEventListener('click', () => {
-            openModal(pill.getAttribute('data-os'));
         });
     });
 
@@ -623,10 +565,21 @@ scoop install vaxtly</pre>
         });
     });
 
+    // Copy snap command
+    document.getElementById('copy-snap').addEventListener('click', function() {
+        const btn = this;
+        navigator.clipboard.writeText('snap install vaxtly').then(() => {
+            btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="var(--emerald)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
+            setTimeout(() => {
+                btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>';
+            }, 2000);
+        });
+    });
+
     // Dynamic footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile nav toggle with hamburger/X animation (#12)
+    // Mobile nav toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
 
@@ -635,7 +588,6 @@ scoop install vaxtly</pre>
         navToggle.classList.toggle('active', isOpen);
     });
 
-    // Close nav on link click
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('nav-open');
@@ -643,7 +595,6 @@ scoop install vaxtly</pre>
         });
     });
 
-    // Close nav on outside click
     document.addEventListener('click', (e) => {
         if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('nav-open');
