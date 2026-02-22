@@ -14,14 +14,14 @@
     </script>
     <title>Vaxtly — Desktop API Client</title>
     <meta name="description"
-        content="A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and HashiCorp Vault integration built in.">
+        content="A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and secrets manager integration built in.">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="canonical" href="https://vaxtly.app/">
     <meta property="og:title" content="Vaxtly — Desktop API Client">
     <meta property="og:description"
-        content="No account, no cloud, no subscription. A desktop API client with Git sync and HashiCorp Vault built in.">
+        content="No account, no cloud, no subscription. A desktop API client with Git sync and secrets manager integration built in.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vaxtly.app/">
     <meta property="og:site_name" content="Vaxtly">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vaxtly — Desktop API Client">
     <meta name="twitter:description"
-        content="No account, no cloud, no subscription. A desktop API client with Git sync and HashiCorp Vault built in.">
+        content="No account, no cloud, no subscription. A desktop API client with Git sync and secrets manager integration built in.">
     <meta name="twitter:image" content="https://vaxtly.app/images/og.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Vaxtly",
-        "description": "A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and HashiCorp Vault integration built in.",
+        "description": "A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and secrets manager integration built in.",
         "url": "https://vaxtly.app",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows, macOS, Linux",
@@ -80,6 +80,7 @@
             <ul class="nav-links" id="nav-links" aria-label="Main navigation">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#download-install">Download</a></li>
+                <li><a href="https://vaxtly.app/docs/" target="_blank" rel="noopener">Docs</a></li>
                 <li>
                     <a href="https://github.com/vaxtly/app" class="nav-gh" target="_blank" rel="noopener">
                         <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -374,14 +375,14 @@ scoop install vaxtly</pre>
 
             <div class="feature-hero-border"></div>
 
-            <!-- Tier 1b: Vault — hero (reversed: visual LEFT, text RIGHT) -->
+            <!-- Tier 1b: Secrets — hero (reversed: visual LEFT, text RIGHT) -->
             <div class="feature-hero feature-hero-reverse reveal">
                 <div class="feature-hero-text">
                     <span class="feature-kicker kicker-red">Secrets that never touch disk</span>
-                    <h2>HashiCorp Vault</h2>
-                    <p>Connect directly to your Vault instance. Secrets sync into environments at runtime — they're
-                        never written to disk or committed to Git. Set a token and namespace, and your team shares
-                        credentials without ever exposing them.</p>
+                    <h2>Secrets Manager</h2>
+                    <p>Connect to HashiCorp Vault or AWS Secrets Manager. Secrets sync into environments at
+                        runtime — they're never written to disk or committed to Git. Your team shares credentials
+                        without ever exposing them.</p>
                 </div>
                 <div class="feature-hero-visual">
                     <div class="terminal-block">
@@ -392,27 +393,27 @@ scoop install vaxtly</pre>
                         <div class="log-entries">
                             <div class="log-entry">
                                 <span class="log-time">14:32:01</span>
-                                <span class="log-tag log-tag-vault">vault</span>
+                                <span class="log-tag log-tag-vault">secrets</span>
                                 <span class="log-action">pull-all</span>
-                                <span class="log-msg">Syncing secrets from Vault...</span>
+                                <span class="log-msg">Syncing secrets from provider...</span>
                             </div>
                             <div class="log-entry">
                                 <span class="log-time">14:32:01</span>
-                                <span class="log-tag log-tag-vault">vault</span>
+                                <span class="log-tag log-tag-vault">secrets</span>
                                 <span class="log-action">pull</span>
                                 <span class="log-msg"><span class="t-white">secret/api/stripe</span> &rarr; 2 keys
                                     loaded</span>
                             </div>
                             <div class="log-entry">
                                 <span class="log-time">14:32:02</span>
-                                <span class="log-tag log-tag-vault">vault</span>
+                                <span class="log-tag log-tag-vault">secrets</span>
                                 <span class="log-action">pull</span>
                                 <span class="log-msg"><span class="t-white">secret/db/prod</span> &rarr; 3 keys
                                     loaded</span>
                             </div>
                             <div class="log-entry">
                                 <span class="log-time">14:32:02</span>
-                                <span class="log-tag log-tag-vault">vault</span>
+                                <span class="log-tag log-tag-vault">secrets</span>
                                 <span class="log-action">sync</span>
                                 <span class="log-msg log-msg-ok">5 secrets synced to environment</span>
                             </div>
