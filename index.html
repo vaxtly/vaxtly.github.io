@@ -383,36 +383,61 @@ scoop install vaxtly</pre>
                 </div>
                 <div class="feature-hero-visual">
                     <div class="terminal-block">
-                        <div class="log-header">
-                            <span class="log-header-tab active">Logs <span class="log-count">5</span></span>
-                            <span class="log-header-tab">History</span>
-                        </div>
-                        <div class="log-entries">
-                            <div class="log-entry">
-                                <span class="log-time">14:32:01</span>
-                                <span class="log-tag log-tag-vault">secrets</span>
-                                <span class="log-action">pull-all</span>
-                                <span class="log-msg">Syncing secrets from provider...</span>
+                        <div class="vault-visual">
+                            <!-- Top bar -->
+                            <div class="vault-top-bar">
+                                <span class="mcp-server-chip">
+                                    <span class="mcp-server-dot"></span>
+                                    Production
+                                </span>
+                                <span class="vault-env-badge">Production</span>
                             </div>
-                            <div class="log-entry">
-                                <span class="log-time">14:32:01</span>
-                                <span class="log-tag log-tag-vault">secrets</span>
-                                <span class="log-action">pull</span>
-                                <span class="log-msg"><span class="t-white">secret/api/stripe</span> &rarr; 2 keys
-                                    loaded</span>
+                            <!-- Env tabs -->
+                            <div class="vault-env-tabs">
+                                <span class="vault-env-tab">Inactive</span>
+                                <span class="vault-env-tab active">Production</span>
                             </div>
-                            <div class="log-entry">
-                                <span class="log-time">14:32:02</span>
-                                <span class="log-tag log-tag-vault">secrets</span>
-                                <span class="log-action">pull</span>
-                                <span class="log-msg"><span class="t-white">secret/db/prod</span> &rarr; 3 keys
-                                    loaded</span>
+                            <!-- Vault sync card -->
+                            <div class="vault-sync-card">
+                                <div class="vault-sync-info">
+                                    <span class="vault-sync-title">Vault Sync</span>
+                                    <span class="vault-sync-sub">Sync variables with your secret manage</span>
+                                    <span class="vault-sync-btn">Pull from Vault</span>
+                                    <span class="vault-sync-note">Save will automatically push to Vault.</span>
+                                </div>
+                                <span class="vault-toggle">
+                                    <span class="vault-toggle-knob"></span>
+                                </span>
                             </div>
-                            <div class="log-entry">
-                                <span class="log-time">14:32:02</span>
-                                <span class="log-tag log-tag-vault">secrets</span>
-                                <span class="log-action">sync</span>
-                                <span class="log-msg log-msg-ok">5 secrets synced to environment</span>
+                            <!-- Variables table -->
+                            <div class="vault-vars">
+                                <div class="vault-vars-label">Variables</div>
+                                <div class="vault-vars-header">
+                                    <span>Variable Name</span>
+                                    <span>Variable Value</span>
+                                </div>
+                                <div class="vault-var-row">
+                                    <span class="vault-var-check">
+                                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span class="vault-var-key">api_key</span>
+                                    <span class="vault-var-val">sk_live_••••••••mZ4x</span>
+                                </div>
+                                <div class="vault-var-row">
+                                    <span class="vault-var-check">
+                                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span class="vault-var-key">db_password</span>
+                                    <span class="vault-var-val">••••••••••••</span>
+                                </div>
+                                <div class="vault-var-row">
+                                    <span class="vault-var-check">
+                                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span class="vault-var-key">jwt_secret</span>
+                                    <span class="vault-var-val">••••••••••••</span>
+                                </div>
+                                <span class="vault-add-row">+ Add row</span>
                             </div>
                         </div>
                     </div>
@@ -432,27 +457,175 @@ scoop install vaxtly</pre>
                 </div>
                 <div class="feature-hero-visual">
                     <div class="terminal-block">
-                        <div class="terminal-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="env-switcher">
-                            <div class="env-tabs">
-                                <span class="env-tab">dev</span>
-                                <span class="env-tab">staging</span>
-                                <span class="env-tab active">prod</span>
+                        <div class="env-auto-visual">
+                            <!-- Shared top bar: both tabs always visible, active one highlights -->
+                            <div class="env-auto-topbar">
+                                <div class="env-auto-chips">
+                                    <span class="env-auto-req-chip env-auto-req-chip-post env-auto-chip-a">
+                                        <span class="env-auto-chip-method">POST</span>
+                                        Create Charge
+                                        <span class="env-auto-chip-dot"></span>
+                                    </span>
+                                    <span class="env-auto-req-chip env-auto-req-chip-get env-auto-chip-b">
+                                        <span class="env-auto-chip-method">GET</span>
+                                        Health Check
+                                        <span class="env-auto-chip-dot"></span>
+                                    </span>
+                                </div>
+                                <div class="env-auto-badges">
+                                    <span class="env-auto-badge env-auto-badge-prod env-auto-badge-a">
+                                        <span class="env-auto-badge-dot"></span>
+                                        Production
+                                    </span>
+                                    <span class="env-auto-badge env-auto-badge-staging env-auto-badge-b">
+                                        <span class="env-auto-badge-dot"></span>
+                                        Staging
+                                    </span>
+                                </div>
                             </div>
-                            <div class="env-rows">
-                                <div class="env-row">
-                                    <span class="env-key">base_url</span>
-                                    <span class="env-val">https://api.example.com</span>
+                            <!-- Crossfading body content -->
+                            <div class="env-auto-body">
+                                <!-- State A: Payments / Production -->
+                                <div class="env-auto-state env-auto-state-a">
+                                    <div class="env-auto-urlbar">
+                                        <span class="env-auto-method env-auto-method-post">POST</span>
+                                        <span class="env-auto-url"><span class="env-auto-tpl">{{base_url}}</span>/v1/charges</span>
+                                        <span class="env-auto-send">&rarr; Send</span>
+                                    </div>
+                                    <div class="env-auto-req-tabs">
+                                        <span class="env-auto-req-tab">Params</span>
+                                        <span class="env-auto-req-tab active">Headers <span class="env-auto-tab-badge">2</span></span>
+                                        <span class="env-auto-req-tab">Body</span>
+                                        <span class="env-auto-req-tab">Auth</span>
+                                        <span class="env-auto-req-tab">Scripts</span>
+                                    </div>
+                                    <div class="env-auto-table">
+                                        <div class="env-auto-table-header">
+                                            <span>Header Name</span>
+                                            <span>Value</span>
+                                        </div>
+                                        <div class="env-auto-table-row">
+                                            <span class="env-auto-row-check">
+                                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                            </span>
+                                            <span class="env-auto-row-key">Authorization</span>
+                                            <span class="env-auto-row-val">Bearer <span class="env-auto-tpl">{{api_key}}</span></span>
+                                        </div>
+                                        <div class="env-auto-table-row">
+                                            <span class="env-auto-row-check">
+                                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                            </span>
+                                            <span class="env-auto-row-key">Content-Type</span>
+                                            <span class="env-auto-row-val">application/json</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="env-row">
-                                    <span class="env-key">api_key</span>
-                                    <span class="env-val">sk_live_••••••••mZ4x</span>
+                                <!-- State B: Health Check / Staging -->
+                                <div class="env-auto-state env-auto-state-b">
+                                    <div class="env-auto-urlbar">
+                                        <span class="env-auto-method env-auto-method-get">GET</span>
+                                        <span class="env-auto-url"><span class="env-auto-tpl">{{base_url}}</span>/health</span>
+                                        <span class="env-auto-send">&rarr; Send</span>
+                                    </div>
+                                    <div class="env-auto-req-tabs">
+                                        <span class="env-auto-req-tab active">Params</span>
+                                        <span class="env-auto-req-tab">Headers <span class="env-auto-tab-badge">1</span></span>
+                                        <span class="env-auto-req-tab">Body</span>
+                                        <span class="env-auto-req-tab">Auth</span>
+                                        <span class="env-auto-req-tab">Scripts</span>
+                                    </div>
+                                    <div class="env-auto-table">
+                                        <div class="env-auto-table-header">
+                                            <span>Param Name</span>
+                                            <span>Value</span>
+                                        </div>
+                                        <div class="env-auto-table-row">
+                                            <span class="env-auto-row-check">
+                                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                            </span>
+                                            <span class="env-auto-row-key">verbose</span>
+                                            <span class="env-auto-row-val">true</span>
+                                        </div>
+                                        <div class="env-auto-table-row">
+                                            <span class="env-auto-row-check">
+                                                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                            </span>
+                                            <span class="env-auto-row-key">region</span>
+                                            <span class="env-auto-row-val"><span class="env-auto-tpl">{{region}}</span></span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="env-row">
-                                    <span class="env-key">timeout</span>
-                                    <span class="env-val">30000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-hero-border"></div>
+
+            <!-- Tier 1d: MCP — hero (reversed: visual LEFT, text RIGHT) -->
+            <div class="feature-hero feature-hero-reverse reveal">
+                <div class="feature-hero-text">
+                    <span class="feature-kicker kicker-cyan">Test any MCP server</span>
+                    <h2>MCP Support</h2>
+                    <p>Configure an MCP endpoint, discover its tools, and call them — all from the same interface you
+                        use for REST APIs. Inspect schemas, pass parameters, and see responses in real time. The first
+                        API client with native Model Context Protocol support.</p>
+                </div>
+                <div class="feature-hero-visual">
+                    <div class="terminal-block">
+                        <div class="mcp-visual">
+                            <!-- Server chip tab -->
+                            <div class="mcp-server-tab-bar">
+                                <span class="mcp-server-chip">
+                                    <span class="mcp-server-dot"></span>
+                                    Stripe API Server
+                                </span>
+                            </div>
+                            <!-- Server header -->
+                            <div class="mcp-server-header">
+                                <span class="mcp-server-dot"></span>
+                                <span class="mcp-server-name">Stripe API Server</span>
+                            </div>
+                            <!-- Navigation tabs -->
+                            <div class="mcp-tabs">
+                                <span class="mcp-tab active">Tools</span>
+                                <span class="mcp-tab">Resources</span>
+                                <span class="mcp-tab">Prompts</span>
+                                <span class="mcp-tab">Traffic</span>
+                                <span class="mcp-tab">Notifications</span>
+                            </div>
+                            <!-- Tool list -->
+                            <div class="mcp-tools-list">
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">create-payment-intent</span>
+                                    <span class="mcp-tool-desc">Creates a new Stripe payment intent with amount and currency</span>
+                                </div>
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">list-customers</span>
+                                    <span class="mcp-tool-desc">Returns a paginated list of customers with optional filters</span>
+                                </div>
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">get-balance</span>
+                                    <span class="mcp-tool-desc">Returns the current account balance breakdown</span>
+                                </div>
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">create-refund</span>
+                                    <span class="mcp-tool-desc">Refunds a charge or payment intent by ID</span>
+                                </div>
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">search-invoices</span>
+                                    <span class="mcp-tool-desc">Searches invoices using Stripe's query language</span>
+                                </div>
+                                <div class="mcp-tool">
+                                    <svg class="mcp-chevron" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    <span class="mcp-tool-name">create-subscription</span>
+                                    <span class="mcp-tool-desc">Creates a recurring subscription for a customer</span>
                                 </div>
                             </div>
                         </div>
