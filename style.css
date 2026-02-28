@@ -2306,7 +2306,6 @@ footer a:hover {
     }
 
     /* Hero — hide forced line breaks on mobile */
-    h1 br,
     .hero-sub br {
         display: none;
     }
