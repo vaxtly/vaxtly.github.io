@@ -249,8 +249,8 @@ nav .container {
         linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 70% 50% at 30% 30%, black, transparent);
-    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 30% 30%, black, transparent);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
     animation: grid-move 4s linear infinite;
     pointer-events: none;
     z-index: 0;
@@ -279,7 +279,7 @@ nav .container {
     max-width: 800px;
     max-height: 800px;
     top: -200px;
-    left: 40%;
+    left: 50%;
     transform-origin: center;
     background: var(--glow-primary);
     filter: blur(120px);
@@ -293,56 +293,169 @@ nav .container {
 .hero-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* ── H1 — left-aligned ── */
+/* ── Kicker badge ── */
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    padding: 6px 18px 6px 14px;
+    border-radius: 20px;
+    background: rgba(167, 139, 250, 0.08);
+    border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.hero-kicker-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+    animation: kicker-pulse 2s ease-in-out infinite;
+}
+
+@keyframes kicker-pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(167, 139, 250, 0.6); }
+    50% { opacity: 0.5; box-shadow: 0 0 16px rgba(167, 139, 250, 0.8); }
+}
+
+/* ── H1 ── */
 h1 {
-    font-size: clamp(40px, 6vw, 76px);
+    font-size: clamp(40px, 6vw, 80px);
     font-weight: 700;
     color: transparent;
-    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.65) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     letter-spacing: -0.035em;
     line-height: 1.08;
-    margin-bottom: 24px;
-    max-width: 800px;
+    margin-bottom: 28px;
+    max-width: 900px;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
 @keyframes text-pan {
-    0% {
-        background-position: 0% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 
 h1 code {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85em;
     color: transparent;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--emerald) 50%, var(--accent) 100%);
+    background: linear-gradient(90deg, var(--accent) 0%, var(--cyan) 33%, var(--emerald) 66%, var(--accent) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: text-pan 4s linear infinite;
+    animation: text-pan 5s linear infinite;
     letter-spacing: -0.02em;
 }
 
+/* ── Subtitle ── */
 .hero-sub {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--gray-400);
-    max-width: 520px;
-    margin-bottom: 48px;
+    max-width: 600px;
+    margin-bottom: 36px;
 }
+
+/* Keyword highlights */
+.hl-white { color: var(--gray-100); font-weight: 500; }
+.hl-accent { color: var(--accent); font-weight: 500; }
+.hl-red { color: var(--red); font-weight: 500; }
+.hl-cyan { color: var(--cyan); font-weight: 500; }
+.hl-amber { color: var(--amber); font-weight: 500; }
+.hl-emerald { color: var(--emerald); font-weight: 500; }
+
+/* ── Hero feature pills ── */
+.hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 44px;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-300);
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    cursor: default;
+}
+
+.hero-pill:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.hero-pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: dot-pulse 3s ease-in-out infinite;
+}
+
+.hero-pill:nth-child(2) .hero-pill-dot { animation-delay: 0.5s; }
+.hero-pill:nth-child(3) .hero-pill-dot { animation-delay: 1s; }
+.hero-pill:nth-child(4) .hero-pill-dot { animation-delay: 1.5s; }
+
+@keyframes dot-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.7; }
+}
+
+.pill-accent {
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+}
+
+.pill-red {
+    background: var(--red);
+    box-shadow: 0 0 8px rgba(248, 113, 113, 0.4);
+}
+
+.pill-amber {
+    background: var(--amber);
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+
+.pill-cyan {
+    background: var(--cyan);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+}
+
+.hero-pill:nth-child(1):hover { border-color: rgba(167, 139, 250, 0.3); background: rgba(167, 139, 250, 0.06); }
+.hero-pill:nth-child(2):hover { border-color: rgba(248, 113, 113, 0.3); background: rgba(248, 113, 113, 0.06); }
+.hero-pill:nth-child(3):hover { border-color: rgba(251, 191, 36, 0.25); background: rgba(251, 191, 36, 0.06); }
+.hero-pill:nth-child(4):hover { border-color: rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.06); }
 
 /* ── Hero install widget ── */
 .hero-install {
     text-align: left;
+    width: 100%;
+    max-width: 640px;
 }
 
 
@@ -2202,13 +2315,24 @@ footer a:hover {
         padding: 130px 0 48px;
     }
 
-    .hero-content {
-        text-align: left;
-    }
-
     .hero-sub {
         font-size: 16px;
-        margin-bottom: 36px;
+        margin-bottom: 32px;
+    }
+
+    .hero-kicker {
+        font-size: 11px;
+        padding: 5px 14px 5px 10px;
+        margin-bottom: 22px;
+    }
+
+    .hero-pills {
+        gap: 6px;
+    }
+
+    .hero-pill {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     /* Install widget responsive */
@@ -2393,6 +2517,18 @@ footer a:hover {
 
     .hero-sub {
         font-size: 15px;
+    }
+
+    .hero-kicker {
+        font-size: 10px;
+        padding: 4px 12px 4px 9px;
+        margin-bottom: 18px;
+    }
+
+    .hero-pill {
+        font-size: 11px;
+        padding: 5px 10px;
+        gap: 6px;
     }
 
     .log-time {
