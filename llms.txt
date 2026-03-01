@@ -1,0 +1,36 @@
+# Vaxtly
+
+> The local-first desktop API client. Free, open-source, MIT licensed.
+
+Vaxtly is a desktop application for testing, debugging, and organizing HTTP requests. It runs entirely on your machine — no account, no cloud, no subscription. Team collaboration is free and unlimited, powered by Git.
+
+## Key Features
+
+- **REST API Client**: Full request builder with method, headers, query params, body, auth, and a syntax-highlighted editor. Import and export collections.
+- **MCP Support**: Native Model Context Protocol (MCP) support. Configure MCP endpoints, discover tools, call them, inspect schemas, and see responses — the first API client with MCP built in.
+- **Git Sync**: Push and pull collections to any Git remote. Share API definitions with your team through version control, not a proprietary cloud. Branch, merge, review diffs.
+- **Secrets Manager**: Connect to HashiCorp Vault or AWS Secrets Manager. Secrets sync into environments at runtime — never written to disk or committed to Git.
+- **Smart Environments**: Define variables per collection or folder. They auto-switch as you navigate between requests. Chain environments with inheritance and override per-folder.
+- **Collections**: Organize requests into nested folders. Each collection gets its own environments, variables, and Git repository.
+
+## Platforms
+
+- Windows
+- macOS (Homebrew: `brew install vaxtly/tap/vaxtly`)
+- Linux
+
+## Links
+
+- Website: https://vaxtly.app
+- Documentation: https://vaxtly.app/docs/
+- GitHub: https://github.com/vaxtly/app
+- Releases: https://github.com/vaxtly/app/releases
+- License: MIT (https://github.com/vaxtly/app/blob/main/LICENSE)
+
+## Principles
+
+- Local-first: all data stays on your machine unless you explicitly push to Git
+- No account required, ever
+- No telemetry or tracking
+- No subscription tiers — every feature is free
+- MIT licensed and open source

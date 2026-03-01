@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" test="test">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,26 +12,29 @@
         gtag('js', new Date());
         gtag('config', 'G-PV84G8501K');
     </script>
-    <title>Vaxtly — Desktop API Client</title>
+    <title>Vaxtly — The Local-First Desktop API Client</title>
     <meta name="description"
-        content="A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and secrets manager integration built in.">
+        content="Free, open-source desktop API client with REST and MCP support. Git sync, HashiCorp Vault and AWS Secrets Manager integration, smart environments. No account, no cloud, no subscription — MIT licensed.">
+    <meta name="keywords"
+        content="API client, REST client, MCP client, Model Context Protocol, desktop API tool, Git sync, secrets manager, HashiCorp Vault, AWS Secrets Manager, open source, local-first, free API client, Postman alternative">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="canonical" href="https://vaxtly.app/">
-    <meta property="og:title" content="Vaxtly — Desktop API Client">
+    <meta property="og:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta property="og:description"
-        content="No account, no cloud, no subscription. A desktop API client with Git sync and secrets manager integration built in.">
+        content="REST and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required. MIT licensed.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vaxtly.app/">
     <meta property="og:site_name" content="Vaxtly">
     <meta property="og:image" content="https://vaxtly.app/images/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vaxtly — The local-first desktop API client with REST and MCP support">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vaxtly — Desktop API Client">
+    <meta name="twitter:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta name="twitter:description"
-        content="No account, no cloud, no subscription. A desktop API client with Git sync and secrets manager integration built in.">
+        content="REST and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required.">
     <meta name="twitter:image" content="https://vaxtly.app/images/og.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,23 +47,46 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Vaxtly",
-        "description": "A free, open-source desktop API client. No account, no cloud, no subscription. Git sync and secrets manager integration built in.",
+        "headline": "The local-first desktop API client",
+        "description": "Free, open-source desktop API client with REST and MCP (Model Context Protocol) support. Sync collections through Git, pull secrets from HashiCorp Vault or AWS Secrets Manager, and use smart environments that auto-switch variables per request. No account, no cloud, no subscription — MIT licensed.",
         "url": "https://vaxtly.app",
+        "downloadUrl": "https://github.com/vaxtly/app/releases/latest",
+        "installUrl": "https://github.com/vaxtly/app/releases/latest",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Windows, macOS, Linux",
+        "applicationSubCategory": "API Testing Tool",
+        "operatingSystem": ["Windows", "macOS", "Linux"],
+        "featureList": [
+            "REST API client with request builder, headers, query params, body, and auth",
+            "MCP (Model Context Protocol) support — discover tools, call them, inspect schemas",
+            "Git Sync — push and pull collections to any Git remote",
+            "Secrets Manager — HashiCorp Vault and AWS Secrets Manager integration",
+            "Smart Environments — variables auto-switch per collection, folder, or request",
+            "Collections — organize requests into nested folders with their own environments",
+            "Local-first — all data stays on your machine, nothing sent to any cloud",
+            "Team collaboration through Git — no proprietary cloud or account required",
+            "Import and export collections",
+            "Syntax-highlighted request and response editor"
+        ],
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
         },
         "author": {
             "@type": "Organization",
             "name": "Vaxtly",
             "url": "https://github.com/vaxtly"
         },
-        "license": "https://github.com/vaxtly/app/blob/main/LICENSE",
-        "softwareVersion": "latest",
-        "screenshot": "https://vaxtly.app/images/screenshot.png"
+        "license": "https://opensource.org/licenses/MIT",
+        "isAccessibleForFree": true,
+        "screenshot": "https://vaxtly.app/images/screenshot.png",
+        "softwareHelp": {
+            "@type": "WebPage",
+            "url": "https://vaxtly.app/docs/"
+        },
+        "codeRepository": "https://github.com/vaxtly/app",
+        "keywords": ["API client", "REST client", "MCP", "Model Context Protocol", "Git sync", "secrets manager", "HashiCorp Vault", "AWS Secrets Manager", "open source", "local-first", "desktop app", "developer tools"]
     }
     </script>
 </head>
