@@ -226,8 +226,14 @@ nav .container {
    ═══════════════════════════════════════════ */
 
 .hero {
-    padding: 180px 0 80px;
+    padding: 180px 0 0;
     position: relative;
+}
+
+.hero > .container {
+    padding-bottom: 64px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Grid background */
@@ -617,7 +623,7 @@ h1 code {
    ═══════════════════════════════════════════ */
 
 .features-section {
-    padding: 120px 0;
+    padding: 0 0 80px;
 }
 
 /* ── Tier 1: Git Sync hero ── */
