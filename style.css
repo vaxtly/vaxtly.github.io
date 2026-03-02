@@ -379,77 +379,122 @@ h1 code {
 .hl-amber { color: var(--amber); font-weight: 500; }
 .hl-emerald { color: var(--emerald); font-weight: 500; }
 
-/* ── Hero feature pills ── */
-.hero-pills {
+/* ── Hero integration icons ── */
+.hero-icons {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0;
     margin-bottom: 44px;
 }
 
-.hero-pill {
-    display: inline-flex;
+.hero-icon-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 8px 18px;
-    border-radius: 20px;
+    gap: 10px;
+    position: relative;
+}
+
+.hero-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--gray-300);
-    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: default;
 }
 
-.hero-pill:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
-    transform: translateY(-2px);
+.hero-icon-item:hover .hero-icon-box {
+    transform: translateY(-3px);
 }
 
-.hero-pill-dot {
-    width: 7px;
-    height: 7px;
+.hero-icon-box.icon-blue {
+    color: var(--blue);
+}
+.hero-icon-box.icon-purple {
+    color: var(--accent);
+}
+.hero-icon-box.icon-orange {
+    color: var(--orange);
+}
+.hero-icon-box.icon-amber {
+    color: var(--amber);
+}
+
+.hero-icon-item:hover .icon-blue {
+    border-color: rgba(96, 165, 250, 0.3);
+    background: rgba(96, 165, 250, 0.08);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.1);
+}
+.hero-icon-item:hover .icon-purple {
+    border-color: rgba(167, 139, 250, 0.3);
+    background: rgba(167, 139, 250, 0.08);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
+}
+.hero-icon-item:hover .icon-orange {
+    border-color: rgba(251, 146, 60, 0.3);
+    background: rgba(251, 146, 60, 0.08);
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.1);
+}
+.hero-icon-item:hover .icon-amber {
+    border-color: rgba(251, 191, 36, 0.3);
+    background: rgba(251, 191, 36, 0.08);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+/* Center item — glass highlight */
+.hero-icon-center .hero-icon-box.icon-glass {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(34, 211, 238, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--gray-200);
+}
+.hero-icon-center:hover .icon-glass {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(34, 211, 238, 0.12));
+    box-shadow: 0 0 30px rgba(167, 139, 250, 0.12);
+}
+
+.hero-icon-dot {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    flex-shrink: 0;
-    animation: dot-pulse 3s ease-in-out infinite;
-}
-
-.hero-pill:nth-child(2) .hero-pill-dot { animation-delay: 0.5s; }
-.hero-pill:nth-child(3) .hero-pill-dot { animation-delay: 1s; }
-.hero-pill:nth-child(4) .hero-pill-dot { animation-delay: 1.5s; }
-
-@keyframes dot-pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.4); opacity: 0.7; }
-}
-
-.pill-accent {
     background: var(--accent);
-    box-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+    z-index: 1;
 }
 
-.pill-red {
-    background: var(--red);
-    box-shadow: 0 0 8px rgba(248, 113, 113, 0.4);
+.hero-icon-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-200);
+    letter-spacing: 0.02em;
 }
 
-.pill-amber {
-    background: var(--amber);
-    box-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
-}
+.hero-icon-label.label-blue { color: var(--blue); }
+.hero-icon-label.label-purple { color: var(--accent); }
+.hero-icon-label.label-white { color: var(--gray-100); }
+.hero-icon-label.label-orange { color: var(--orange); }
+.hero-icon-label.label-amber { color: var(--amber); }
 
-.pill-cyan {
-    background: var(--cyan);
-    box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+.hero-icon-connector {
+    width: 32px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    align-self: flex-end;
+    margin-bottom: 32px;
 }
-
-.hero-pill:nth-child(1):hover { border-color: rgba(167, 139, 250, 0.3); background: rgba(167, 139, 250, 0.06); }
-.hero-pill:nth-child(2):hover { border-color: rgba(248, 113, 113, 0.3); background: rgba(248, 113, 113, 0.06); }
-.hero-pill:nth-child(3):hover { border-color: rgba(251, 191, 36, 0.25); background: rgba(251, 191, 36, 0.06); }
-.hero-pill:nth-child(4):hover { border-color: rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.06); }
 
 /* ── Hero install widget ── */
 .hero-install {
@@ -2325,13 +2370,38 @@ footer a:hover {
         margin-bottom: 22px;
     }
 
-    .hero-pills {
-        gap: 6px;
+    .hero-icons {
+        gap: 0;
     }
 
-    .hero-pill {
+    .hero-icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+    }
+
+    .hero-icon-box svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-icon-center .hero-icon-box.icon-glass {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-icon-center .hero-icon-box.icon-glass svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .hero-icon-connector {
+        width: 16px;
+        margin-bottom: 26px;
+    }
+
+    .hero-icon-label {
         font-size: 12px;
-        padding: 6px 12px;
     }
 
     /* Install widget responsive */
@@ -2524,9 +2594,43 @@ footer a:hover {
         margin-bottom: 18px;
     }
 
-    .hero-pill {
+    .hero-icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+
+    .hero-icon-box svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-icon-center .hero-icon-box.icon-glass {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-icon-center .hero-icon-box.icon-glass svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .hero-icon-connector {
+        width: 10px;
+        margin-bottom: 22px;
+    }
+
+    .hero-icon-label {
         font-size: 11px;
-        padding: 5px 10px;
+    }
+
+    .hero-icon-dot {
+        width: 8px;
+        height: 8px;
+        top: 14px;
+    }
+
+    .hero-icon-item {
         gap: 6px;
     }
 
