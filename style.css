@@ -337,35 +337,37 @@ nav .container {
 }
 
 /* ── H1 ── */
-h1 {
-    font-size: clamp(40px, 6vw, 80px);
-    font-weight: 700;
-    color: transparent;
-    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.65) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
-    margin-bottom: 28px;
-    max-width: 900px;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+.hero-h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-@keyframes text-pan {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+.h1-local {
+    font-size: clamp(42px, 5.5vw, 72px);
+    letter-spacing: -0.04em;
+    color: var(--gray-100);
+    line-height: 0.95;
 }
 
-h1 code {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85em;
+.h1-api {
+    font-size: clamp(42px, 5.5vw, 72px);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
     color: transparent;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--cyan) 33%, var(--emerald) 66%, var(--accent) 100%);
-    background-size: 200% auto;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--amber) 50%, var(--red) 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    animation: text-pan 5s linear infinite;
-    letter-spacing: -0.02em;
+    filter: drop-shadow(0 0 30px rgba(251, 146, 60, 0.25));
+}
+
+.h1-dot {
+    color: var(--orange);
+    -webkit-text-fill-color: var(--orange);
 }
 
 /* ── Subtitle ── */
@@ -500,7 +502,8 @@ h1 code {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    min-width: 0;
 }
 
 .hero-col-install {
@@ -2590,8 +2593,9 @@ footer a:hover {
 
 /* ── 480px ── */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 32px;
+    .h1-local,
+    .h1-api {
+        font-size: 36px;
     }
 
     .hero {
