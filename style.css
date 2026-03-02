@@ -91,7 +91,7 @@ a {
 
 /* ── Container ── */
 .container {
-    max-width: 1120px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -385,7 +385,6 @@ h1 code {
     align-items: center;
     justify-content: center;
     gap: 0;
-    margin-bottom: 44px;
 }
 
 .hero-icon-item {
@@ -462,19 +461,6 @@ h1 code {
     box-shadow: 0 0 30px rgba(167, 139, 250, 0.12);
 }
 
-.hero-icon-dot {
-    position: absolute;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
-    z-index: 1;
-}
-
 .hero-icon-label {
     font-size: 14px;
     font-weight: 600;
@@ -496,11 +482,29 @@ h1 code {
     margin-bottom: 32px;
 }
 
+/* ── Hero 2-column layout ── */
+.hero-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    width: 100%;
+}
+
+.hero-col-icons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-col-install {
+    flex: 1;
+}
+
 /* ── Hero install widget ── */
 .hero-install {
     text-align: left;
     width: 100%;
-    max-width: 640px;
 }
 
 
@@ -2325,9 +2329,7 @@ footer a:hover {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        background: rgba(10, 10, 10, 0.95);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
+        background: var(--gray-950);
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         padding: 8px 24px 16px;
     }
@@ -2350,24 +2352,30 @@ footer a:hover {
         padding: 12px 0;
     }
 
-    /* Hero — hide forced line breaks on mobile */
-    .hero-sub br {
-        display: none;
+    .nav-links .nav-gh {
+        display: inline-flex;
+        padding: 8px 16px;
     }
 
     .hero {
         padding: 130px 0 48px;
     }
 
-    .hero-sub {
-        font-size: 16px;
-        margin-bottom: 32px;
-    }
-
     .hero-kicker {
         font-size: 11px;
         padding: 5px 14px 5px 10px;
         margin-bottom: 22px;
+    }
+
+    .hero-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .hero-col-icons {
+        align-items: center;
+        text-align: center;
     }
 
     .hero-icons {
@@ -2582,10 +2590,6 @@ footer a:hover {
 
     .hero {
         padding: 120px 0 40px;
-    }
-
-    .hero-sub {
-        font-size: 15px;
     }
 
     .hero-kicker {
