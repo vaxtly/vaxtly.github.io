@@ -30,6 +30,7 @@
     --orange: #fb923c;
     --red: #f87171;
     --cyan: #22d3ee;
+    --teal: #2dd4bf;
     --accent: #a78bfa;
     --accent-dim: rgba(167, 139, 250, 0.12);
     --glow-primary: linear-gradient(135deg, rgba(167, 139, 250, 0.6), rgba(52, 211, 153, 0.4), rgba(96, 165, 250, 0.5));
@@ -107,7 +108,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 16px 0;
+    padding: 10px 0;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(20px) saturate(1.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -226,7 +227,7 @@ nav .container {
    ═══════════════════════════════════════════ */
 
 .hero {
-    padding: 180px 0 0;
+    padding: 140px 0 0;
     position: relative;
 }
 
@@ -315,7 +316,7 @@ nav .container {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 28px;
+    margin-bottom: 36px;
     padding: 6px 18px 6px 14px;
     border-radius: 20px;
     background: rgba(167, 139, 250, 0.08);
@@ -426,6 +427,9 @@ nav .container {
 .hero-icon-box.icon-purple {
     color: var(--accent);
 }
+.hero-icon-box.icon-teal {
+    color: var(--teal);
+}
 .hero-icon-box.icon-orange {
     color: var(--orange);
 }
@@ -442,6 +446,11 @@ nav .container {
     border-color: rgba(167, 139, 250, 0.3);
     background: rgba(167, 139, 250, 0.08);
     box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
+}
+.hero-icon-item:hover .icon-teal {
+    border-color: rgba(45, 212, 191, 0.3);
+    background: rgba(45, 212, 191, 0.08);
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
 }
 .hero-icon-item:hover .icon-orange {
     border-color: rgba(251, 146, 60, 0.3);
@@ -478,6 +487,7 @@ nav .container {
 
 .hero-icon-label.label-blue { color: var(--blue); }
 .hero-icon-label.label-purple { color: var(--accent); }
+.hero-icon-label.label-teal { color: var(--teal); }
 .hero-icon-label.label-white { color: var(--gray-100); }
 .hero-icon-label.label-orange { color: var(--orange); }
 .hero-icon-label.label-amber { color: var(--amber); }
@@ -1601,7 +1611,7 @@ nav .container {
 /* ── Features grid: Compact cards ── */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     border-radius: 16px;
     overflow: hidden;
@@ -1699,6 +1709,11 @@ nav .container {
 .fi-accent {
     background: var(--accent-dim);
     color: var(--accent);
+}
+
+.fi-teal {
+    background: rgba(45, 212, 191, 0.1);
+    color: var(--teal);
 }
 
 .fi-orange {
@@ -2318,6 +2333,10 @@ footer a:hover {
 
     .feature-hero-text p {
         max-width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

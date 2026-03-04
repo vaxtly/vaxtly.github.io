@@ -14,27 +14,27 @@
     </script>
     <title>Vaxtly — The Local-First Desktop API Client</title>
     <meta name="description"
-        content="Free, open-source desktop API client with REST and MCP support. Git sync, HashiCorp Vault and AWS Secrets Manager integration, smart environments. No account, no cloud, no subscription — MIT licensed.">
+        content="Free, open-source desktop API client with REST, WebSocket, and MCP support. Git sync, HashiCorp Vault and AWS Secrets Manager integration, smart environments. No account, no cloud, no subscription — MIT licensed.">
     <meta name="keywords"
-        content="API client, REST client, MCP client, Model Context Protocol, desktop API tool, Git sync, secrets manager, HashiCorp Vault, AWS Secrets Manager, open source, local-first, free API client, Postman alternative">
+        content="API client, REST client, WebSocket client, MCP client, Model Context Protocol, desktop API tool, Git sync, secrets manager, HashiCorp Vault, AWS Secrets Manager, open source, local-first, free API client, Postman alternative">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="canonical" href="https://vaxtly.app/">
     <meta property="og:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta property="og:description"
-        content="REST and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required. MIT licensed.">
+        content="REST, WebSocket, and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required. MIT licensed.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vaxtly.app/">
     <meta property="og:site_name" content="Vaxtly">
     <meta property="og:image" content="https://vaxtly.app/images/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Vaxtly — The local-first desktop API client with REST and MCP support">
+    <meta property="og:image:alt" content="Vaxtly — The local-first desktop API client with REST, WebSocket, and MCP support">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta name="twitter:description"
-        content="REST and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required.">
+        content="REST, WebSocket, and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required.">
     <meta name="twitter:image" content="https://vaxtly.app/images/og.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +48,7 @@
         "@type": "SoftwareApplication",
         "name": "Vaxtly",
         "headline": "The local-first desktop API client",
-        "description": "Free, open-source desktop API client with REST and MCP (Model Context Protocol) support. Sync collections through Git, pull secrets from HashiCorp Vault or AWS Secrets Manager, and use smart environments that auto-switch variables per request. No account, no cloud, no subscription — MIT licensed.",
+        "description": "Free, open-source desktop API client with REST, WebSocket, and MCP (Model Context Protocol) support. Sync collections through Git, pull secrets from HashiCorp Vault or AWS Secrets Manager, and use smart environments that auto-switch variables per request. No account, no cloud, no subscription — MIT licensed.",
         "url": "https://vaxtly.app",
         "downloadUrl": "https://github.com/vaxtly/app/releases/latest",
         "installUrl": "https://github.com/vaxtly/app/releases/latest",
@@ -57,6 +57,7 @@
         "operatingSystem": ["Windows", "macOS", "Linux"],
         "featureList": [
             "REST API client with request builder, headers, query params, body, and auth",
+            "WebSocket support — connect, send messages, inspect responses with JSON syntax highlighting",
             "MCP (Model Context Protocol) support — discover tools, call them, inspect schemas",
             "Git Sync — push and pull collections to any Git remote",
             "Secrets Manager — HashiCorp Vault and AWS Secrets Manager integration",
@@ -86,7 +87,7 @@
             "url": "https://vaxtly.app/docs/"
         },
         "codeRepository": "https://github.com/vaxtly/app",
-        "keywords": ["API client", "REST client", "MCP", "Model Context Protocol", "Git sync", "secrets manager", "HashiCorp Vault", "AWS Secrets Manager", "open source", "local-first", "desktop app", "developer tools"]
+        "keywords": ["API client", "REST client", "WebSocket client", "MCP", "Model Context Protocol", "Git sync", "secrets manager", "HashiCorp Vault", "AWS Secrets Manager", "open source", "local-first", "desktop app", "developer tools"]
     }
     </script>
 </head>
@@ -150,6 +151,15 @@
                         <div class="hero-icon-box icon-purple">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="6" width="8" height="12" rx="2"/><path d="M14 8h4a2 2 0 012 2v4a2 2 0 01-2 2h-4"/><path d="M10 12h4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hero-icon-connector"></div>
+                    <div class="hero-icon-item">
+                        <span class="hero-icon-label label-teal">WebSocket</span>
+                        <div class="hero-icon-box icon-teal">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
                             </svg>
                         </div>
                     </div>
@@ -742,6 +752,20 @@ scoop install vaxtly</pre>
                         <h4>Collections</h4>
                         <p>Organize requests into nested folders. Each collection gets its own environments, variables,
                             and Git repository.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-compact">
+                    <div class="feature-icon fi-teal">
+                        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>WebSocket</h4>
+                        <p>Connect to WebSocket endpoints, send messages with JSON syntax highlighting, and inspect
+                            responses in real-time.</p>
                     </div>
                 </div>
 
