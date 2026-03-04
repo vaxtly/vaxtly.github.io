@@ -227,7 +227,7 @@ nav .container {
    ═══════════════════════════════════════════ */
 
 .hero {
-    padding: 140px 0 0;
+    padding: 80px 0 0;
     position: relative;
 }
 
@@ -394,148 +394,41 @@ nav .container {
 .hl-amber { color: var(--amber); font-weight: 500; }
 .hl-emerald { color: var(--emerald); font-weight: 500; }
 
-/* ── Hero integration icons ── */
-.hero-icons {
+/* ── Hero capability pills ── */
+.hero-pills {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
-}
-
-.hero-icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
-    position: relative;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
 }
 
-.hero-icon-box {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
-    cursor: default;
-}
-
-.hero-icon-item:hover .hero-icon-box {
-    transform: translateY(-3px);
-}
-
-.hero-icon-box.icon-blue {
-    color: var(--blue);
-}
-.hero-icon-box.icon-purple {
-    color: var(--accent);
-}
-.hero-icon-box.icon-teal {
-    color: var(--teal);
-}
-.hero-icon-box.icon-orange {
-    color: var(--orange);
-}
-.hero-icon-box.icon-amber {
-    color: var(--amber);
-}
-
-.hero-icon-item:hover .icon-blue {
-    border-color: rgba(96, 165, 250, 0.3);
-    background: rgba(96, 165, 250, 0.08);
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.1);
-}
-.hero-icon-item:hover .icon-purple {
-    border-color: rgba(167, 139, 250, 0.3);
-    background: rgba(167, 139, 250, 0.08);
-    box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
-}
-.hero-icon-item:hover .icon-teal {
-    border-color: rgba(45, 212, 191, 0.3);
-    background: rgba(45, 212, 191, 0.08);
-    box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
-}
-.hero-icon-item:hover .icon-orange {
-    border-color: rgba(251, 146, 60, 0.3);
-    background: rgba(251, 146, 60, 0.08);
-    box-shadow: 0 0 20px rgba(251, 146, 60, 0.1);
-}
-.hero-icon-item:hover .icon-amber {
-    border-color: rgba(251, 191, 36, 0.3);
-    background: rgba(251, 191, 36, 0.08);
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.1);
-}
-
-/* Center item — glass highlight */
-.hero-icon-center .hero-icon-box.icon-glass {
-    width: 72px;
-    height: 72px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(34, 211, 238, 0.08));
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: var(--gray-200);
-}
-.hero-icon-center:hover .icon-glass {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(34, 211, 238, 0.12));
-    box-shadow: 0 0 30px rgba(167, 139, 250, 0.12);
-}
-
-.hero-icon-label {
+.hero-pill {
     font-size: 14px;
     font-weight: 600;
-    color: var(--gray-200);
     letter-spacing: 0.02em;
 }
 
-.hero-icon-label.label-blue { color: var(--blue); }
-.hero-icon-label.label-purple { color: var(--accent); }
-.hero-icon-label.label-teal { color: var(--teal); }
-.hero-icon-label.label-white { color: var(--gray-100); }
-.hero-icon-label.label-orange { color: var(--orange); }
-.hero-icon-label.label-amber { color: var(--amber); }
-
-.hero-icon-connector {
-    width: 32px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.08);
-    align-self: flex-end;
-    margin-bottom: 32px;
+.hero-pill-dot {
+    color: var(--gray-600);
+    font-size: 18px;
+    line-height: 1;
+    user-select: none;
 }
 
-/* ── Hero 2-column layout ── */
-.hero-columns {
-    display: flex;
-    align-items: flex-start;
-    gap: 56px;
-    width: 100%;
-    margin-bottom: 56px;
-}
-
-.hero-col-brand {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-width: 0;
-}
-
-.hero-col-desc {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 24px;
-}
+.hero-pill.pill-blue { color: var(--blue); }
+.hero-pill.pill-teal { color: var(--teal); }
+.hero-pill.pill-purple { color: var(--accent); }
+.hero-pill.pill-orange { color: var(--orange); }
+.hero-pill.pill-amber { color: var(--amber); }
 
 .hero-desc {
-    font-size: 17px;
-    line-height: 1.75;
+    font-size: 18px;
+    line-height: 1.7;
     color: var(--gray-400);
-    text-align: left;
+    text-align: center;
+    max-width: 640px;
 }
 
 .hero-desc .hl-blue { color: var(--blue); font-weight: 500; }
@@ -545,18 +438,79 @@ nav .container {
 .hero-desc .hl-amber { color: var(--amber); font-weight: 500; }
 
 .hero-desc-sub {
-    margin-top: 16px;
-    font-size: 14px;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--gray-200);
+    text-align: center;
+}
+
+.hero-desc-badge {
+    margin-bottom: 16px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--gray-300);
-    text-align: left;
+    color: var(--accent);
+    text-align: center;
 }
 
 /* ── Hero install row ── */
-.hero-install-row {
+/* ── Install section (standalone, between features and CTA) ── */
+.install-section {
+    padding: 80px 0;
+    position: relative;
+    scroll-margin-top: 60px;
+}
+
+.install-title {
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--gray-100);
+    line-height: 1.15;
+    margin-bottom: 40px;
+}
+
+.install-section::before {
+    content: '';
+    position: absolute;
     width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+/* ── Hero download button ── */
+.hero-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--gray-100);
+    background: rgba(167, 139, 250, 0.12);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.hero-download:hover {
+    background: rgba(167, 139, 250, 0.2);
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 0 24px rgba(167, 139, 250, 0.15);
+    transform: translateY(-1px);
+}
+
+.hero-download:active {
+    transform: translateY(0);
 }
 
 /* ── Hero install widget ── */
@@ -1760,34 +1714,36 @@ nav .container {
     color: var(--orange);
 }
 
-/* ── Compact row ── */
+/* ── Compact row (vertical cards) ── */
 .feature-compact {
-    padding: 28px 28px;
+    padding: 36px;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 16px;
 }
 
 .feature-compact .feature-icon {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
 }
 
 .feature-compact .feature-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
 }
 
 .feature-compact h4 {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--gray-100);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .feature-compact p {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--gray-500);
     line-height: 1.6;
 }
@@ -2425,7 +2381,7 @@ footer a:hover {
     }
 
     .hero {
-        padding: 130px 0 48px;
+        padding: 72px 0 48px;
     }
 
     .hero-kicker {
@@ -2434,59 +2390,8 @@ footer a:hover {
         margin-bottom: 22px;
     }
 
-    .hero-columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-
-    .hero-col-brand {
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-col-desc {
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-desc,
-    .hero-desc-sub {
-        text-align: center;
-    }
-
-    .hero-icons {
-        gap: 0;
-    }
-
-    .hero-icon-box {
-        width: 52px;
-        height: 52px;
-        border-radius: 14px;
-    }
-
-    .hero-icon-box svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    .hero-icon-center .hero-icon-box.icon-glass {
-        width: 60px;
-        height: 60px;
-    }
-
-    .hero-icon-center .hero-icon-box.icon-glass svg {
-        width: 26px;
-        height: 26px;
-    }
-
-    .hero-icon-connector {
-        width: 16px;
-        margin-bottom: 26px;
-    }
-
-    .hero-icon-label {
-        font-size: 12px;
+    .hero-pill {
+        font-size: 13px;
     }
 
     /* Install widget responsive */
@@ -2615,6 +2520,11 @@ footer a:hover {
         overflow-x: auto;
     }
 
+    /* Install section */
+    .install-section {
+        padding: 60px 0;
+    }
+
     /* Closing */
     .closing-section {
         padding: 80px 0 80px;
@@ -2667,7 +2577,7 @@ footer a:hover {
     }
 
     .hero {
-        padding: 120px 0 40px;
+        padding: 64px 0 40px;
     }
 
     .hero-kicker {
@@ -2676,44 +2586,12 @@ footer a:hover {
         margin-bottom: 18px;
     }
 
-    .hero-icon-box {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
+    .hero-pill {
+        font-size: 12px;
     }
 
-    .hero-icon-box svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .hero-icon-center .hero-icon-box.icon-glass {
-        width: 50px;
-        height: 50px;
-    }
-
-    .hero-icon-center .hero-icon-box.icon-glass svg {
-        width: 22px;
-        height: 22px;
-    }
-
-    .hero-icon-connector {
-        width: 10px;
-        margin-bottom: 22px;
-    }
-
-    .hero-icon-label {
-        font-size: 11px;
-    }
-
-    .hero-icon-dot {
-        width: 8px;
-        height: 8px;
-        top: 14px;
-    }
-
-    .hero-icon-item {
-        gap: 6px;
+    .hero-pill-dot {
+        font-size: 14px;
     }
 
     .log-time {
@@ -2870,17 +2748,17 @@ footer a:hover {
     }
 
     .feature-compact {
-        padding: 20px 18px;
+        padding: 28px 20px;
     }
 
     .feature-compact .feature-icon {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
     }
 
     .feature-compact .feature-icon svg {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
     }
 
     .screenshot-section {
