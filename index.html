@@ -14,16 +14,16 @@
     </script>
     <title>Vaxtly — The Local-First Desktop API Client</title>
     <meta name="description"
-        content="Free, open-source desktop API client with REST, WebSocket, and MCP support. Git sync, HashiCorp Vault and AWS Secrets Manager integration, smart environments. No account, no cloud, no subscription — MIT licensed.">
+        content="Free, open-source desktop API client with REST, WebSocket, and MCP support — plus a CLI and MCP server so AI coding agents (Cursor, Claude Code, Codex, Claude Desktop) can mirror endpoints into the app. Git sync, HashiCorp Vault and AWS Secrets Manager integration, smart environments. No account, no cloud, no subscription — MIT licensed.">
     <meta name="keywords"
-        content="API client, REST client, WebSocket client, MCP client, Model Context Protocol, desktop API tool, Git sync, secrets manager, HashiCorp Vault, AWS Secrets Manager, open source, local-first, free API client, Postman alternative">
+        content="API client, REST client, WebSocket client, MCP client, Model Context Protocol, AI agent integration, Cursor, Claude Code, Codex, MCP server, desktop API tool, Git sync, secrets manager, HashiCorp Vault, AWS Secrets Manager, open source, local-first, free API client, Postman alternative">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="canonical" href="https://vaxtly.app/">
     <meta property="og:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta property="og:description"
-        content="REST, WebSocket, and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required. MIT licensed.">
+        content="REST, WebSocket, and MCP from your machine. Now with AI agent integration — tell your coding agent &quot;add this endpoint to Vaxtly&quot; and it just does it. Git sync, Vault secrets, smart environments — free, open-source, no account required. MIT licensed.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vaxtly.app/">
     <meta property="og:site_name" content="Vaxtly">
@@ -34,7 +34,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vaxtly — The Local-First Desktop API Client">
     <meta name="twitter:description"
-        content="REST, WebSocket, and MCP from your machine. Git sync, Vault secrets, smart environments — free, open-source, no account required.">
+        content="REST, WebSocket, and MCP from your machine. Now with AI agent integration — tell your coding agent &quot;add this endpoint to Vaxtly&quot; and it just does it. Git sync, Vault, smart environments — free, open-source.">
     <meta name="twitter:image" content="https://vaxtly.app/images/og.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,7 @@
         "applicationSubCategory": "API Testing Tool",
         "operatingSystem": ["Windows", "macOS", "Linux"],
         "featureList": [
+            "AI Agent Integration — bundled CLI and MCP server let coding agents (Cursor, Claude Code, Codex, Claude Desktop) mirror endpoints into the app",
             "REST API client with request builder, headers, query params, body, and auth",
             "WebSocket support — connect, send messages, inspect responses with JSON syntax highlighting",
             "MCP (Model Context Protocol) support — discover tools, call them, inspect schemas",
@@ -126,12 +127,28 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+
+                <a href="https://github.com/vaxtly/app/releases/tag/v0.11.0" target="_blank" rel="noopener" class="release-strip animate-in delay-1">
+                    <span class="release-strip-pulse" aria-hidden="true">
+                        <span class="release-strip-dot"></span>
+                        <span class="release-strip-ring"></span>
+                    </span>
+                    <span class="release-strip-text">
+                        <span class="release-strip-ver">v0.11.0</span>
+                        <span class="release-strip-sep">&middot;</span>
+                        <span class="release-strip-headline">AI Agent Integration</span>
+                    </span>
+                    <span class="release-strip-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+
                 <div class="hero-pills animate-in delay-2">
                     <span class="hero-pill pill-blue">REST</span>
                     <span class="hero-pill-dot">&middot;</span>
                     <span class="hero-pill pill-teal">WebSocket</span>
                     <span class="hero-pill-dot">&middot;</span>
                     <span class="hero-pill pill-purple">MCP</span>
+                    <span class="hero-pill-dot">&middot;</span>
+                    <span class="hero-pill pill-emerald">Agents</span>
                     <span class="hero-pill-dot">&middot;</span>
                     <span class="hero-pill pill-orange">Git</span>
                     <span class="hero-pill-dot">&middot;</span>
@@ -143,14 +160,39 @@
                 </h1>
 
                 <p class="hero-desc-badge animate-in delay-3">Open source &middot; Free forever</p>
-                <p class="hero-desc animate-in delay-3">A fast, native API client that runs entirely on your machine. Test <span class="hl-blue">REST</span>, <span class="hl-teal">WebSocket</span>, and <span class="hl-purple">MCP</span> endpoints. Sync collections through <span class="hl-orange">Git</span>, pull secrets from <span class="hl-amber">Vault</span>, and use environments that auto-switch variables per request.</p>
+                <p class="hero-desc animate-in delay-3">A fast, native API client that runs entirely on your machine. Test <span class="hl-blue">REST</span>, <span class="hl-teal">WebSocket</span>, and <span class="hl-purple">MCP</span> endpoints — and let your <span class="hl-emerald">AI agent</span> mirror new endpoints into Vaxtly while you build them. Sync collections through <span class="hl-orange">Git</span>, pull secrets from <span class="hl-amber">Vault</span>, and use environments that auto-switch variables per request.</p>
                 <p class="hero-desc-sub animate-in delay-3">No account. No cloud. No subscription.</p>
 
+                <!-- Live typewriter — cycles through real CLI commands; populated by script.js -->
+                <div class="hero-term animate-in delay-3" aria-hidden="true">
+                    <div class="hero-term-bar">
+                        <span class="hero-term-dot hero-term-dot-r"></span>
+                        <span class="hero-term-dot hero-term-dot-y"></span>
+                        <span class="hero-term-dot hero-term-dot-g"></span>
+                        <span class="hero-term-title">vaxtly &middot; live</span>
+                        <span class="hero-term-pulse"></span>
+                    </div>
+                    <div class="hero-term-body">
+                        <span class="hero-term-prompt">$</span>
+                        <span class="hero-term-text" id="hero-term-text"></span>
+                        <span class="hero-term-caret" aria-hidden="true"></span>
+                    </div>
+                </div>
+
                 <a href="#download-install" class="hero-download animate-in delay-4">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <span class="hero-download-shine" aria-hidden="true"></span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    Download
+                    <span class="hero-download-text">
+                        <span class="hero-download-label">Download</span>
+                        <span class="hero-download-os">macOS &middot; Windows &middot; Linux</span>
+                    </span>
+                </a>
+
+                <a href="#features" class="hero-scroll-cue animate-in delay-4" aria-label="Scroll to features">
+                    <span class="hero-scroll-cue-line"></span>
+                    <span class="hero-scroll-cue-label">explore the toolkit</span>
                 </a>
 
             </div>
@@ -198,6 +240,121 @@
     <!-- Features -->
     <section class="features-section" id="features">
         <div class="container">
+
+            <!-- Tier 0: AI Agent Integration — new headline feature, v0.11.0 -->
+            <div class="feature-hero reveal feature-hero-agents">
+                <div class="feature-hero-text">
+                    <span class="feature-kicker kicker-emerald">Tell your agent. Vaxtly listens.</span>
+                    <h2>AI Agent Integration</h2>
+                    <p>Vaxtly ships a CLI and an MCP server so your AI coding agent — Cursor, Claude Code, Codex, Claude Desktop — can mirror endpoints into the app while you build them. The agent reads your route, runs an idempotent upsert, and the new request appears in your collection tree. Re-running updates instead of duplicating. Secrets are always redacted on read; no opt-in.</p>
+                    <div class="agent-cta-row">
+                        <span class="agent-cta-quote">
+                            <span class="agent-cta-quote-mark">&ldquo;</span>Add the GET /users endpoint to Vaxtly<span class="agent-cta-quote-mark">&rdquo;</span>
+                        </span>
+                        <a href="https://vaxtly.app/docs/ai-agents" target="_blank" rel="noopener" class="agent-cta-link">
+                            Read the guide <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-hero-visual">
+                    <div class="terminal-block agent-flow">
+
+                        <!-- Step 1: chat message from the developer to the agent -->
+                        <div class="agent-step agent-step-prompt">
+                            <div class="agent-step-meta">
+                                <span class="agent-step-tag agent-step-tag-you">YOU</span>
+                                <span class="agent-step-actor">via your favourite agent</span>
+                            </div>
+                            <div class="agent-prompt-bubble">
+                                Add the <code class="agent-mono">GET /users</code> endpoint to Vaxtly.
+                            </div>
+                        </div>
+
+                        <!-- Connector arrow -->
+                        <div class="agent-connector" aria-hidden="true">
+                            <span class="agent-connector-line"></span>
+                            <svg class="agent-connector-arrow" viewBox="0 0 12 12" fill="none">
+                                <path d="M6 1v10M2 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Step 2: agent runs the CLI / MCP call -->
+                        <div class="agent-step agent-step-call">
+                            <div class="agent-step-meta">
+                                <span class="agent-step-tag agent-step-tag-agent">AGENT</span>
+                                <span class="agent-step-actor">vaxtly mcp &middot; upsert.request</span>
+                            </div>
+                            <div class="agent-call-block">
+                                <div class="agent-call-line">
+                                    <span class="agent-call-prompt">$</span>
+                                    <span class="agent-call-cmd">vaxtly upsert request \</span>
+                                </div>
+                                <div class="agent-call-line agent-call-flag">
+                                    <span class="agent-call-key">--collection-external-key</span>
+                                    <span class="agent-call-val">acme</span> <span class="agent-call-cont">\</span>
+                                </div>
+                                <div class="agent-call-line agent-call-flag">
+                                    <span class="agent-call-key">--external-key</span>
+                                    <span class="agent-call-val">users.list</span> <span class="agent-call-cont">\</span>
+                                </div>
+                                <div class="agent-call-line agent-call-flag">
+                                    <span class="agent-call-key">--method</span>
+                                    <span class="agent-call-val">GET</span>
+                                    <span class="agent-call-key">--url</span>
+                                    <span class="agent-call-val">/users</span>
+                                </div>
+                                <div class="agent-call-result">
+                                    <span class="agent-call-result-key">&rarr;</span>
+                                    <span class="agent-call-result-val">{"id":"&hellip;","created":true,"updated_at":"&hellip;"}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Connector arrow -->
+                        <div class="agent-connector" aria-hidden="true">
+                            <span class="agent-connector-line"></span>
+                            <svg class="agent-connector-arrow" viewBox="0 0 12 12" fill="none">
+                                <path d="M6 1v10M2 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Step 3: the new request appears in Vaxtly's tree -->
+                        <div class="agent-step agent-step-tree">
+                            <div class="agent-step-meta">
+                                <span class="agent-step-tag agent-step-tag-vaxtly">VAXTLY</span>
+                                <span class="agent-step-actor">collection tree</span>
+                            </div>
+                            <div class="agent-tree">
+                                <div class="agent-tree-row agent-tree-row-collection">
+                                    <svg class="agent-tree-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                                    <span class="agent-tree-name">Acme API</span>
+                                </div>
+                                <div class="agent-tree-row agent-tree-row-folder">
+                                    <svg class="agent-tree-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                                    <svg class="agent-tree-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+                                    <span class="agent-tree-name">Users</span>
+                                </div>
+                                <div class="agent-tree-row agent-tree-row-request agent-tree-row-new">
+                                    <span class="agent-tree-method agent-tree-method-get">GET</span>
+                                    <span class="agent-tree-name">List users</span>
+                                    <span class="agent-tree-new-pill">NEW</span>
+                                </div>
+                                <div class="agent-tree-row agent-tree-row-request">
+                                    <span class="agent-tree-method agent-tree-method-get">GET</span>
+                                    <span class="agent-tree-name agent-tree-name-dim">Get user by id</span>
+                                </div>
+                                <div class="agent-tree-row agent-tree-row-request">
+                                    <span class="agent-tree-method agent-tree-method-post">POST</span>
+                                    <span class="agent-tree-name agent-tree-name-dim">Create user</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-hero-border"></div>
 
             <!-- Tier 1: Git Sync — full-width hero treatment -->
             <div class="feature-hero reveal">

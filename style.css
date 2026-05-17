@@ -2812,3 +2812,652 @@ footer a:hover {
         scroll-behavior: auto !important;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   v0.11.0 — AI Agent Integration
+   ─────────────────────────────────────────────────────────────────── */
+
+/* ── Release strip (top of hero) ──────────────────────────────────── */
+.release-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 16px 7px 12px;
+    margin-bottom: 24px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.07), rgba(52, 211, 153, 0.03));
+    border: 1px solid rgba(52, 211, 153, 0.22);
+    color: var(--gray-200);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.25s ease,
+                background 0.25s ease;
+}
+.release-strip:hover {
+    transform: translateY(-1px);
+    border-color: rgba(52, 211, 153, 0.45);
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.12), rgba(52, 211, 153, 0.05));
+}
+.release-strip-pulse {
+    position: relative;
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.release-strip-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.7);
+    z-index: 2;
+}
+.release-strip-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1.5px solid var(--emerald);
+    opacity: 0;
+    animation: release-strip-ring 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+@keyframes release-strip-ring {
+    0%   { transform: scale(0.6); opacity: 0.9; }
+    70%  { transform: scale(2.4); opacity: 0; }
+    100% { transform: scale(2.4); opacity: 0; }
+}
+.release-strip-text {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.release-strip-ver {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--emerald);
+    letter-spacing: 0.02em;
+}
+.release-strip-sep {
+    color: var(--gray-600);
+}
+.release-strip-headline {
+    color: var(--gray-100);
+    font-weight: 500;
+}
+.release-strip-arrow {
+    margin-left: 2px;
+    color: var(--gray-500);
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+.release-strip:hover .release-strip-arrow {
+    transform: translateX(3px);
+    color: var(--emerald);
+}
+
+/* ── Hero pill / inline highlight: emerald variant ─────────────────── */
+.hero-pill.pill-emerald { color: var(--emerald); }
+.hero-desc .hl-emerald { color: var(--emerald); font-weight: 500; }
+
+/* ── Feature kicker: emerald variant ──────────────────────────────── */
+.kicker-emerald {
+    color: var(--emerald);
+}
+
+/* ── AI Agent feature block (text side: tagline + CTA row) ────────── */
+.agent-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 20px;
+    margin-top: 28px;
+}
+.agent-cta-quote {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.06), rgba(52, 211, 153, 0.02));
+    border: 1px solid rgba(52, 211, 153, 0.18);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--gray-100);
+    line-height: 1.4;
+}
+.agent-cta-quote-mark {
+    color: var(--emerald);
+    opacity: 0.7;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 2px;
+}
+.agent-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--emerald);
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+.agent-cta-link:hover {
+    gap: 9px;
+}
+.agent-cta-link span {
+    transition: transform 0.2s ease;
+}
+
+/* ── 3-stage flow mockup ──────────────────────────────────────────── */
+.agent-flow {
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.55), rgba(15, 15, 15, 0.4));
+}
+.agent-step {
+    padding: 14px 14px 13px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(20, 20, 20, 0.55);
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.02) inset;
+    transition: border-color 0.4s ease, background 0.4s ease;
+}
+.agent-step:hover {
+    border-color: rgba(52, 211, 153, 0.18);
+}
+.agent-step-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+}
+.agent-step-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.agent-step-tag-you {
+    color: var(--gray-300);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.agent-step-tag-agent {
+    color: var(--accent);
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+}
+.agent-step-tag-vaxtly {
+    color: var(--emerald);
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+.agent-step-actor {
+    color: var(--gray-500);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+}
+
+/* Step 1 — user prompt bubble */
+.agent-prompt-bubble {
+    padding: 10px 13px;
+    border-radius: 6px 12px 12px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--gray-200);
+    font-size: 13.5px;
+    line-height: 1.55;
+}
+.agent-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--gray-100);
+}
+
+/* Connector arrow between steps */
+.agent-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    height: 28px;
+    margin: -2px 0;
+    color: var(--gray-600);
+}
+.agent-connector-line {
+    width: 1px;
+    height: 14px;
+    background: linear-gradient(180deg, transparent, rgba(52, 211, 153, 0.4));
+}
+.agent-connector-arrow {
+    width: 12px;
+    height: 12px;
+    color: rgba(52, 211, 153, 0.5);
+    margin-top: -2px;
+}
+
+/* Step 2 — CLI call block */
+.agent-call-block {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--gray-300);
+}
+.agent-call-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.agent-call-flag {
+    padding-left: 22px;
+}
+.agent-call-prompt {
+    color: var(--emerald);
+    font-weight: 600;
+    user-select: none;
+}
+.agent-call-cmd {
+    color: var(--gray-100);
+}
+.agent-call-key {
+    color: var(--gray-500);
+}
+.agent-call-val {
+    color: var(--blue);
+}
+.agent-call-cont {
+    color: var(--gray-600);
+}
+.agent-call-result {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.06);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    color: var(--gray-400);
+    font-size: 12px;
+}
+.agent-call-result-key {
+    color: var(--emerald);
+    font-weight: 600;
+}
+.agent-call-result-val {
+    color: var(--gray-300);
+    word-break: break-word;
+}
+
+/* Step 3 — Vaxtly tree */
+.agent-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 8px 4px;
+    overflow: hidden;
+}
+.agent-tree-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 8px;
+    font-size: 13px;
+    color: var(--gray-300);
+    border-radius: 4px;
+}
+.agent-tree-chev {
+    width: 11px;
+    height: 11px;
+    color: var(--gray-500);
+    flex-shrink: 0;
+}
+.agent-tree-folder-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--gray-400);
+    flex-shrink: 0;
+    margin-left: -2px;
+}
+.agent-tree-row-folder {
+    padding-left: 14px;
+}
+.agent-tree-row-request {
+    padding-left: 36px;
+}
+.agent-tree-name {
+    color: var(--gray-200);
+}
+.agent-tree-name-dim {
+    color: var(--gray-500);
+}
+.agent-tree-method {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    min-width: 32px;
+    text-align: center;
+}
+.agent-tree-method-get {
+    color: var(--emerald);
+    background: rgba(52, 211, 153, 0.1);
+}
+.agent-tree-method-post {
+    color: var(--amber);
+    background: rgba(251, 191, 36, 0.1);
+}
+
+/* The newly-added row gets the emerald spotlight treatment */
+.agent-tree-row-new {
+    position: relative;
+    background: linear-gradient(90deg, rgba(52, 211, 153, 0.13), rgba(52, 211, 153, 0.03));
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.06) inset,
+                0 8px 20px -10px rgba(52, 211, 153, 0.35);
+    color: var(--gray-100);
+    animation: agent-tree-new-glow 3.6s ease-in-out infinite;
+}
+.agent-tree-row-new .agent-tree-name {
+    color: var(--gray-100);
+    font-weight: 500;
+}
+@keyframes agent-tree-new-glow {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.06) inset, 0 8px 20px -10px rgba(52, 211, 153, 0.35); }
+    50%      { box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.18) inset, 0 12px 32px -8px rgba(52, 211, 153, 0.55); }
+}
+.agent-tree-new-pill {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--emerald);
+    background: rgba(52, 211, 153, 0.14);
+    border: 1px solid rgba(52, 211, 153, 0.32);
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+/* ── Responsive: stack the CTA row, tighten the flow on narrow screens ── */
+@media (max-width: 720px) {
+    .release-strip {
+        padding: 6px 14px 6px 11px;
+        font-size: 11.5px;
+    }
+    .release-strip-headline {
+        display: none;
+    }
+    .agent-cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .agent-cta-quote {
+        font-size: 11.5px;
+    }
+    .agent-flow {
+        padding: 14px;
+    }
+    .agent-step {
+        padding: 11px 11px 10px;
+    }
+    .agent-call-block {
+        font-size: 11px;
+    }
+    .agent-call-flag {
+        padding-left: 14px;
+    }
+    .agent-tree-row {
+        font-size: 12px;
+    }
+    .agent-tree-row-request {
+        padding-left: 28px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Hero refresh — live terminal, enriched download CTA, scroll cue
+   ─────────────────────────────────────────────────────────────────── */
+
+/* ── Live typewriter terminal in the hero ─────────────────────────── */
+.hero-term {
+    width: min(560px, 100%);
+    margin: 36px auto 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+    overflow: hidden;
+    box-shadow:
+        0 12px 32px -16px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    position: relative;
+}
+.hero-term::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(135deg,
+        rgba(52, 211, 153, 0.18),
+        rgba(167, 139, 250, 0.10) 40%,
+        rgba(96, 165, 250, 0.08) 70%,
+        transparent);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+}
+.hero-term-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.hero-term-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+.hero-term-dot-r { background: #ff5f57; }
+.hero-term-dot-y { background: #febc2e; }
+.hero-term-dot-g { background: #28c840; }
+.hero-term-title {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-500);
+    letter-spacing: 0.04em;
+}
+.hero-term-pulse {
+    margin-left: auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 6px rgba(52, 211, 153, 0.7);
+    animation: hero-term-pulse 1.8s ease-in-out infinite;
+}
+@keyframes hero-term-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.85); }
+    50%      { opacity: 1;   transform: scale(1); }
+}
+.hero-term-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--gray-200);
+    min-height: 48px;
+    overflow: hidden;
+}
+.hero-term-prompt {
+    color: var(--emerald);
+    font-weight: 600;
+    user-select: none;
+    flex-shrink: 0;
+}
+.hero-term-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    flex: 1;
+    color: var(--gray-100);
+}
+.hero-term-caret {
+    display: inline-block;
+    width: 7px;
+    height: 15px;
+    margin-left: -4px;
+    background: var(--emerald);
+    box-shadow: 0 0 5px rgba(52, 211, 153, 0.6);
+    animation: hero-term-caret 1s steps(2) infinite;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+@keyframes hero-term-caret {
+    50% { opacity: 0; }
+}
+
+/* ── Enriched download CTA: bigger, with sublabel + shine sweep ───── */
+.hero-download {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 24px 12px 20px;
+    gap: 12px;
+    /* Override existing margin to give the terminal breathing room above */
+    margin-top: 28px;
+}
+.hero-download .hero-download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    line-height: 1.1;
+}
+.hero-download-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-100);
+}
+.hero-download-os {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: var(--gray-500);
+    letter-spacing: 0.03em;
+    font-weight: 400;
+}
+.hero-download-shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+        transparent 30%,
+        rgba(52, 211, 153, 0.18) 50%,
+        transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+.hero-download:hover .hero-download-shine {
+    transform: translateX(100%);
+}
+.hero-download:hover .hero-download-os {
+    color: var(--emerald);
+    transition: color 0.3s ease;
+}
+
+/* ── Scroll cue — small "explore" hint at the bottom of the hero ──── */
+.hero-scroll-cue {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 56px;
+    color: var(--gray-500);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.25s ease, gap 0.25s ease;
+}
+.hero-scroll-cue:hover {
+    color: var(--emerald);
+    gap: 9px;
+}
+.hero-scroll-cue-line {
+    width: 1px;
+    height: 22px;
+    background: linear-gradient(180deg, transparent, var(--gray-600));
+    position: relative;
+    overflow: hidden;
+}
+.hero-scroll-cue-line::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, var(--emerald));
+    transform: translateY(-100%);
+    animation: hero-scroll-cue-drip 2.2s ease-in-out infinite;
+}
+@keyframes hero-scroll-cue-drip {
+    0%   { transform: translateY(-100%); }
+    60%  { transform: translateY(100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* ── Responsive tweaks for the hero refresh ───────────────────────── */
+@media (max-width: 720px) {
+    .hero-term {
+        margin-top: 28px;
+    }
+    .hero-term-body {
+        font-size: 11.5px;
+        padding: 12px 14px 13px;
+    }
+    .hero-download {
+        padding: 11px 20px 11px 18px;
+    }
+    .hero-download-label {
+        font-size: 14px;
+    }
+    .hero-download-os {
+        font-size: 9.5px;
+    }
+    .hero-scroll-cue {
+        margin-top: 36px;
+    }
+}

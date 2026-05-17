@@ -178,4 +178,59 @@
         revealElements.forEach(el => el.classList.add('active'));
     }
 
+    // Hero terminal typewriter — cycles through example CLI commands so the
+    // hero feels like a live, working tool. Honors prefers-reduced-motion.
+    const heroTermText = document.getElementById('hero-term-text');
+    if (heroTermText) {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const lines = [
+            'vaxtly upsert request --external-key users.list --method GET --url /users',
+            'vaxtly list collections',
+            'vaxtly get request --collection-external-key acme --external-key users.list',
+            'vaxtly upsert env-var --env-external-key prod --key API_KEY --value •••',
+            'vaxtly mcp   # let your agent take over',
+            'vaxtly ping  # {"pong":true,"app_version":"0.11.0"}',
+        ];
+
+        if (prefersReducedMotion) {
+            heroTermText.textContent = lines[0];
+        } else {
+            let lineIdx = 0;
+            let charIdx = 0;
+            let mode = 'typing';
+            const TYPE_MS = 32;
+            const ERASE_MS = 14;
+            const HOLD_MS = 1700;
+            const NEXT_MS = 350;
+
+            const tick = () => {
+                const line = lines[lineIdx];
+                if (mode === 'typing') {
+                    charIdx++;
+                    heroTermText.textContent = line.slice(0, charIdx);
+                    if (charIdx >= line.length) {
+                        mode = 'holding';
+                        setTimeout(tick, HOLD_MS);
+                        return;
+                    }
+                    setTimeout(tick, TYPE_MS + Math.random() * 28);
+                } else if (mode === 'holding') {
+                    mode = 'erasing';
+                    setTimeout(tick, NEXT_MS);
+                } else {
+                    charIdx--;
+                    heroTermText.textContent = line.slice(0, charIdx);
+                    if (charIdx <= 0) {
+                        lineIdx = (lineIdx + 1) % lines.length;
+                        mode = 'typing';
+                        setTimeout(tick, NEXT_MS);
+                        return;
+                    }
+                    setTimeout(tick, ERASE_MS);
+                }
+            };
+            setTimeout(tick, 600); // wait for hero animations to settle
+        }
+    }
+
 })();
