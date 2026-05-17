@@ -128,13 +128,21 @@
         <div class="container">
             <div class="hero-content">
 
-                <a href="https://github.com/vaxtly/app/releases/tag/v0.11.0" target="_blank" rel="noopener" class="release-strip animate-in delay-1">
+                <!--
+                  The version + link are populated from the GitHub Releases API on load
+                  (see script.js, fetch of /releases/latest). The href falls back to the
+                  /latest redirect URL so it always lands on the current release even if
+                  the JS hasn't run (or failed). The headline is intentionally STATIC —
+                  it tracks the marketing message for the current minor line; bump it by
+                  hand at the next minor/major release, not on every patch.
+                -->
+                <a id="release-strip-link" href="https://github.com/vaxtly/app/releases/latest" target="_blank" rel="noopener" class="release-strip animate-in delay-1">
                     <span class="release-strip-pulse" aria-hidden="true">
                         <span class="release-strip-dot"></span>
                         <span class="release-strip-ring"></span>
                     </span>
                     <span class="release-strip-text">
-                        <span class="release-strip-ver">v0.11.0</span>
+                        <span class="release-strip-ver" id="release-strip-ver">v0.11.1</span>
                         <span class="release-strip-sep">&middot;</span>
                         <span class="release-strip-headline">AI Agent Integration</span>
                     </span>

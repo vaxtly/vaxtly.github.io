@@ -9,11 +9,18 @@
         .then(release => {
             if (!release) return;
 
-            // Update version badge
+            // Update version badge + release strip from latest GitHub release.
+            // The release strip's headline is intentionally NOT updated here — it's
+            // the marketing message for the current minor line, edited by hand at
+            // each minor/major bump.
             if (release.tag_name) {
                 const ver = release.tag_name.replace(/^v/, '');
                 const badge = document.getElementById('hero-version');
                 if (badge) badge.textContent = 'v' + ver;
+                const stripVer = document.getElementById('release-strip-ver');
+                if (stripVer) stripVer.textContent = 'v' + ver;
+                const stripLink = document.getElementById('release-strip-link');
+                if (stripLink) stripLink.href = 'https://github.com/vaxtly/app/releases/tag/v' + ver;
                 // Update structured data
                 const ldJson = document.querySelector('script[type="application/ld+json"]');
                 if (ldJson) {
